@@ -1,13 +1,25 @@
-import re
-from typing import List, Set
+from typing import List
 from src.scrapers.base import JobPost
 from src.profile import profile
 
 
+BROAD_SKILLS = [
+    "qa", "quality assurance", "automation", "test", "testing", "sdet",
+    "frontend", "front-end", "front end", "react", "full stack", "fullstack",
+    "javascript", "typescript", "python", "node", "nodejs", "node.js",
+    "html", "css", "api", "rest", "e2e", "integration testing",
+    "cypress", "playwright", "selenium", "postman", "appium", "pytest",
+    "cucumber", "git", "ci/cd", "ci", "cd", "azure", "mongodb",
+    "mysql", "postgresql", "sql", "database", "unit test",
+    "agile", "scrum", "devops", "cloud", "docker", "kubernetes",
+    "ui", "ux", "responsive", "mobile", "web", "software",
+    "developer", "engineer", "development", "engineering"
+]
+
+
 class JobMatcher:
     def __init__(self):
-        self.skill_keywords = {s.lower() for s in profile.skills}
-        self.exclude_locations = {loc.lower().strip() for loc in [
+        self.excluded_locations = {
             "india", "asia", "bangalore", "mumbai", "hyderabad",
             "chennai", "pune", "delhi", "kolkata", "ahmedabad",
             "noida", "gurgaon", "philippines", "pakistan",
@@ -15,20 +27,19 @@ class JobMatcher:
             "thailand", "malaysia", "china", "singapore",
             "kuala lumpur", "manila", "jakarta", "dhaka",
             "colombo", "hanoi", "ho chi minh", "bangkok"
-        ]}
-        self.exclude_terms = {"hybrid", "on-site", "onsite", "senior staff", "principal"}
+        }
 
     def filter_jobs(self, jobs: List[JobPost]) -> List[JobPost]:
         filtered = []
         for job in jobs:
             if self._is_excluded_location(job):
                 continue
-            if self._is_excluded_term(job):
+            if self._is_excluded_title(job):
                 continue
             if not self._is_remote(job):
                 continue
             score = self._calculate_match(job)
-            if score >= 0.15:
+            if score >= 0.05:
                 job.match_score = round(score, 2)
                 filtered.append(job)
         filtered.sort(key=lambda j: j.match_score, reverse=True)
@@ -36,42 +47,41 @@ class JobMatcher:
 
     def _is_excluded_location(self, job: JobPost) -> bool:
         loc = job.location.lower().strip()
-        if any(ex in loc for ex in self.exclude_locations):
-            return True
-        full_text = f"{job.title.lower()} {job.description.lower()}"
-        if any(ex in full_text for ex in self.exclude_locations):
+        return any(ex in loc for ex in self.excluded_locations)
+
+    def _is_excluded_title(self, job: JobPost) -> bool:
+        title = job.title.lower()
+        if "hybrid" in title or "on-site" in title or "onsite" in title:
             return True
         return False
-
-    def _is_excluded_term(self, job: JobPost) -> bool:
-        text = f"{job.title.lower()} {job.description.lower()}"
-        return any(term in text for term in self.exclude_terms)
 
     def _is_remote(self, job: JobPost) -> bool:
         if job.is_remote:
             return True
         text = f"{job.title.lower()} {job.description.lower()} {job.location.lower()}"
-        if "remote" in text or "100% remoto" in text or "trabajo remoto" in text:
+        if "remote" in text or "remoto" in text:
             return True
         if "hybrid" in text or "on-site" in text or "presencial" in text:
             return False
         return False
 
     def _calculate_match(self, job: JobPost) -> float:
-        text = f"{job.title.lower()} {job.description.lower()}"
-        title_text = job.title.lower()
-        matched_skills = 0
-        for skill in self.skill_keywords:
-            if skill in text:
-                matched_skills += 1
-        skill_ratio = matched_skills / max(len(self.skill_keywords), 1)
+        title = job.title.lower()
+        desc = job.description.lower()
+        combined = f"{title} {desc}"
+
+        matched = sum(1 for s in BROAD_SKILLS if s in combined)
+        skill_score = matched / 40.0
+
         title_bonus = 0.0
         target_roles = [
             "qa", "quality assurance", "automation", "test", "sdet",
-            "frontend", "front-end", "front end", "react", "full stack"
+            "frontend", "front-end", "front end", "react", "full stack",
+            "fullstack", "developer", "engineer", "software"
         ]
         for role in target_roles:
-            if role in title_text:
+            if role in title:
                 title_bonus = 0.3
                 break
-        return skill_ratio * 0.7 + title_bonus
+
+        return skill_score * 0.7 + title_bonus
