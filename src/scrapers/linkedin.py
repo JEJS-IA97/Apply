@@ -5,6 +5,7 @@ from typing import List, Tuple
 import requests
 from bs4 import BeautifulSoup
 
+from src.config import config
 from src.profile import profile
 from src.scrapers.base import BaseScraper, JobPost
 
@@ -15,7 +16,9 @@ class LinkedInScraper(BaseScraper):
     SEARCH_LOCATIONS = [
         "Latin America",
         "Remote",
+        "",
     ]
+    SEARCH_STARTS = [0, 25, 50]
     GUEST_API = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
     LOGGED_IN_SEARCH = "https://www.linkedin.com/jobs/search/"
 
@@ -70,11 +73,26 @@ class LinkedInScraper(BaseScraper):
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         search_pairs = self._build_search_pairs(keywords)
         if self.logged_in:
-            jobs = self._scrape_logged_in(search_pairs)
+            jobs = self._scrape_logged_in(search_pairs, remote_only=True)
             if jobs:
+                if len(jobs) < 10:
+                    print("  [LinkedIn] Low remote-only volume while logged in, broadening search")
+                    jobs.extend(self._scrape_logged_in(search_pairs, remote_only=False))
                 return self.filter_keyword_jobs(jobs, keywords)
             print("  [LinkedIn] Logged-in search returned 0 jobs, falling back to guest endpoint")
-        return self.filter_keyword_jobs(self._scrape_guest(search_pairs), keywords)
+        jobs = self._scrape_guest(search_pairs, remote_only=True)
+        if len(jobs) < 10:
+            print("  [LinkedIn] Low remote-only volume in guest mode, broadening search")
+            jobs.extend(self._scrape_guest(search_pairs, remote_only=False))
+        deduped = []
+        seen_keys = set()
+        for job in jobs:
+            job_key = self._job_key(job.url)
+            if job_key in seen_keys:
+                continue
+            seen_keys.add(job_key)
+            deduped.append(job)
+        return self.filter_keyword_jobs(deduped, keywords)
 
     def _build_search_pairs(self, keywords: List[str]) -> List[Tuple[str, str]]:
         search_terms = self.unique_keywords(keywords)
@@ -110,65 +128,89 @@ class LinkedInScraper(BaseScraper):
 
         return [(keyword, location) for keyword in search_terms for location in locations]
 
-    def _scrape_logged_in(self, search_pairs: List[Tuple[str, str]]) -> List[JobPost]:
+    def _job_key(self, url: str) -> str:
+        clean_url = (url or "").split("?", 1)[0].rstrip("/")
+        match = re.search(r"(\d+)$", clean_url)
+        return match.group(1) if match else clean_url
+
+    def _search_params(self, keyword: str, location: str, start: int, remote_only: bool) -> dict:
+        params = {
+            "keywords": keyword,
+            "start": start,
+        }
+        if remote_only:
+            params["f_WT"] = "2"
+        if location:
+            params["location"] = location
+        if config.max_days_old > 0:
+            params["f_TPR"] = f"r{config.max_days_old * 86400}"
+        return params
+
+    def _guest_session(self) -> requests.Session:
+        session = requests.Session()
+        session.headers.update({
+            "User-Agent": UA,
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        })
+        return session
+
+    def _scrape_logged_in(self, search_pairs: List[Tuple[str, str]], remote_only: bool) -> List[JobPost]:
         jobs = []
         seen_ids = set()
         for kw, loc in search_pairs:
-            try:
-                params = {
-                    "keywords": kw,
-                    "location": loc,
-                    "f_WT": "2",
-                    "f_TPR": "r86400",
-                    "start": 0,
-                }
-                resp = self.session.get(
-                    self.LOGGED_IN_SEARCH,
-                    params=params,
-                    timeout=20,
-                    allow_redirects=True,
-                )
-                if resp.status_code != 200:
-                    continue
+            for start in self.SEARCH_STARTS:
+                try:
+                    resp = self.session.get(
+                        self.LOGGED_IN_SEARCH,
+                        params=self._search_params(kw, loc, start, remote_only),
+                        timeout=20,
+                        allow_redirects=True,
+                    )
+                    if resp.status_code != 200:
+                        continue
 
-                for job in self._parse_search_html(resp.text):
-                    jid = re.search(r"/jobs/view/(\d+)", job.url)
-                    if jid and jid.group(1) not in seen_ids:
-                        seen_ids.add(jid.group(1))
-                        jobs.append(job)
+                    for job in self._parse_search_html(resp.text):
+                        job_key = self._job_key(job.url)
+                        if job_key not in seen_ids:
+                            seen_ids.add(job_key)
+                            jobs.append(job)
 
-                if len(jobs) >= 150:
-                    break
-            except Exception as e:
-                print(f"  [LinkedIn] Logged-in search failed for '{kw}' in '{loc}': {e}")
+                    if len(jobs) >= 150:
+                        break
+                except Exception as e:
+                    print(f"  [LinkedIn] Logged-in search failed for '{kw}' in '{loc}' start={start} remote_only={remote_only}: {e}")
+            if len(jobs) >= 150:
+                break
         return jobs
 
-    def _scrape_guest(self, search_pairs: List[Tuple[str, str]]) -> List[JobPost]:
+    def _scrape_guest(self, search_pairs: List[Tuple[str, str]], remote_only: bool) -> List[JobPost]:
         jobs = []
         seen_ids = set()
+        guest_session = self._guest_session()
         for kw, loc in search_pairs:
-            try:
-                params = {
-                    "keywords": kw,
-                    "location": loc,
-                    "f_WT": "2",
-                    "f_TPR": "r86400",
-                    "start": 0,
-                }
-                resp = self.session.get(self.GUEST_API, params=params, timeout=20)
-                if resp.status_code != 200:
-                    continue
+            for start in self.SEARCH_STARTS:
+                try:
+                    resp = guest_session.get(
+                        self.GUEST_API,
+                        params=self._search_params(kw, loc, start, remote_only),
+                        timeout=20,
+                    )
+                    if resp.status_code != 200:
+                        continue
 
-                for job in self._parse_guest_html(resp.text):
-                    jid = re.search(r"/jobs/view/(\d+)", job.url)
-                    if jid and jid.group(1) not in seen_ids:
-                        seen_ids.add(jid.group(1))
-                        jobs.append(job)
+                    for job in self._parse_guest_html(resp.text):
+                        job_key = self._job_key(job.url)
+                        if job_key not in seen_ids:
+                            seen_ids.add(job_key)
+                            jobs.append(job)
 
-                if len(jobs) >= 150:
-                    break
-            except Exception as e:
-                print(f"  [LinkedIn] Guest search failed for '{kw}' in '{loc}': {e}")
+                    if len(jobs) >= 150:
+                        break
+                except Exception as e:
+                    print(f"  [LinkedIn] Guest search failed for '{kw}' in '{loc}' start={start} remote_only={remote_only}: {e}")
+            if len(jobs) >= 150:
+                break
         return jobs
 
     def _parse_search_html(self, html: str) -> List[JobPost]:
@@ -277,12 +319,19 @@ class LinkedInScraper(BaseScraper):
 
     def verify_job_active(self, url: str) -> bool:
         try:
-            resp = self.session.get(url, timeout=15, allow_redirects=True)
+            resp = requests.get(
+                url,
+                headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"},
+                timeout=15,
+                allow_redirects=True,
+            )
             if resp.status_code != 200:
                 return False
 
             text = resp.text.lower()
             if "this position has been filled" in text or "no longer accepting" in text:
+                return False
+            if "position no longer available" in text or "job is no longer available" in text:
                 return False
             if "job search" in text and len(text) < 2000:
                 return False
