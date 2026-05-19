@@ -24,34 +24,33 @@ class RedditScraper(BaseScraper):
 
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         if not self.praw:
-            return self._scrape_without_auth(keywords)
-        return self._scrape_with_auth(keywords)
+            return self.filter_keyword_jobs(self._scrape_without_auth(), keywords)
+        return self.filter_keyword_jobs(self._scrape_with_auth(), keywords)
 
-    def _scrape_without_auth(self, keywords: List[str]) -> List[JobPost]:
+    def _scrape_without_auth(self) -> List[JobPost]:
         import requests
         jobs = []
         subreddits = ["remotejs", "forhire", "jobbit", "remotejobs", "freelance"]
         for sub in subreddits:
-            for kw in keywords[:2]:
-                try:
-                    resp = requests.get(
-                        f"https://www.reddit.com/r/{sub}/search.json",
-                        params={"q": kw, "restrict_sr": 1, "sort": "new", "t": "week"},
-                        headers={"User-Agent": self.user_agent},
-                        timeout=15
-                    )
-                    if resp.status_code != 200:
-                        continue
-                    data = resp.json()
-                    for post in data.get("data", {}).get("children", []):
-                        job = self._parse_reddit_post(post.get("data", {}), sub)
-                        if job:
-                            jobs.append(job)
-                except Exception:
+            try:
+                resp = requests.get(
+                    f"https://www.reddit.com/r/{sub}/new.json",
+                    params={"limit": 50},
+                    headers={"User-Agent": self.user_agent},
+                    timeout=15
+                )
+                if resp.status_code != 200:
                     continue
+                data = resp.json()
+                for post in data.get("data", {}).get("children", []):
+                    job = self._parse_reddit_post(post.get("data", {}), sub)
+                    if job:
+                        jobs.append(job)
+            except Exception:
+                continue
         return jobs
 
-    def _scrape_with_auth(self, keywords: List[str]) -> List[JobPost]:
+    def _scrape_with_auth(self) -> List[JobPost]:
         jobs = []
         subreddits = ["remotejs", "forhire", "jobbit", "remotejobs", "freelance", "QualityAssurance"]
         for sub in subreddits:

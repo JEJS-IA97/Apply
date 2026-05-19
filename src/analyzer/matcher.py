@@ -1,4 +1,6 @@
+import re
 from typing import List
+from src.config import config
 from src.scrapers.base import JobPost
 from src.profile import profile
 
@@ -28,6 +30,10 @@ class JobMatcher:
             "kuala lumpur", "manila", "jakarta", "dhaka",
             "colombo", "hanoi", "ho chi minh", "bangkok"
         }
+        self.profile_skills = self._unique_terms(profile.skills)
+        self.target_roles = self._unique_terms(
+            config.search_keywords + [part.strip() for part in profile.title.split("/") if part.strip()]
+        )
 
     def filter_jobs(self, jobs: List[JobPost]) -> List[JobPost]:
         filtered = []
@@ -52,11 +58,11 @@ class JobMatcher:
         return filtered
 
     def _is_excluded_location(self, job: JobPost) -> bool:
-        loc = job.location.lower().strip()
+        loc = self._normalize(job.location)
         return any(ex in loc for ex in self.excluded_locations)
 
     def _is_excluded_title(self, job: JobPost) -> bool:
-        title = job.title.lower()
+        title = self._normalize(job.title)
         if "hybrid" in title or "on-site" in title or "onsite" in title:
             return True
         return False
@@ -64,7 +70,7 @@ class JobMatcher:
     def _is_remote(self, job: JobPost) -> bool:
         if job.is_remote:
             return True
-        text = f"{job.title.lower()} {job.description.lower()} {job.location.lower()}"
+        text = self._normalize(f"{job.title} {job.description} {job.location}")
         if "remote" in text or "remoto" in text:
             return True
         if "hybrid" in text or "on-site" in text or "presencial" in text:
@@ -72,22 +78,45 @@ class JobMatcher:
         return False
 
     def _calculate_match(self, job: JobPost) -> float:
-        title = job.title.lower()
-        desc = job.description.lower()
-        combined = f"{title} {desc}"
+        title = self._normalize(job.title)
+        combined = self._normalize(f"{job.title} {job.description} {job.company} {job.location}")
 
-        matched = sum(1 for s in BROAD_SKILLS if s in combined)
-        skill_score = matched / 40.0
+        matched_profile_skills = sum(1 for skill in self.profile_skills if skill in combined)
+        matched_broad_skills = sum(1 for skill in BROAD_SKILLS if self._normalize(skill) in combined)
+        skill_score = min(1.0, ((matched_profile_skills * 1.5) + (matched_broad_skills * 0.5)) / 18.0)
 
         title_bonus = 0.0
-        target_roles = [
-            "qa", "quality assurance", "automation", "test", "sdet",
-            "frontend", "front-end", "front end", "react", "full stack",
-            "fullstack", "developer", "engineer", "software"
-        ]
-        for role in target_roles:
+        for role in self.target_roles:
             if role in title:
                 title_bonus = 0.3
                 break
 
         return skill_score * 0.7 + title_bonus
+
+    def _normalize(self, text: str) -> str:
+        normalized = (text or "").lower()
+        replacements = (
+            (r"\bfront-end\b", "front end"),
+            (r"\bfrontend\b", "front end"),
+            (r"\bfull-stack\b", "full stack"),
+            (r"\bfullstack\b", "full stack"),
+            (r"\bnode\.js\b", "node js"),
+            (r"\bnodejs\b", "node js"),
+            (r"\be2e\b", "end to end"),
+            (r"\bqa\b", "quality assurance"),
+        )
+        for pattern, target in replacements:
+            normalized = re.sub(pattern, target, normalized)
+        normalized = re.sub(r"[^a-z0-9\s]+", " ", normalized)
+        return re.sub(r"\s+", " ", normalized).strip()
+
+    def _unique_terms(self, values: List[str]) -> List[str]:
+        unique = []
+        seen = set()
+        for value in values:
+            normalized = self._normalize(value)
+            if not normalized or normalized in seen:
+                continue
+            seen.add(normalized)
+            unique.append(normalized)
+        return unique

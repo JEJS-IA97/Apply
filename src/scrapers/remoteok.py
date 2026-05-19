@@ -4,15 +4,6 @@ from typing import List
 from src.scrapers.base import BaseScraper, JobPost
 
 
-KEYWORD_WORDS = [
-    "qa", "quality", "assurance", "automation", "test", "sdet",
-    "frontend", "front-end", "front", "end", "react", "fullstack",
-    "full-stack", "developer", "engineer", "playwright", "cypress",
-    "selenium", "javascript", "typescript", "python", "node",
-    "software", "e2e", "integration"
-]
-
-
 class RemoteOKScraper(BaseScraper):
     def __init__(self):
         super().__init__("RemoteOK")
@@ -31,16 +22,10 @@ class RemoteOKScraper(BaseScraper):
                 return []
             jobs = []
             for item in data[1:]:
-                title = (item.get("position") or "").lower()
-                desc = (item.get("description") or "").lower()
-                tags = [t.lower() for t in item.get("tags", [])]
-                combined = f"{title} {desc} {' '.join(tags)}"
-                score = sum(1 for w in KEYWORD_WORDS if w in combined)
-                if score >= 2:
-                    job = self._parse(item)
-                    if job:
-                        jobs.append(job)
-            return jobs
+                job = self._parse(item)
+                if job:
+                    jobs.append(job)
+            return self.filter_keyword_jobs(jobs, keywords)
         except Exception as e:
             print(f"  [RemoteOK] scrape error: {e}")
             return []

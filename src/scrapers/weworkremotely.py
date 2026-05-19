@@ -17,9 +17,9 @@ class WeWorkRemotelyScraper(BaseScraper):
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         jobs = []
         categories = [
-            "/remote-jobs/full-stack-programming",
-            "/remote-jobs/front-end-programming",
-            "/remote-jobs/qa",
+            "/categories/remote-full-stack-programming-jobs",
+            "/categories/remote-front-end-programming-jobs",
+            "/remote-qa-jobs",
         ]
         for cat in categories:
             try:
@@ -32,7 +32,7 @@ class WeWorkRemotelyScraper(BaseScraper):
                     continue
                 soup = BeautifulSoup(resp.text, "html.parser")
                 for article in soup.select("article"):
-                    link = article.select_one("a[href*='/remote-jobs/']")
+                    link = article.select_one("a[href*='/remote-jobs/'], a[href*='/listings/']")
                     if not link:
                         continue
                     href = link.get("href", "")
@@ -45,8 +45,7 @@ class WeWorkRemotelyScraper(BaseScraper):
                         continue
                     title = title_el.get_text(strip=True)
                     company = company_el.get_text(strip=True) if company_el else ""
-                    if not title or title.lower().startswith(("all", "back", "customer", "design", "devops",
-                        "front", "full", "manage", "product", "sal")):
+                    if not title:
                         continue
                     url = f"{self.BASE}{href}" if href.startswith("/") else href
                     jobs.append(JobPost(
@@ -59,7 +58,7 @@ class WeWorkRemotelyScraper(BaseScraper):
             except Exception as e:
                 print(f"  [WeWorkRemotely] category {cat}: {e}")
                 continue
-        return jobs
+        return self.filter_keyword_jobs(jobs, keywords)
 
     def verify_job_active(self, url: str) -> bool:
         try:

@@ -26,7 +26,7 @@ class RemotiveScraper(BaseScraper):
                         jobs.append(job)
             except Exception:
                 continue
-        return jobs
+        return self.filter_keyword_jobs(jobs, keywords)
 
     def _parse(self, item: dict) -> JobPost:
         title = item.get("title", "")

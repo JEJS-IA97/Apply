@@ -13,7 +13,7 @@ class GetOnBoardScraper(BaseScraper):
 
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         jobs = []
-        for kw in keywords[:3]:
+        for kw in self.unique_keywords(keywords):
             try:
                 resp = requests.get(
                     f"{self.BASE}/search",
@@ -30,10 +30,10 @@ class GetOnBoardScraper(BaseScraper):
                         jobs.append(job)
             except Exception:
                 continue
-        return jobs
+        return self.filter_keyword_jobs(jobs, keywords)
 
     def _parse_card(self, card) -> Optional[JobPost]:
-        link_el = card.select_one("a[href*='/jobs/']")
+        link_el = card.select_one("a[href*='/jobs/'], a[href*='/empleos/']")
         if not link_el:
             return None
         href = link_el.get("href", "")

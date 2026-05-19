@@ -15,7 +15,7 @@ class IndeedScraper(BaseScraper):
 
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         jobs = []
-        for kw in keywords[:5]:
+        for kw in self.unique_keywords(keywords):
             try:
                 params = {
                     "q": kw,
@@ -39,7 +39,7 @@ class IndeedScraper(BaseScraper):
                         jobs.append(job)
             except Exception:
                 continue
-        return jobs
+        return self.filter_keyword_jobs(jobs, keywords)
 
     def _parse_card(self, card) -> Optional[JobPost]:
         title_el = card.select_one("[id*='jobTitle'], h2 a, .jobTitle")
