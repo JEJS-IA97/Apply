@@ -56,20 +56,53 @@ class LinkedInScraper(BaseScraper):
         except Exception as e:
             print(f"  [LinkedIn] Login error: {e}")
 
+    SEARCH_TERMS = [
+        ("QA Automation", "Latin America"),
+        ("QA Engineer", "Latin America"),
+        ("QA Analyst", "Latin America"),
+        ("Quality Assurance", "Latin America"),
+        ("Automation Engineer", "Latin America"),
+        ("Frontend Developer", "Latin America"),
+        ("React Developer", "Latin America"),
+        ("SDET", "Latin America"),
+        ("QA Automation", "Mexico"),
+        ("QA Engineer", "Mexico"),
+        ("QA Automation", "Colombia"),
+        ("QA Engineer", "Colombia"),
+        ("QA Automation", "Argentina"),
+        ("QA Engineer", "Argentina"),
+        ("QA Automation", "Chile"),
+        ("QA Engineer", "Chile"),
+        ("QA Automation", "Peru"),
+        ("QA Engineer", "Peru"),
+        ("QA Automation", "Costa Rica"),
+        ("QA Engineer", "Costa Rica"),
+        ("Analista de calidad", "América Latina"),
+        ("Aseguramiento de calidad", "América Latina"),
+        ("QA Automation", "Venezuela"),
+        ("QA Engineer", "Venezuela"),
+        ("Quality Assurance", "Venezuela"),
+        ("QA Tester", "Latin America"),
+        ("QA Analyst", "Mexico"),
+        ("QA Analyst", "Colombia"),
+        ("QA Analyst", "Argentina"),
+    ]
+
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         if self.logged_in:
-            return self._scrape_logged_in(keywords)
+            return self._scrape_logged_in()
         return self._scrape_guest(keywords)
 
-    def _scrape_logged_in(self, keywords: List[str]) -> List[JobPost]:
+    def _scrape_logged_in(self) -> List[JobPost]:
         jobs = []
-        for kw in keywords[:5]:
+        seen_ids = set()
+        for kw, loc in self.SEARCH_TERMS:
             try:
                 params = {
                     "keywords": kw,
-                    "location": "Worldwide",
+                    "location": loc,
                     "f_WT": "2",
-                    "f_TPR": "r604800",
+                    "f_TPR": "r86400",
                     "start": 0,
                 }
                 resp = self.session.get(
@@ -80,20 +113,28 @@ class LinkedInScraper(BaseScraper):
                 )
                 if resp.status_code != 200:
                     continue
-                jobs.extend(self._parse_search_html(resp.text, kw))
+                parsed = self._parse_search_html(resp.text)
+                for j in parsed:
+                    jid = re.search(r'/jobs/view/(\d+)', j.url)
+                    if jid and jid.group(1) not in seen_ids:
+                        seen_ids.add(jid.group(1))
+                        jobs.append(j)
+                if len(jobs) >= 100:
+                    break
             except Exception:
                 continue
         return jobs
 
     def _scrape_guest(self, keywords: List[str]) -> List[JobPost]:
         jobs = []
+        seen_ids = set()
         for kw in keywords[:5]:
             try:
                 params = {
                     "keywords": kw,
-                    "location": "Worldwide",
+                    "location": "Latin America",
                     "f_WT": "2",
-                    "f_TPR": "r604800",
+                    "f_TPR": "r86400",
                     "start": 0,
                 }
                 resp = self.session.get(
@@ -103,7 +144,11 @@ class LinkedInScraper(BaseScraper):
                 )
                 if resp.status_code != 200:
                     continue
-                jobs.extend(self._parse_guest_html(resp.text))
+                for j in self._parse_guest_html(resp.text):
+                    jid = re.search(r'/jobs/view/(\d+)', j.url)
+                    if jid and jid.group(1) not in seen_ids:
+                        seen_ids.add(jid.group(1))
+                        jobs.append(j)
             except Exception:
                 continue
         return jobs

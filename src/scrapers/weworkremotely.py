@@ -31,20 +31,24 @@ class WeWorkRemotelyScraper(BaseScraper):
                 if resp.status_code != 200:
                     continue
                 soup = BeautifulSoup(resp.text, "html.parser")
-                for article in soup.select("article, li.job, .job-listing, tr"):
+                for article in soup.select("article"):
                     link = article.select_one("a[href*='/remote-jobs/']")
                     if not link:
                         continue
                     href = link.get("href", "")
-                    if not href.startswith("/remote-jobs/"):
+                    parts = href.split("/")
+                    if len(parts) < 4 or not parts[-1]:
                         continue
-                    title_el = article.select_one(".title, h2, h3, .job-title, .position")
-                    company_el = article.select_one(".company, .subtitle, .company-name, .employer")
+                    title_el = article.select_one(".title, h2, h3, .job-title, .position, .listing-title")
+                    company_el = article.select_one(".company, .subtitle, .company-name, .employer, .listing-company")
                     if not title_el:
                         continue
                     title = title_el.get_text(strip=True)
                     company = company_el.get_text(strip=True) if company_el else ""
-                    url = f"{self.BASE}{href}"
+                    if not title or title.lower().startswith(("all", "back", "customer", "design", "devops",
+                        "front", "full", "manage", "product", "sal")):
+                        continue
+                    url = f"{self.BASE}{href}" if href.startswith("/") else href
                     jobs.append(JobPost(
                         title=title, company=company,
                         location="Remote", description="",

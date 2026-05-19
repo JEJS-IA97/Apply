@@ -30,7 +30,9 @@ class Config:
         "QA Automation Engineer", "QA Engineer", "Automation Engineer",
         "Frontend Developer", "Frontend Engineer", "SDET",
         "Software Development Engineer in Test", "Quality Assurance Automation",
-        "React Developer", "Playwright", "Cypress", "QA", "QA Analyst", "Tester"
+        "React Developer", "Playwright", "Cypress",
+        "QA Analyst", "Quality Assurance", "Manual QA",
+        "QA Tester", "Automation Tester"
     ])
     exclude_locations: List[str] = field(default_factory=lambda: [
         "India", "Asia", "Bangalore", "Mumbai", "Hyderabad", "Chennai",

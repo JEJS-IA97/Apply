@@ -32,16 +32,22 @@ class JobMatcher:
     def filter_jobs(self, jobs: List[JobPost]) -> List[JobPost]:
         filtered = []
         for job in jobs:
+            reasons = []
             if self._is_excluded_location(job):
-                continue
+                reasons.append(f"loc:{job.location}")
             if self._is_excluded_title(job):
-                continue
+                reasons.append("title_excl")
             if not self._is_remote(job):
+                reasons.append("not_remote")
+            if reasons:
+                print(f"    FILTERED: [{job.source}] {job.title[:50]} @ {job.company[:20]} => {', '.join(reasons)}")
                 continue
             score = self._calculate_match(job)
-            if score >= 0.05:
-                job.match_score = round(score, 2)
-                filtered.append(job)
+            if score < 0.05:
+                print(f"    LOW SCORE: [{job.source}] {job.title[:50]} @ {job.company[:20]} => score={score:.3f}")
+                continue
+            job.match_score = round(score, 2)
+            filtered.append(job)
         filtered.sort(key=lambda j: j.match_score, reverse=True)
         return filtered
 
