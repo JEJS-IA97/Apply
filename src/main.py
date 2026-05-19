@@ -29,10 +29,7 @@ def get_scrapers():
             user_agent=config.reddit_user_agent
         ),
     ]
-    if config.linkedin_email and config.linkedin_password:
-        scrapers.append(LinkedInScraper())
-    else:
-        scrapers.append(LinkedInScraper({"li_at": ""}))
+    scrapers.append(LinkedInScraper(email=config.linkedin_email, password=config.linkedin_password))
     return scrapers
 
 
