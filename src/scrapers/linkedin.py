@@ -88,15 +88,16 @@ class LinkedInScraper(BaseScraper):
         ("QA Analyst", "Argentina"),
     ]
 
-    def scrape(self, keywords: List[str]) -> List[JobPost]:
-        if self.logged_in:
-            return self._scrape_logged_in()
-        return self._scrape_guest(keywords)
+    GUEST_API = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
 
-    def _scrape_logged_in(self) -> List[JobPost]:
+    def scrape(self, keywords: List[str]) -> List[JobPost]:
+        return self._search_jobs()
+
+    def _search_jobs(self) -> List[JobPost]:
         jobs = []
         seen_ids = set()
-        for kw, loc in self.SEARCH_TERMS:
+        terms = self.SEARCH_TERMS
+        for kw, loc in terms:
             try:
                 params = {
                     "keywords": kw,
@@ -106,121 +107,46 @@ class LinkedInScraper(BaseScraper):
                     "start": 0,
                 }
                 resp = self.session.get(
-                    "https://www.linkedin.com/jobs/search/",
+                    self.GUEST_API,
                     params=params,
-                    timeout=20,
-                    allow_redirects=True
+                    timeout=20
                 )
                 if resp.status_code != 200:
                     continue
-                parsed = self._parse_search_html(resp.text)
-                for j in parsed:
-                    jid = re.search(r'/jobs/view/(\d+)', j.url)
-                    if jid and jid.group(1) not in seen_ids:
-                        seen_ids.add(jid.group(1))
-                        jobs.append(j)
+                soup = BeautifulSoup(resp.text, "html.parser")
+                for card in soup.select("li"):
+                    link = card.select_one("a.base-card__full-link")
+                    if not link:
+                        continue
+                    href = link.get("href", "")
+                    jid = re.search(r'/jobs/view/(\d+)', href)
+                    if not jid or jid.group(1) in seen_ids:
+                        continue
+                    seen_ids.add(jid.group(1))
+                    title_el = card.select_one("h3.base-search-card__title")
+                    company_el = card.select_one("h4.base-search-card__subtitle")
+                    location_el = card.select_one(".job-search-card__location")
+                    time_el = card.select_one("time.job-search-card__listdate")
+                    title = title_el.get_text(strip=True) if title_el else ""
+                    company = company_el.get_text(strip=True) if company_el else ""
+                    location = location_el.get_text(strip=True) if location_el else ""
+                    if not title:
+                        continue
+                    if not href.startswith("http"):
+                        href = f"https://www.linkedin.com{href}"
+                    jobs.append(JobPost(
+                        title=title, company=company, location=location,
+                        description="", url=href, source=self.name,
+                        is_remote="remote" in location.lower(),
+                        apply_url=href, apply_button_active=False
+                    ))
                 if len(jobs) >= 100:
                     break
             except Exception:
                 continue
         return jobs
 
-    def _scrape_guest(self, keywords: List[str]) -> List[JobPost]:
-        jobs = []
-        seen_ids = set()
-        for kw in keywords[:5]:
-            try:
-                params = {
-                    "keywords": kw,
-                    "location": "Latin America",
-                    "f_WT": "2",
-                    "f_TPR": "r86400",
-                    "start": 0,
-                }
-                resp = self.session.get(
-                    "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search",
-                    params=params,
-                    timeout=20
-                )
-                if resp.status_code != 200:
-                    continue
-                for j in self._parse_guest_html(resp.text):
-                    jid = re.search(r'/jobs/view/(\d+)', j.url)
-                    if jid and jid.group(1) not in seen_ids:
-                        seen_ids.add(jid.group(1))
-                        jobs.append(j)
-            except Exception:
-                continue
-        return jobs
 
-    def _parse_search_html(self, html: str, keyword: str) -> List[JobPost]:
-        soup = BeautifulSoup(html, "html.parser")
-        jobs = []
-        for card in soup.select("li.jobs-search-results__list-item, div.job-card-container, li[data-occ-billboard]"):
-            link = card.select_one("a[href*='/jobs/view/']")
-            if not link:
-                continue
-            href = link.get("href", "").split("?")[0]
-            title_el = card.select_one("a[href*='/jobs/view/'] span, .job-card-list__title, h3")
-            company_el = card.select_one(".job-card-container__company-name, .artdeco-entity-lockup__subtitle, span[data-anonymize=company-name]")
-            location_el = card.select_one(".job-card-container__metadata-wrapper, .job-search-card__location, li[class*='location']")
-            time_el = card.select_one("time, .job-card-container__listed-state, .job-search-card__listdate")
-            title = title_el.get_text(strip=True) if title_el else ""
-            company = company_el.get_text(strip=True) if company_el else ""
-            location = location_el.get_text(strip=True) if location_el else ""
-            posted = None
-            if time_el:
-                dt = time_el.get("datetime") or time_el.get_text(strip=True)
-                if dt:
-                    try:
-                        parsed = datetime.fromisoformat(dt.replace("Z", "+00:00"))
-                        if parsed.tzinfo is None:
-                            parsed = parsed.replace(tzinfo=timezone.utc)
-                        posted = parsed
-                    except (ValueError, TypeError):
-                        posted = None
-            if title:
-                if not href.startswith("http"):
-                    href = f"https://www.linkedin.com{href}"
-                jobs.append(JobPost(
-                    title=title, company=company, location=location,
-                    description="", url=href, source=self.name,
-                    posted_date=posted, is_remote="remote" in location.lower(),
-                    apply_url=href, apply_button_active=False
-                ))
-        return jobs
-
-    def _parse_guest_html(self, html: str) -> List[JobPost]:
-        soup = BeautifulSoup(html, "html.parser")
-        jobs = []
-        for card in soup.select("li"):
-            link = card.select_one("a.base-card__full-link")
-            if not link:
-                continue
-            href = link.get("href", "")
-            title_el = card.select_one("h3.base-search-card__title")
-            company_el = card.select_one("h4.base-search-card__subtitle")
-            location_el = card.select_one(".job-search-card__location")
-            time_el = card.select_one("time.job-search-card__listdate")
-            title = title_el.get_text(strip=True) if title_el else ""
-            company = company_el.get_text(strip=True) if company_el else ""
-            location = location_el.get_text(strip=True) if location_el else ""
-            posted = None
-            if time_el and time_el.get("datetime"):
-                try:
-                    posted = datetime.fromisoformat(time_el["datetime"])
-                except ValueError:
-                    pass
-            if title:
-                if not href.startswith("http"):
-                    href = f"https://www.linkedin.com{href}"
-                jobs.append(JobPost(
-                    title=title, company=company, location=location,
-                    description="", url=href, source=self.name,
-                    posted_date=posted, is_remote="remote" in location.lower(),
-                    apply_url=href, apply_button_active=False
-                ))
-        return jobs
 
     def verify_job_active(self, url: str) -> bool:
         try:
