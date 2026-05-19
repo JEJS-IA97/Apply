@@ -1,9 +1,11 @@
 import re
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List
 from bs4 import BeautifulSoup
 from src.scrapers.base import BaseScraper, JobPost
+
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
 
 
 class WeWorkRemotelyScraper(BaseScraper):
@@ -15,59 +17,55 @@ class WeWorkRemotelyScraper(BaseScraper):
     def scrape(self, keywords: List[str]) -> List[JobPost]:
         jobs = []
         categories = [
-            "/remote-jobs/design",
-            "/remote-jobs/devops-sysadmin",
             "/remote-jobs/full-stack-programming",
             "/remote-jobs/front-end-programming",
             "/remote-jobs/qa",
         ]
         for cat in categories:
             try:
-                resp = requests.get(f"{self.BASE}{cat}", headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+                resp = requests.get(
+                    f"{self.BASE}{cat}",
+                    headers={"User-Agent": UA, "Accept": "text/html"},
+                    timeout=15
+                )
                 if resp.status_code != 200:
                     continue
                 soup = BeautifulSoup(resp.text, "html.parser")
-                for li in soup.select("li"):
-                    link = li.select_one("a")
-                    if not link or not link.get("href"):
+                for article in soup.select("article, li.job, .job-listing, tr"):
+                    link = article.select_one("a[href*='/remote-jobs/']")
+                    if not link:
                         continue
-                    href = link["href"]
-                    if not href.startswith("/remote-jobs"):
+                    href = link.get("href", "")
+                    if not href.startswith("/remote-jobs/"):
                         continue
-                    title_el = li.select_one(".title")
-                    company_el = li.select_one(".company")
-                    if not title_el or not company_el:
+                    title_el = article.select_one(".title, h2, h3, .job-title, .position")
+                    company_el = article.select_one(".company, .subtitle, .company-name, .employer")
+                    if not title_el:
                         continue
                     title = title_el.get_text(strip=True)
-                    company = company_el.get_text(strip=True)
+                    company = company_el.get_text(strip=True) if company_el else ""
                     url = f"{self.BASE}{href}"
-                    posted = self._extract_date(li)
                     jobs.append(JobPost(
                         title=title, company=company,
                         location="Remote", description="",
                         url=url, source=self.name,
-                        posted_date=posted, is_remote=True,
+                        posted_date=None, is_remote=True,
                         apply_url=url, apply_button_active=True
                     ))
-            except Exception:
+            except Exception as e:
+                print(f"  [WeWorkRemotely] category {cat}: {e}")
                 continue
         return jobs
 
-    def _extract_date(self, li) -> datetime:
-        time_el = li.select_one("time")
-        if time_el and time_el.get("datetime"):
-            try:
-                return datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
-            except ValueError:
-                pass
-        return None
-
     def verify_job_active(self, url: str) -> bool:
         try:
-            resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+            resp = requests.get(url, headers={"User-Agent": UA}, timeout=10)
             if resp.status_code != 200:
                 return False
             soup = BeautifulSoup(resp.text, "html.parser")
-            return bool(soup.select_one(".apply_button") or "apply" in resp.text.lower())
+            text = resp.text.lower()
+            if "no longer" in text or "filled" in text or "closed" in text:
+                return False
+            return bool(soup.select_one("[class*='apply']")) or "apply now" in text
         except Exception:
             return False

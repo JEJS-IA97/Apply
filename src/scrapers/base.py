@@ -36,5 +36,9 @@ class BaseScraper(ABC):
     def is_recent(self, job: JobPost, max_days: int = 7) -> bool:
         if not job.posted_date:
             return True
-        delta = datetime.now(timezone.utc) - job.posted_date
+        now = datetime.now(timezone.utc)
+        posted = job.posted_date
+        if posted.tzinfo is None:
+            posted = posted.replace(tzinfo=timezone.utc)
+        delta = now - posted
         return delta.days <= max_days

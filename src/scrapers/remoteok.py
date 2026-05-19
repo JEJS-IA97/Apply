@@ -1,7 +1,16 @@
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List
 from src.scrapers.base import BaseScraper, JobPost
+
+
+KEYWORD_WORDS = [
+    "qa", "quality", "assurance", "automation", "test", "sdet",
+    "frontend", "front-end", "front", "end", "react", "fullstack",
+    "full-stack", "developer", "engineer", "playwright", "cypress",
+    "selenium", "javascript", "typescript", "python", "node",
+    "software", "e2e", "integration"
+]
 
 
 class RemoteOKScraper(BaseScraper):
@@ -20,19 +29,20 @@ class RemoteOKScraper(BaseScraper):
             data = resp.json()
             if not isinstance(data, list) or len(data) < 2:
                 return []
-            kw_lower = [k.lower() for k in keywords]
             jobs = []
             for item in data[1:]:
                 title = (item.get("position") or "").lower()
                 desc = (item.get("description") or "").lower()
                 tags = [t.lower() for t in item.get("tags", [])]
                 combined = f"{title} {desc} {' '.join(tags)}"
-                if any(kw.lower() in combined for kw in keywords):
+                score = sum(1 for w in KEYWORD_WORDS if w in combined)
+                if score >= 2:
                     job = self._parse(item)
                     if job:
                         jobs.append(job)
             return jobs
-        except Exception:
+        except Exception as e:
+            print(f"  [RemoteOK] scrape error: {e}")
             return []
 
     def _parse(self, item: dict) -> JobPost:
@@ -42,7 +52,12 @@ class RemoteOKScraper(BaseScraper):
         desc = item.get("description", "")
         url = f"https://remoteok.com/remote-jobs/{item.get('slug', '')}"
         date_str = item.get("date")
-        posted = datetime.fromisoformat(date_str.replace("Z", "+00:00")) if date_str else None
+        posted = None
+        if date_str:
+            try:
+                posted = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            except (ValueError, AttributeError):
+                posted = None
         return JobPost(
             title=title, company=company, location=location,
             description=desc, url=url, source=self.name,
@@ -56,13 +71,3 @@ class RemoteOKScraper(BaseScraper):
             return resp.status_code == 200 and "apply" in resp.text.lower()
         except Exception:
             return False
-
-    def _deduplicate(self, jobs: List[JobPost]) -> List[JobPost]:
-        seen = set()
-        result = []
-        for j in jobs:
-            key = j.title.lower() + j.company.lower()
-            if key not in seen:
-                seen.add(key)
-                result.append(j)
-        return result

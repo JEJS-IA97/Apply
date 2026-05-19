@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List
 from src.scrapers.base import BaseScraper, JobPost
 
@@ -35,7 +35,15 @@ class RemotiveScraper(BaseScraper):
         desc = item.get("description", "")
         url = item.get("url", "")
         date_str = item.get("publication_date")
-        posted = datetime.fromisoformat(date_str.replace("Z", "+00:00")) if date_str else None
+        posted = None
+        if date_str:
+            try:
+                dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                posted = dt
+            except (ValueError, AttributeError):
+                posted = None
         return JobPost(
             title=title, company=company, location=location,
             description=desc, url=url, source=self.name,
