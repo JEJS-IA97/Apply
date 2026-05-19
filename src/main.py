@@ -123,13 +123,14 @@ def main():
             password=config.email_password,
             to_addr=config.email_to
         )
-        notifier.send_jobs_report(new_jobs)
-        print("Email sent")
+        sent = notifier.send_jobs_report(new_jobs)
+        print(f"Email {'sent' if sent else 'FAILED'}")
+        if not sent:
+            print("Check EMAIL_PASSWORD secret - must be a Gmail App Password, not your regular password")
         if db.is_connected():
             db.mark_all_sent()
     else:
-        print("\nEmail not configured - results printed above")
-        print("Set EMAIL_FROM and EMAIL_PASSWORD env vars to enable email delivery")
+        print(f"\nEmail not configured (EMAIL_FROM={'set' if config.email_from else 'missing'}, EMAIL_PASSWORD={'set' if config.email_password else 'missing'})")
 
     if db.is_connected():
         db.close()

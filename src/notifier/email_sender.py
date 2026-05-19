@@ -103,5 +103,6 @@ class EmailNotifier:
                 server.login(self.from_addr, self.password)
                 server.send_message(msg)
             return True
-        except Exception:
+        except Exception as e:
+            print(f"Email error (empty report): {e}")
             return False
