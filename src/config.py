@@ -1,12 +1,17 @@
 import os
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Optional
+
+
+def env(key: str, default: str = "") -> str:
+    val = os.getenv(key)
+    return val if val else default
 
 
 @dataclass
 class Config:
-    mongo_uri: str = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-    mongo_db: str = os.getenv("MONGO_DB", "job_bot")
+    mongo_uri: Optional[str] = env("MONGO_URI") or None
+    mongo_db: str = env("MONGO_DB", "job_bot")
     email_from: str = os.getenv("EMAIL_FROM", "")
     email_password: str = os.getenv("EMAIL_PASSWORD", "")
     email_to: str = os.getenv("EMAIL_TO", "jose.e.jimenez.1411@gmail.com")
@@ -25,7 +30,7 @@ class Config:
         "QA Automation Engineer", "QA Engineer", "Automation Engineer",
         "Frontend Developer", "Frontend Engineer", "SDET",
         "Software Development Engineer in Test", "Quality Assurance Automation",
-        "React Developer", "Playwright", "Cypress"
+        "React Developer", "Playwright", "Cypress", "QA", "QA Analyst", "Tester"
     ])
     exclude_locations: List[str] = field(default_factory=lambda: [
         "India", "Asia", "Bangalore", "Mumbai", "Hyderabad", "Chennai",
