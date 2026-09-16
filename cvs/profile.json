@@ -1,5 +1,5 @@
 {
-  "name": "José Eduardo Jiménez",
+  "name": "José Eduardo Jiménez Suárez",
   "email": "jose.e.jimenez.1411@gmail.com",
   "title": "QA Automation Engineer / Front-End Developer",
   "location": "Venezuela",
@@ -7,13 +7,46 @@
   "linkedin": "https://www.linkedin.com/in/jejs97",
   "github": "https://github.com/JEJS-IA97",
 
+  "experience": {
+    "qa_automation": {
+      "company": "Chicks Gold Inc.",
+      "period": "Feb 2025 - Apr 2026",
+      "type": "Remote",
+      "highlights": [
+        "Built and maintained E2E automation suite in Cypress (JS/TS) under POM architecture",
+        "Automated marketplace purchase/payment flows (crypto + fiat)",
+        "Automated crypto-to-fiat exchange platform validation",
+        "Used JSON for multi-step order data persistence between test runs",
+        "Executed suites locally before Azure DevOps staging pipeline",
+        "Manual testing of tip-based purchase flow for ~1 year before automation"
+      ]
+    },
+    "ui_designer": {
+      "company": "MM Publicidad C.A - Mayor JV C.A.",
+      "period": "2020 - 2025",
+      "type": "On-site",
+      "highlights": [
+        "UI design using Figma",
+        "Digital design: Illustrator, Photoshop, CorelDRAW",
+        "Basic front-end: HTML, CSS, responsive architectures"
+      ]
+    }
+  },
+
   "core_skills": {
-    "qa_automation": ["Cypress", "Playwright", "Selenium", "Postman", "Appium", "Pytest", "Cucumber", "TestNG"],
-    "frontend": ["React", "React Native", "TypeScript", "JavaScript", "HTML", "CSS", "TailwindCSS", "Vite"],
-    "backend": ["Node.js", "Python", "Express"],
-    "databases": ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
-    "devops": ["Azure", "Git", "GitHub Actions", "CI/CD", "Docker"],
-    "testing_concepts": ["E2E testing", "API testing", "REST API testing", "Unit testing", "Integration testing", "Page Object Model", "BDD", "TDD", "Smoke testing", "Regression testing", "Performance testing"]
+    "qa_automation": ["Cypress", "Playwright", "Appium", "Postman"],
+    "programming": ["JavaScript", "TypeScript", "HTML", "CSS"],
+    "frontend": ["React", "React Native", "Expo", "Redux"],
+    "backend": ["Node.js", "Express", "APIs REST"],
+    "databases": ["PostgreSQL", "MongoDB", "MySQL", "SQLite"],
+    "devops": ["Azure DevOps", "GitHub Actions", "Git", "GitHub", "CI/CD", "SonarQube", "ESLint"],
+    "design": ["Figma", "CorelDRAW", "Photoshop", "Illustrator"],
+    "testing_concepts": ["E2E testing", "API testing", "Page Object Model", "Regression testing", "Smoke testing", "Functional testing", "User Stories", "Bug Tracking"]
+  },
+
+  "skills_not_on_cv": {
+    "note": "These are NOT on any of the 4 CVs. Do NOT match against them.",
+    "excluded": ["Selenium", "Pytest", "Cucumber", "TestNG", "TailwindCSS", "Vite", "Docker", "Azure (cloud)", "BDD", "TDD", "Performance testing", "Load testing"]
   },
 
   "job_titles_fit": [
@@ -21,63 +54,56 @@
     "Software Development Engineer in Test", "SDET", "Test Automation Engineer",
     "QA Analyst", "Quality Assurance", "QA Lead", "QA Consultant",
     "Frontend Developer", "Front-End Developer", "React Developer",
-    "UI Automation Engineer", "Full Stack Developer", "Software Engineer",
-    "DevOps Engineer", "Test Engineer", "Quality Engineer",
+    "UI Developer", "UI/UX Developer",
+    "Software Engineer", "Full Stack Developer",
+    "Quality Engineer", "Test Engineer",
     "QA Junior", "QA Mid-level", "Frontend Junior", "Frontend Mid-level",
-    "Manual QA", "QA Tester", "Software Tester", "Application Developer"
+    "Software Tester", "Application Developer"
   ],
-
-  "company_fit_keywords": [
-    "startup", "remote", "distributed", "tech company", "software house",
-    "consultora", "consulting", "digital", "innovation", "fintech",
-    "healthtech", "edtech", "saas", "cloud", "agency"
-  ],
-
-  "salary_expectations": {
-    "hourly_usd_min": 10,
-    "monthly_usd_min": 800
-  },
-
-  "language_compatibility": {
-    "primary": "es",
-    "secondary": "en",
-    "also_compatible": ["pt"],
-    "description": "The user can work in Spanish (native) and English (B1-B2). Portuguese jobs are compatible but require translation of requirements. Only exclude jobs that require native-level English or specific languages other than ES/EN/PT."
-  },
 
   "exclude_titles": [
-    "Estimator", "Quantity Surveyor", "Project Manager",
-    "Scrum Master", "Business Analyst", "Data Analyst",
-    "Sales Manager", "Marketing Manager", "HR Manager",
-    "Account Manager", "Product Manager", "UX Designer",
-    "Graphic Designer", "Content Writer", "Copywriter"
+    "Estimator", "Quantity Surveyor", "Project Manager", "Scrum Master",
+    "Business Analyst", "Data Analyst", "Sales Manager", "Marketing Manager",
+    "HR Manager", "Account Manager", "Product Manager", "UX Designer",
+    "Graphic Designer", "Content Writer", "Copywriter", "Data Scientist",
+    "Machine Learning Engineer", "DevOps", "System Administrator",
+    "Network Engineer", "Security Engineer", "Cloud Architect",
+    "Technical Writer", "Support Engineer", "Customer Success Manager"
   ],
 
   "exclude_keywords_in_title": [
     "estimator", "quantity surveyor", "accounting", "bookkeeper",
     "financial analyst", "data entry", "virtual assistant",
-    "customer success", "sales development", "lead generation"
+    "customer success", "sales development", "lead generation",
+    "solutions architect", "staff engineer", "principal engineer",
+    "director", "vp", "vice president", "head of"
   ],
 
   "location_filter": {
-    "exclude_countries": ["India", "China", "Japan", "South Korea", "Singapore", "Malaysia", "Indonesia", "Vietnam", "Thailand", "Philippines", "Bangladesh", "Pakistan", "Sri Lanka", "Nepal", "Myanmar", "Cambodia", "Laos", "Taiwan"],
-    "exclude_regions": ["Asia Pacific", "APAC", "South Asia", "Southeast Asia"],
-    "prefer_regions": ["Latin America", "LATAM", "América Latina", "Remote", "Worldwide", "Global", "US", "Europe", "Africa", "Middle East"]
+    "exclude_countries": ["India", "China", "Japan", "South Korea", "Singapore", "Malaysia", "Indonesia", "Vietnam", "Thailand", "Philippines", "Bangladesh", "Pakistan", "Sri Lanka", "Nepal", "Myanmar", "Cambodia", "Laos", "Taiwan", "Hong Kong"],
+    "exclude_regions": ["Asia Pacific", "APAC", "South Asia", "Southeast Asia"]
   },
 
   "remote_type_filter": {
-    "allowed": ["Remote", "Fully Remote", "100% Remote", "Work from Home", "Distributed"],
-    "excluded": ["Hybrid", "On-site", "Onsite", "Office"]
+    "allowed": ["Remote", "Fully Remote", "100% Remote", "Work from Home", "Distributed", "Worldwide", "Global", "LATAM", "Latin America", "América Latina"],
+    "excluded": ["Hybrid", "On-site", "Onsite", "Office", "In Office", "Presencial"]
   },
+
+  "company_fit_keywords": [
+    "startup", "remote", "distributed", "tech company", "software house",
+    "consultora", "consulting", "digital", "innovation", "fintech",
+    "healthtech", "edtech", "saas", "cloud", "agency", "gaming",
+    "e-commerce", "marketplace", "crypto", "blockchain"
+  ],
 
   "platforms": {
     "linkedin_search_terms": [
       "QA Automation", "QA Engineer", "Quality Assurance", "Automation Engineer",
-      "SDET", "Test Automation", "Cypress", "Playwright", "Selenium",
+      "SDET", "Test Automation", "Cypress", "Playwright", "Appium",
       "Frontend Developer", "React Developer", "Front-End Engineer",
       "Software Developer", "Software Engineer", "Full Stack Developer",
       "QA Analyst", "QA Tester", "Software Tester", "Quality Engineer",
-      "DevOps Engineer", "UI Developer", "UI Automation"
+      "UI Developer", "UI Automation", "Manual QA", "QA Junior"
     ],
     "linkedin_locations": [
       "Latin America", "América Latina", "Mexico", "Colombia", "Argentina",
@@ -85,7 +111,7 @@
       "Guatemala", "Honduras", "Panama", "Dominican Republic", "Bolivia",
       "Paraguay", "Remote", "Worldwide"
     ],
-    "remoteok_categories": ["qa", "test", "automation", "frontend", "react", "fullstack", "devops"],
+    "remoteok_categories": ["qa", "test", "automation", "frontend", "react"],
     "reddit_subreddits": ["remotejs", "forhire", "jobbit", "remotejobs", "QualityAssurance", "SoftwareTesting", "QA_Careers"],
     "weworkremotely_categories": ["/remote-jobs/full-stack-programming", "/remote-jobs/front-end-programming", "/remote-jobs/qa"]
   }

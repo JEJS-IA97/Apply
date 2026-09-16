@@ -1,6 +1,6 @@
 import json
 import os
-from typing import List, Set, Optional
+from typing import List
 from src.scrapers.base import JobPost
 
 CV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "..", "cvs", "profile.json")
@@ -21,17 +21,12 @@ class JobMatcher:
 
     def _build_indices(self):
         cs = self.cv.get("core_skills", {})
-        all_skills = []
+        self.core_skills = []
         for group in cs.values():
             if isinstance(group, list):
-                all_skills.extend(group)
-        self.all_skills_lower = {s.lower(): s for s in all_skills}
+                self.core_skills.extend(group)
 
-        self.all_skills_words = set()
-        for s in all_skills:
-            for w in s.lower().split():
-                if len(w) > 2:
-                    self.all_skills_words.add(w)
+        self.excluded_skills = [s.lower() for s in self.cv.get("skills_not_on_cv", {}).get("excluded", [])]
 
         self.job_titles = [t.lower() for t in self.cv.get("job_titles_fit", [])]
         self.exclude_titles = [t.lower() for t in self.cv.get("exclude_titles", [])]
@@ -40,11 +35,12 @@ class JobMatcher:
         lf = self.cv.get("location_filter", {})
         self.exclude_countries = {c.lower() for c in lf.get("exclude_countries", [])}
         self.exclude_regions = {r.lower() for r in lf.get("exclude_regions", [])}
-        self.prefer_regions = {r.lower() for r in lf.get("prefer_regions", [])}
 
         rf = self.cv.get("remote_type_filter", {})
         self.allowed_remote = {r.lower() for r in rf.get("allowed", [])}
         self.excluded_remote = {r.lower() for r in rf.get("excluded", [])}
+
+        self.company_fit = [k.lower() for k in self.cv.get("company_fit_keywords", [])]
 
     def filter_jobs(self, jobs: List[JobPost]) -> List[JobPost]:
         filtered = []
@@ -143,15 +139,23 @@ class JobMatcher:
         desc = job.description.lower()
         combined = f"{title} {desc}"
 
+        # Check for excluded skills first
+        for es in self.excluded_skills:
+            if es in combined:
+                return 0
+
         score = 0
 
+        # Title match (0-40)
         title_match = self._score_title_match(title)
         score += title_match
 
+        # Skill match (0-40)
         skill_match = self._score_skill_match(combined)
         score += skill_match
 
-        if self.cv.get("company_fit_keywords"):
+        # Company fit (0-20)
+        if self.company_fit:
             company_match = self._score_company_fit(combined)
             score += company_match
 
@@ -161,16 +165,16 @@ class JobMatcher:
         for jt in self.job_titles:
             if jt in title:
                 return 40
+
         partial_matches = [
-            (["qa", "quality", "assurance"], 20),
-            (["automation", "automatiz"], 15),
-            (["test", "testing", "tester"], 15),
-            (["frontend", "front-end", "front end", "react"], 20),
-            (["developer", "engineer", "desarrollador", "ingeniero"], 10),
-            (["software", "developer", "engineer"], 10),
-            (["devops"], 15),
-            (["sdet"], 30),
-            (["full stack", "fullstack"], 10),
+            (["sdet"], 35),
+            (["qa", "quality", "assurance", "test"], 25),
+            (["automation", "automatiz"], 25),
+            (["frontend", "front-end", "front end", "react"], 25),
+            (["developer", "engineer", "desarrollador", "ingeniero"], 15),
+            (["software"], 10),
+            (["devops"], 20),
+            (["full stack", "fullstack"], 15),
         ]
         for words, pts in partial_matches:
             if any(w in title for w in words):
@@ -179,16 +183,12 @@ class JobMatcher:
 
     def _score_skill_match(self, combined_text: str) -> float:
         matched = 0
-        for skill_lower, skill_original in self.all_skills_lower.items():
-            if skill_lower in combined_text:
+        total = max(len(self.core_skills), 1)
+        for skill in self.core_skills:
+            if skill.lower() in combined_text:
                 matched += 1
-        total = max(len(self.all_skills_lower), 1)
-        ratio = matched / total
-        return min(ratio * 40, 40)
+        return min((matched / total) * 40, 40)
 
-    def _score_company_fit(self, combined_text: str) -> float:
-        company_kw = self.cv.get("company_fit_keywords", [])
-        if not company_kw:
-            return 0
-        matched = sum(1 for kw in company_kw if kw in combined_text)
+    def _score_company_fit(self, combined_text: float) -> float:
+        matched = sum(1 for kw in self.company_fit if kw in combined_text)
         return min(matched * 3, 20)
