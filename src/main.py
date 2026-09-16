@@ -5,6 +5,8 @@ from src.scrapers.base import JobPost
 from src.scrapers.remoteok import RemoteOKScraper
 from src.scrapers.weworkremotely import WeWorkRemotelyScraper
 from src.scrapers.remotive import RemotiveScraper
+from src.scrapers.arbeitnow import ArbeitnowScraper
+from src.scrapers.himalayas import HimalayasScraper
 from src.scrapers.linkedin import LinkedInScraper
 from src.scrapers.indeed import IndeedScraper
 from src.scrapers.reddit import RedditScraper
@@ -20,6 +22,8 @@ def get_scrapers():
         RemoteOKScraper(),
         RemotiveScraper(),
         WeWorkRemotelyScraper(),
+        ArbeitnowScraper(),
+        HimalayasScraper(),
         IndeedScraper(),
         GetOnBoardScraper(),
         RedditScraper(
