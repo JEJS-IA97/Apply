@@ -1,5 +1,25 @@
+import json
+import os
 from dataclasses import dataclass, field
-from typing import List
+
+CV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "cvs", "profile.json")
+
+
+def load_cv() -> dict:
+    """Fuente versionada y aprobada del perfil (cvs/profile.json)."""
+    try:
+        with open(CV_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def cv_skills() -> list[str]:
+    skills = []
+    for group in load_cv().get("core_skills", {}).values():
+        if isinstance(group, list):
+            skills.extend(group)
+    return skills
 
 
 @dataclass
@@ -15,7 +35,7 @@ class UserProfile:
     telegram: str = "https://t.me/JEJS97"
     discord: str = "jejs8519"
 
-    skills: List[str] = field(default_factory=lambda: [
+    skills: list[str] = field(default_factory=lambda: [
         "Cypress", "Playwright", "Selenium", "Postman", "Appium",
         "Pytest", "Cucumber", "React", "React Native", "JavaScript",
         "TypeScript", "Python", "Node.js", "HTML", "CSS", "TailwindCSS",
@@ -42,3 +62,7 @@ class UserProfile:
 
 
 profile = UserProfile()
+
+_profile_cv_skills = cv_skills()
+if _profile_cv_skills:
+    profile.skills = _profile_cv_skills

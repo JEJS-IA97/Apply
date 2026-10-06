@@ -1,10 +1,12 @@
 import re
-import requests
-from datetime import datetime, timezone
+from datetime import timezone
 from email.utils import parsedate_to_datetime
-from typing import List, Optional
+from typing import ClassVar
 from xml.etree import ElementTree
+
+import requests
 from bs4 import BeautifulSoup
+
 from src.scrapers.base import BaseScraper, JobPost
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
@@ -21,25 +23,27 @@ class WeWorkRemotelyScraper(BaseScraper):
     """
 
     BASE = "https://weworkremotely.com"
-    FEEDS = [
+    FEEDS: ClassVar[list] = [
         "/categories/remote-programming-jobs.rss",
         "/categories/remote-devops-sysadmin-jobs.rss",
         "/categories/all-other-remote-jobs.rss",
     ]
+    trusts_freshness = True
+    max_requests = 10
 
     def __init__(self):
         super().__init__("WeWorkRemotely")
 
-    def scrape(self, keywords: List[str]) -> List[JobPost]:
+    def scrape(self, keywords: list[str]) -> list[JobPost]:
         jobs = []
         for feed in self.FEEDS:
             try:
-                resp = requests.get(
+                resp = self.request(
                     f"{self.BASE}{feed}",
                     headers={"User-Agent": UA, "Accept": "application/rss+xml, text/xml"},
                     timeout=15
                 )
-                if resp.status_code != 200:
+                if resp is None or resp.status_code != 200:
                     continue
                 root = ElementTree.fromstring(resp.content)
                 for item in root.findall("./channel/item"):
@@ -51,7 +55,7 @@ class WeWorkRemotelyScraper(BaseScraper):
                 continue
         return self.filter_keyword_jobs(jobs, keywords)
 
-    def _parse_item(self, item) -> Optional[JobPost]:
+    def _parse_item(self, item) -> JobPost | None:
         raw_title = (item.findtext("title") or "").strip()
         if not raw_title:
             return None
@@ -107,5 +111,5 @@ class WeWorkRemotelyScraper(BaseScraper):
                 return False
             soup = BeautifulSoup(resp.text, "html.parser")
             return bool(soup.select_one("[class*='apply']")) or "apply now" in text
-        except Exception:
+        except Exception:  # noqa: BLE001
             return False

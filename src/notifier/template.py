@@ -1,7 +1,8 @@
-from datetime import datetime, timezone
-from typing import List
-from src.scrapers.base import JobPost
+import html as html_lib
+
+from src.config import config
 from src.profile import profile
+from src.scrapers.base import JobPost
 
 PRIMARY = "#0077B5"
 ACCENT = "#00A0DC"
@@ -9,12 +10,58 @@ SUCCESS = "#057642"
 LIGHT_BG = "#F3F6F8"
 CARD_BORDER = "#E1E8ED"
 
+CHECKLIST = [
+    "Requisitos: confirma que cumples tecnologias y anyos pedidos",
+    "Nivel: verifica que no exigen senior/lead/staff",
+    "Ubicacion: verifica que aceptan tu geografia o es remoto total",
+    "Idioma: espanol o ingles hasta B2",
+    "Actividad: abre el enlace y confirma que la oferta sigue publicada",
+]
 
-def generar_html(jobs: List[JobPost], fecha: str) -> str:
+
+def _assist_block(job: JobPost) -> str:
+    apply_url = job.apply_url or job.url
+    letter = (job.cover_letter or "").strip()
+    letter_html = (
+        html_lib.escape(letter).replace("\n", "<br>")
+        if letter else "<em>Sin carta adjunta</em>"
+    )
+    items = "".join(
+        f'<li style="margin: 3px 0;">{html_lib.escape(item)}</li>'
+        for item in CHECKLIST
+    )
+    return f"""
+            <tr>
+                <td style="padding-top: 12px; margin-top: 10px; border-top: 1px dashed {CARD_BORDER};">
+                    <div style="font-size: 11px; font-weight: 700; color: {PRIMARY}; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Postulacion asistida</div>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 12px; color: #555;">
+                        <tr>
+                            <td style="padding: 2px 8px 2px 0; white-space: nowrap; font-weight: 600;">URL de postulacion:</td>
+                            <td><a href="{apply_url}" style="color: {ACCENT}; word-break: break-all;">{apply_url}</a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 2px 8px 2px 0; white-space: nowrap; font-weight: 600;">Perfil a usar:</td>
+                            <td>{profile.name} &bull; {profile.email} &bull; {profile.location} &bull; Ingles {profile.english_level}</td>
+                        </tr>
+                    </table>
+                    <div style="font-size: 12px; font-weight: 600; color: #444; margin: 8px 0 2px 0;">Checklist antes de enviar:</div>
+                    <ul style="margin: 0 0 8px 0; padding-left: 18px; font-size: 12px; color: #666;">
+                        {items}
+                    </ul>
+                    <div style="font-size: 12px; font-weight: 600; color: #444; margin: 4px 0 2px 0;">Carta de presentacion:</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5; background: {LIGHT_BG}; border: 1px solid {CARD_BORDER}; border-radius: 6px; padding: 8px 10px;">{letter_html}</div>
+                </td>
+            </tr>
+        """
+
+
+def generar_html(jobs: list[JobPost], fecha: str) -> str:
     if not jobs:
         return _html_vacio(fecha)
+    mode = config.apply_mode
     cards = ""
     for j in jobs:
+        assist_block = _assist_block(j) if mode == "assist" else ""
         score = j.match_score
         score_color = SUCCESS if score >= 60 else "#E7A33E" if score >= 40 else "#CC4444"
         score_label = f"{int(score)}%"
@@ -22,7 +69,7 @@ def generar_html(jobs: List[JobPost], fecha: str) -> str:
         if j.posted_date:
             try:
                 posted = j.posted_date.strftime("%d %b %Y")
-            except Exception:
+            except Exception:  # noqa: BLE001
                 posted = ""
         desc_short = j.description or ""
         if len(desc_short) > 250:
@@ -62,6 +109,7 @@ def generar_html(jobs: List[JobPost], fecha: str) -> str:
                                     <td style="font-size: 12px; color: #777; line-height: 1.5;">{desc_short}</td>
                                 </tr>
                             </table>
+                            {assist_block}
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 12px;">
                                 <tr>
                                     <td>
@@ -76,6 +124,7 @@ def generar_html(jobs: List[JobPost], fecha: str) -> str:
         </tr>
         """
 
+    mode_line = " &bull; Postulacion asistida (revisa antes de enviar)" if mode == "assist" else ""
     return f"""<!DOCTYPE html>
 <html>
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -84,7 +133,7 @@ def generar_html(jobs: List[JobPost], fecha: str) -> str:
         <tr>
             <td style="background: linear-gradient(135deg, {PRIMARY} 0%, {ACCENT} 100%); padding: 24px 20px; text-align: center;">
                 <h1 style="color: white; margin: 0; font-size: 22px; font-weight: 700;">Job Bot Report</h1>
-                <p style="color: rgba(255,255,255,0.85); margin: 6px 0 0 0; font-size: 13px;">{profile.name} &bull; {fecha}</p>
+                <p style="color: rgba(255,255,255,0.85); margin: 6px 0 0 0; font-size: 13px;">{profile.name} &bull; {fecha}{mode_line}</p>
             </td>
         </tr>
         <tr>
@@ -144,15 +193,27 @@ def _html_vacio(fecha: str) -> str:
 </html>"""
 
 
-def generar_texto(jobs: List[JobPost], fecha: str) -> str:
+def generar_texto(jobs: list[JobPost], fecha: str) -> str:
     if not jobs:
         return f"Job Bot Report - {fecha}\n\nNo se encontraron vacantes nuevas hoy."
+    mode = config.apply_mode
     lines = [f"Job Bot Report - {fecha}", f"{len(jobs)} vacantes nuevas encontradas", ""]
     for i, j in enumerate(jobs, 1):
         lines.extend([
             f"{i}. {j.title} ({j.match_score}%)",
             f"   {j.company} | {j.source} | {j.location}",
             f"   {j.url}",
-            ""
         ])
+        if mode == "assist":
+            apply_url = j.apply_url or j.url
+            lines.append("   Postulacion asistida (no enviada):")
+            lines.append(f"   - URL: {apply_url}")
+            lines.append(f"   - Perfil: {profile.name} | {profile.email} | {profile.location} | Ingles {profile.english_level}")
+            for item in CHECKLIST:
+                lines.append(f"   - [ ] {item}")
+            if j.cover_letter:
+                lines.append("   Carta:")
+                for letter_line in j.cover_letter.strip().splitlines():
+                    lines.append(f"   {letter_line}")
+        lines.append("")
     return "\n".join(lines)

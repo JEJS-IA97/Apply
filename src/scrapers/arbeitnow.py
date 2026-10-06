@@ -1,6 +1,7 @@
-import requests
 from datetime import datetime, timezone
-from typing import List, Optional
+
+import requests
+
 from src.scrapers.base import BaseScraper, JobPost
 
 
@@ -15,7 +16,7 @@ class ArbeitnowScraper(BaseScraper):
     def __init__(self):
         super().__init__("Arbeitnow")
 
-    def scrape(self, keywords: List[str]) -> List[JobPost]:
+    def scrape(self, keywords: list[str]) -> list[JobPost]:
         jobs = []
         try:
             page = 1
@@ -34,11 +35,11 @@ class ArbeitnowScraper(BaseScraper):
                 if not data.get("links", {}).get("next"):
                     break
                 page += 1
-        except Exception:
+        except Exception:  # noqa: BLE001, S110
             pass
         return self.filter_keyword_jobs(jobs, keywords)
 
-    def _parse(self, item: dict) -> Optional[JobPost]:
+    def _parse(self, item: dict) -> JobPost | None:
         title = item.get("title", "")
         company = item.get("company_name", "")
         location = item.get("location", "") or ("Remote" if item.get("remote") else "")
@@ -63,5 +64,5 @@ class ArbeitnowScraper(BaseScraper):
         try:
             resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
             return resp.status_code == 200
-        except Exception:
+        except Exception:  # noqa: BLE001
             return False

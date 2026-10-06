@@ -1,0 +1,23 @@
+[
+  {
+    "id": "111",
+    "created_at": "2026-10-05T12:00:00.000Z",
+    "url": "https://mastodon.social/@acme/111",
+    "content": "<p>We're hiring a QA Automation Engineer to build Playwright test suites. Fully remote across Latin America. DM us or apply on our site.</p>",
+    "account": {"display_name": "Acme HR"}
+  },
+  {
+    "id": "112",
+    "created_at": "2026-10-05T13:00:00.000Z",
+    "url": "https://mastodon.social/@bob/112",
+    "content": "<p>Buenos dias a todos</p>",
+    "account": {"display_name": "Bob"}
+  },
+  {
+    "id": "113",
+    "created_at": "2026-10-05T14:00:00.000Z",
+    "url": "https://mastodon.social/@cook/113",
+    "content": "<p>Publicando mi nuevo articulo sobre cocina mediterranea con recetas faciles para todo el mundo durante el fin de semana.</p>",
+    "account": {"display_name": "Cocina"}
+  }
+]

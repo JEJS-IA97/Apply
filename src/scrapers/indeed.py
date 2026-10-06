@@ -1,9 +1,9 @@
-import requests
 import re
 from datetime import datetime, timedelta, timezone
-from typing import List, Optional
-from urllib.parse import quote
+
+import requests
 from bs4 import BeautifulSoup
+
 from src.scrapers.base import BaseScraper, JobPost
 
 
@@ -13,7 +13,7 @@ class IndeedScraper(BaseScraper):
     def __init__(self):
         super().__init__("Indeed")
 
-    def scrape(self, keywords: List[str]) -> List[JobPost]:
+    def scrape(self, keywords: list[str]) -> list[JobPost]:
         jobs = []
         for kw in self.unique_keywords(keywords):
             try:
@@ -37,11 +37,11 @@ class IndeedScraper(BaseScraper):
                     job = self._parse_card(card)
                     if job:
                         jobs.append(job)
-            except Exception:
+            except Exception:  # noqa: BLE001, S112
                 continue
         return self.filter_keyword_jobs(jobs, keywords)
 
-    def _parse_card(self, card) -> Optional[JobPost]:
+    def _parse_card(self, card) -> JobPost | None:
         title_el = card.select_one("[id*='jobTitle'], h2 a, .jobTitle")
         if not title_el:
             return None
@@ -82,5 +82,5 @@ class IndeedScraper(BaseScraper):
             if "no longer accepting" in text or "position filled" in text:
                 return False
             return "apply" in text or "apply now" in text
-        except Exception:
+        except Exception:  # noqa: BLE001
             return False

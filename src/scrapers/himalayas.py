@@ -1,6 +1,7 @@
-import requests
 from datetime import datetime, timezone
-from typing import List, Optional
+
+import requests
+
 from src.scrapers.base import BaseScraper, JobPost
 
 
@@ -13,20 +14,22 @@ class HimalayasScraper(BaseScraper):
     API = "https://himalayas.app/jobs/api"
     PAGE_SIZE = 20
     MAX_PAGES = 5
+    trusts_freshness = True
+    max_requests = 6
 
     def __init__(self):
         super().__init__("Himalayas")
 
-    def scrape(self, keywords: List[str]) -> List[JobPost]:
+    def scrape(self, keywords: list[str]) -> list[JobPost]:
         jobs = []
         try:
             for page in range(self.MAX_PAGES):
-                resp = requests.get(
+                resp = self.request(
                     self.API,
                     params={"limit": self.PAGE_SIZE, "offset": page * self.PAGE_SIZE},
                     timeout=15
                 )
-                if resp.status_code != 200:
+                if resp is None or resp.status_code != 200:
                     break
                 data = resp.json()
                 items = data.get("jobs", [])
@@ -38,11 +41,11 @@ class HimalayasScraper(BaseScraper):
                         jobs.append(job)
                 if len(items) < self.PAGE_SIZE:
                     break
-        except Exception:
+        except Exception:  # noqa: BLE001, S110
             pass
         return self.filter_keyword_jobs(jobs, keywords)
 
-    def _parse(self, item: dict) -> Optional[JobPost]:
+    def _parse(self, item: dict) -> JobPost | None:
         title = item.get("title", "")
         company = item.get("companyName", "") or item.get("company", "")
         restrictions = item.get("locationRestrictions") or []
@@ -67,5 +70,5 @@ class HimalayasScraper(BaseScraper):
         try:
             resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
             return resp.status_code == 200
-        except Exception:
+        except Exception:  # noqa: BLE001
             return False

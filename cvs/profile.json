@@ -52,7 +52,7 @@
   "job_titles_fit": [
     "QA Automation Engineer", "QA Engineer", "Automation Engineer",
     "Software Development Engineer in Test", "SDET", "Test Automation Engineer",
-    "QA Analyst", "Quality Assurance", "QA Lead", "QA Consultant",
+    "QA Analyst", "Quality Assurance", "QA Consultant",
     "Frontend Developer", "Front-End Developer", "React Developer",
     "UI Developer", "UI/UX Developer",
     "Software Engineer", "Full Stack Developer",
@@ -62,7 +62,7 @@
   ],
 
   "exclude_titles": [
-    "Estimator", "Quantity Surveyor", "Project Manager", "Scrum Master",
+    "QA Lead", "Estimator", "Quantity Surveyor", "Project Manager", "Scrum Master",
     "Business Analyst", "Data Analyst", "Sales Manager", "Marketing Manager",
     "HR Manager", "Account Manager", "Product Manager", "UX Designer",
     "Graphic Designer", "Content Writer", "Copywriter", "Data Scientist",
@@ -76,12 +76,62 @@
     "financial analyst", "data entry", "virtual assistant",
     "customer success", "sales development", "lead generation",
     "solutions architect", "staff engineer", "principal engineer",
-    "director", "vp", "vice president", "head of"
+    "director", "vp", "vice president", "head of",
+    "data engineer", "data quality", "data analyst", "compliance", "grc",
+    "network engineer", "cloud architect", "security engineer", "systems engineer"
   ],
 
   "location_filter": {
     "exclude_countries": ["India", "China", "Japan", "South Korea", "Singapore", "Malaysia", "Indonesia", "Vietnam", "Thailand", "Philippines", "Bangladesh", "Pakistan", "Sri Lanka", "Nepal", "Myanmar", "Cambodia", "Laos", "Taiwan", "Hong Kong"],
     "exclude_regions": ["Asia Pacific", "APAC", "South Asia", "Southeast Asia"]
+  },
+
+  "level_filter": {
+    "note": "Perfil junior/mid. Excluye senior+ por titulo o por experiencia minima exigida (RF-1/RF-2 spec 001). Los rangos cuyo minimo es menor a 5 (ej. 3-5 anios) no excluyen.",
+    "excluded_title_markers": ["senior", "sr.", "sr ", "sénior", "seniority", "lead", "staff", "principal", "head of", "director", "chief", "manager", "gerente", "jefe", "líder", "architect", "evangelist"],
+    "excluded_title_patterns": ["\\b(ii|iii|iv)\\b"],
+    "allowed_title_markers": ["junior", "jr", "entry", "intern", "internship", "trainee", "mid", "mid-level", "beca", "graduate", "grad", "practicant", "aprendiz", "semi senior", "semi-senior"],
+    "min_years_excluded": 5,
+    "years_patterns": ["(\\d+)\\s*(?:-\\s*\\d+)?\\s*\\+?\\s*(?:years|años|yrs|yr)"]
+  },
+
+  "trust_filter": {
+    "note": "RF-4/RF-5 spec 001. La lista es editable: anade aqui empresas/marcas bloqueadas. Las senales aplican a titulo+descripcion+empresa.",
+    "blocked_companies": ["BairesDev", "Baires Dev"],
+    "scam_signals": [
+      "pago para aplicar", "pago por postular", "fee to apply", "pay to apply",
+      "payment required", "registration fee", "pago de inscripción", "costo de registro",
+      "inversión inicial", "initial investment", "capital inicial", "deposito requerido",
+      "required deposit", "pago por adelantado", "upfront payment",
+      "ingresos garantizados", "garantized income", "guaranteed income", "ganancia garantizada",
+      "gana $", "earn $", "ganarás $", "sin experiencia ganando",
+      "solo whatsapp", "whatsapp only", "contacto solo por whatsapp", "escribe por whatsapp",
+      "consigue empleo con ia", "empleo con inteligencia artificial", "ai will get you hired",
+      "get hired with ai", "te conseguimos empleo con ia"
+    ]
+  },
+
+  "language_filter": {
+    "note": "RF-6/RF-7 spec 001. Rechaza exigencias de ingles por encima de B2; premia ofertas en espanol o de LATAM/Espana.",
+    "rejected_english_patterns": [
+      "\\b(?:english|ingl[eé]s)\\b[^a-z0-9]{0,15}\\b(?:c1|c2|native|fluent|proficient|bilingual|advanced|avanzado)\\b",
+      "\\b(?:c1|c2|native|fluent|proficient|bilingual|advanced|avanzado)\\b[^a-z0-9]{0,15}\\b(?:english|ingl[eé]s)\\b",
+      "\\b(?:c1|c2)\\b"
+    ],
+    "spanish_bonus": 5,
+    "spanish_markers": ["español", "castellano", "spanish", "latam", "latin america", "américa latina", "america latina", "venezuela", "colombia", "méxico", "mexico", "argentina", "chile", "perú", "peru", "ecuador", "uruguay", "paraguay", "bolivia", "costa rica", "panamá", "guatemala", "honduras", "república dominicana", "hispanic", "remoto latam"]
+  },
+
+  "relevance_filter": {
+    "note": "RF-13 spec 001. Exige relevancia minima de rol: titulo del listado job_titles_fit (40 pts) o patron de las familias QA/testing o frontend; ademas un score minimo global.",
+    "min_score": 20,
+    "title_patterns": [
+      "\\bqa\\b", "\\bsdet\\b", "\\bquality assurance\\b", "\\bquality engineer\\b",
+      "\\bassurance\\b", "\\btest(?:ing|ers?)?\\b", "\\bcypress\\b", "\\bplaywright\\b",
+      "\\bappium\\b", "\\bautomatizaci[oó]n\\b", "\\bpruebas?\\b", "\\bcalidad\\b",
+      "\\bqa automation\\b", "\\btest automation\\b", "\\bmanual qa\\b",
+      "\\bfront[- ]?end\\b", "\\breact(?:\\s+native)?\\b", "\\bui developer\\b"
+    ]
   },
 
   "remote_type_filter": {
@@ -111,8 +161,12 @@
       "Guatemala", "Honduras", "Panama", "Dominican Republic", "Bolivia",
       "Paraguay", "Remote", "Worldwide"
     ],
-    "remoteok_categories": ["qa", "test", "automation", "frontend", "react"],
-    "reddit_subreddits": ["remotejs", "forhire", "jobbit", "remotejobs", "QualityAssurance", "SoftwareTesting", "QA_Careers"],
-    "weworkremotely_categories": ["/remote-jobs/full-stack-programming", "/remote-jobs/front-end-programming", "/remote-jobs/qa"]
+    "reddit_subreddits": ["remotejs", "forhire", "jobbit", "remotejobs", "QualityAssurance", "SoftwareTesting", "QA_Careers", "webdev", "reactjs"],
+    "reddit_search_terms": ["flair:hiring", "\"hiring\" qa", "\"hiring\" automation", "\"we're hiring\"", "estamos contratando"],
+    "weworkremotely_categories": ["remote-programming-jobs", "remote-devops-sysadmin-jobs", "all-other-remote-jobs"],
+    "mastodon_instances": ["mastodon.social", "mastodon.online", "mstdn.social", "fosstodon.org", "techhub.social"],
+    "post_search_terms": ["hiring", "we're hiring", "we are hiring", "estamos buscando", "estamos contratando", "estamos reclutando", "vacante", "job opening", "referral", "we need a"],
+    "post_hashtags": ["#hiring", "#remoto", "#trabajoremoto", "#vacante", "#qa", "#qaautomation", "#frontend"],
+    "web3career_search_url": "https://web3.career/remote-jobs"
   }
 }

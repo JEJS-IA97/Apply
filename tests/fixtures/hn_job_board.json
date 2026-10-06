@@ -1,0 +1,23 @@
+{
+  "hits": [
+    {
+      "objectID": "42000001",
+      "title": "Example Corp is hiring (YC S24)",
+      "url": "https://example.com/careers",
+      "created_at": "2026-10-04T14:30:00.000Z",
+      "created_at_i": 1791153000,
+      "tags": ["job", "story"],
+      "num_comments": 3
+    },
+    {
+      "objectID": "42000002",
+      "title": "Who is hiring? October 2026",
+      "url": null,
+      "created_at": "2026-10-01T08:00:00.000Z",
+      "created_at_i": 1790860800,
+      "tags": ["story"]
+    }
+  ],
+  "nbHits": 2,
+  "page": 0
+}

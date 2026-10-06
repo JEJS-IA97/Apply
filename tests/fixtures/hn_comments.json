@@ -1,0 +1,29 @@
+{
+  "hits": [
+    {
+      "objectID": "42100101",
+      "story_id": "42100000",
+      "comment_text": "AcmeQA | QA Automation Engineer (Mid) | Remote (Americas) | Full-time<br>We build Playwright and Cypress frameworks end to end, 3+ years of experience, English B2 required. Apply on our site.",
+      "created_at": "2026-10-02T09:00:00.000Z",
+      "created_at_i": 1790966800,
+      "tags": ["comment", "author"]
+    },
+    {
+      "objectID": "42100102",
+      "story_id": "42100000",
+      "comment_text": "Incorrect.",
+      "created_at": "2026-10-02T09:05:00.000Z",
+      "created_at_i": 1790967100,
+      "tags": ["comment"]
+    },
+    {
+      "objectID": "42100103",
+      "story_id": "42100000",
+      "comment_text": "We are a distributed team building developer tools. We need a Frontend Developer React remote, comfortable with TypeScript and testing with Cypress. Ping us by email with your GitHub profile and preferred start date.",
+      "created_at": "2026-10-02T10:00:00.000Z",
+      "created_at_i": 1790970000,
+      "tags": ["comment"]
+    }
+  ],
+  "nbHits": 3
+}

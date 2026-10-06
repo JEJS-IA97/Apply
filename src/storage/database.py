@@ -1,10 +1,10 @@
 from datetime import datetime, timezone
-from typing import List, Optional
+
 from pymongo import MongoClient, errors
 
 
 class JobDatabase:
-    def __init__(self, uri: Optional[str], db_name: str):
+    def __init__(self, uri: str | None, db_name: str):
         self._available = uri is not None and "user:pass" not in uri
         if self._available:
             self.client = MongoClient(uri, serverSelectionTimeoutMS=5000)
@@ -48,7 +48,7 @@ class JobDatabase:
         except errors.DuplicateKeyError:
             return False
 
-    def get_unsent_jobs(self) -> List[dict]:
+    def get_unsent_jobs(self) -> list[dict]:
         if not hasattr(self, "jobs"):
             return []
         return list(self.jobs.find({"sent": False}).sort("created_at", -1))

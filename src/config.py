@@ -1,7 +1,6 @@
 import os
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Optional
 
 
 def load_env_file() -> None:
@@ -29,9 +28,20 @@ def env(key: str, default: str = "") -> str:
     return val if val else default
 
 
+def apply_mode_from(value: str) -> str:
+    """RF-1 (spec 003): valores fuera de off|assist|auto caen a assist."""
+    normalized = (value or "").strip().lower()
+    return normalized if normalized in ("off", "assist", "auto") else "assist"
+
+
+def apply_paused_from(value: str) -> bool:
+    """RF-9 (spec 003): pausa de envíos por flag/env."""
+    return (value or "").strip().lower() in ("1", "true", "yes", "on")
+
+
 @dataclass
 class Config:
-    mongo_uri: Optional[str] = env("MONGO_URI") or None
+    mongo_uri: str | None = env("MONGO_URI") or None
     mongo_db: str = env("MONGO_DB", "job_bot")
     email_from: str = env("EMAIL_FROM")
     email_password: str = env("EMAIL_PASSWORD")
@@ -47,7 +57,7 @@ class Config:
     reddit_client_id: str = env("REDDIT_CLIENT_ID")
     reddit_client_secret: str = env("REDDIT_CLIENT_SECRET")
     reddit_user_agent: str = env("REDDIT_USER_AGENT", "job-bot/1.0")
-    search_keywords: List[str] = field(default_factory=lambda: [
+    search_keywords: list[str] = field(default_factory=lambda: [
         "QA Automation Engineer", "QA Engineer", "Automation Engineer",
         "Frontend Developer", "Frontend Engineer", "SDET",
         "Software Development Engineer in Test", "Quality Assurance Automation",
@@ -55,17 +65,11 @@ class Config:
         "QA Analyst", "Quality Assurance", "Manual QA",
         "QA Tester", "Automation Tester"
     ])
-    exclude_locations: List[str] = field(default_factory=lambda: [
-        "India", "Asia", "Bangalore", "Mumbai", "Hyderabad", "Chennai",
-        "Pune", "Delhi", "Kolkata", "Ahmedabad", "Noida", "Gurgaon",
-        "Philippines", "Pakistan", "Bangladesh", "Sri Lanka", "Vietnam",
-        "Indonesia", "Thailand", "Malaysia", "China", "Singapore"
-    ])
-    exclude_terms: List[str] = field(default_factory=lambda: [
-        "hybrid", "on-site", "onsite", "senior staff", "principal"
-    ])
     max_days_old: int = int(os.getenv("MAX_DAYS_OLD", "7"))
     output_format: str = os.getenv("OUTPUT_FORMAT", "email")
+    apply_mode: str = field(default_factory=lambda: apply_mode_from(env("APPLY_MODE", "assist")))
+    apply_daily_limit: int = int(env("APPLY_DAILY_LIMIT", "5"))
+    apply_paused: bool = field(default_factory=lambda: apply_paused_from(env("APPLY_PAUSED", "0")))
 
 
 config = Config()

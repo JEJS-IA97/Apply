@@ -3,3 +3,13 @@ __pycache__/
 *.pdf
 .env
 job-bot/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Runtime state (RF-8 ledger + family maintenance status)
+storage/applications.json
+storage/family_status.json
+storage/evidence/

@@ -1,7 +1,8 @@
+from datetime import datetime, timezone
+
 import requests
-from datetime import datetime, timedelta, timezone
-from typing import List, Optional
 from bs4 import BeautifulSoup
+
 from src.scrapers.base import BaseScraper, JobPost
 
 
@@ -11,7 +12,7 @@ class GetOnBoardScraper(BaseScraper):
     def __init__(self):
         super().__init__("GetOnBoard")
 
-    def scrape(self, keywords: List[str]) -> List[JobPost]:
+    def scrape(self, keywords: list[str]) -> list[JobPost]:
         jobs = []
         for kw in self.unique_keywords(keywords):
             try:
@@ -28,11 +29,11 @@ class GetOnBoardScraper(BaseScraper):
                     job = self._parse_card(card)
                     if job:
                         jobs.append(job)
-            except Exception:
+            except Exception:  # noqa: BLE001, S112
                 continue
         return self.filter_keyword_jobs(jobs, keywords)
 
-    def _parse_card(self, card) -> Optional[JobPost]:
+    def _parse_card(self, card) -> JobPost | None:
         link_el = card.select_one("a[href*='/jobs/'], a[href*='/empleos/']")
         if not link_el:
             return None
@@ -64,5 +65,5 @@ class GetOnBoardScraper(BaseScraper):
             if "not available" in text or "closed" in text:
                 return False
             return bool(soup.select_one("[class*='apply'], [class*='postular'], a[href*='apply']")) or "apply" in text
-        except Exception:
+        except Exception:  # noqa: BLE001
             return False

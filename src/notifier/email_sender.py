@@ -1,11 +1,11 @@
 import smtplib
+from datetime import datetime, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from datetime import datetime, timezone
-from typing import List
-from src.scrapers.base import JobPost
-from src.profile import profile
+
 from src.notifier.template import generar_html, generar_texto
+from src.profile import profile
+from src.scrapers.base import JobPost
 
 
 class EmailNotifier:
@@ -17,7 +17,7 @@ class EmailNotifier:
         self.smtp_server = smtp_server
         self.smtp_port = smtp_port
 
-    def send_jobs_report(self, jobs: List[JobPost]) -> bool:
+    def send_jobs_report(self, jobs: list[JobPost]) -> bool:
         fecha = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
         html = generar_html(jobs, fecha)
         text = generar_texto(jobs, fecha)
@@ -41,6 +41,6 @@ class EmailNotifier:
                 server.login(self.from_addr, self.password)
                 server.send_message(msg)
             return True
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"  Email error: {e}")
             return False

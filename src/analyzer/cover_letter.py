@@ -1,6 +1,5 @@
-from typing import Optional
+from src.profile import cv_skills, profile
 from src.scrapers.base import JobPost
-from src.profile import profile
 
 
 class CoverLetterGenerator:
@@ -25,7 +24,7 @@ class CoverLetterGenerator:
             f"My expertise includes building end-to-end test automation frameworks using "
             f"Cypress and Playwright, performing API testing with Postman, and developing "
             f"responsive React applications with TypeScript. I have experience integrating "
-            f"CI/CD pipelines with GitHub Actions and Azure, ensuring that every release "
+            f"CI/CD pipelines with GitHub Actions and Azure DevOps, ensuring that every release "
             f"is thoroughly validated before reaching production.\n\n"
             f"I am particularly drawn to this position because it aligns with my dual "
             f"passion for development and quality assurance. I believe that great software "
@@ -62,9 +61,11 @@ class CoverLetterGenerator:
                 temperature=0.7
             )
             return resp.choices[0].message.content.strip()
-        except Exception:
+        except Exception:  # noqa: BLE001
             return self._generate_template(job)
 
     def _extract_matched_skills(self, job: JobPost) -> list:
+        """RF-11 (spec 001): skills desde cvs/profile.json, nunca desde
+        listas por defecto de código."""
         text = f"{job.title.lower()} {job.description.lower()}"
-        return [s for s in profile.skills if s.lower() in text]
+        return [s for s in cv_skills() if s.lower() in text]
