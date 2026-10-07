@@ -23,7 +23,7 @@ Applied in order: trust (scams, blocked employers, employment-agency/IAM-recruit
 ## Cover letters
 
 - **Template mode** (default): fills job details into a template; skills come from `cvs/profile.json`.
-- **AI mode** (with `OPENAI_API_KEY`): GPT-generated letters.
+- **AI mode** (with `GEMINI_API_KEY`): Gemini-generated letters (falls back to the template on any error).
 
 ## Apply mode (`APPLY_MODE`)
 
@@ -62,7 +62,7 @@ The workflow runs daily at 12:00 UTC (8:00 AM Venezuela time). Set these **repos
 | `MONGO_URI` | MongoDB Atlas connection string (optional) |
 | `REDDIT_CLIENT_ID` | Reddit API client ID (optional) |
 | `REDDIT_CLIENT_SECRET` | Reddit API secret (optional) |
-| `OPENAI_API_KEY` | OpenAI key for AI cover letters (optional) |
+| `GEMINI_API_KEY` | Google Gemini key for AI cover letters (optional) |
 | `APPLY_MODE` | `assist` (default) / `off` / `auto` (sends on the ATS pilot; needs `python -m playwright install chromium`) |
 
 ### Getting a Gmail App Password

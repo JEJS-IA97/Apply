@@ -198,7 +198,9 @@ def main():
             db.close()
         return
 
-    cover_gen = CoverLetterGenerator(openai_api_key=config.openai_api_key)
+    cover_gen = CoverLetterGenerator(
+        gemini_api_key=config.gemini_api_key, model=config.gemini_model
+    )
     for job in new_jobs:
         job.cover_letter = cover_gen.generate(job)
         if db.is_connected():

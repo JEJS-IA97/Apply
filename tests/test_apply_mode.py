@@ -157,7 +157,7 @@ def test_main_sends_only_filtered_matches(monkeypatch):
 
     monkeypatch.setattr(config, "apply_mode", "auto")
     monkeypatch.setattr(config, "email_from", "")
-    monkeypatch.setattr(config, "openai_api_key", "")
+    monkeypatch.setattr(config, "gemini_api_key", "")
     monkeypatch.setattr(main_mod, "get_scrapers", list)
     monkeypatch.setattr(main_mod, "scrape_all", lambda scrapers, kws: [senior, good])
     monkeypatch.setattr(main_mod, "JobDatabase", lambda *a, **k: FakeDB())
