@@ -27,7 +27,7 @@ def test_every_non_enabled_source_has_reason():
 def test_unreachable_sources_disabled_with_reason():
     """RF-10/RF-13 (spec 002): fuentes inaccesibles registradas con causa."""
     specs = _specs()
-    for name in ("getonboard", "indeed", "bluesky", "tecnoempleo", "dice", "flexjobs"):
+    for name in ("indeed", "bluesky", "tecnoempleo", "dice", "flexjobs"):
         spec = specs[name]
         assert spec.status in ("disabled", "pending"), f"{name}: {spec.status}"
         assert spec.reason.strip()
@@ -58,3 +58,10 @@ def test_enabled_sources_build_without_network():
     assert "BuiltIn" in names
     for scraper in scrapers:
         assert scraper.max_requests > 0
+
+
+def test_torre_and_getonboard_enabled():
+    """RF-7 (spec 004): Torre y Get on Board habilitadas vía API pública."""
+    specs = _specs()
+    assert specs["torre"].status == "enabled"
+    assert specs["getonboard"].status == "enabled"

@@ -1,0 +1,1977 @@
+{
+ "updated": "2026-10-19T14:28+00:00",
+ "jobs": [
+  {
+   "id": "712756cbb055",
+   "title": "Automation QA Engineer (QVAC) (100% remote)",
+   "company": "Tether.io",
+   "location": "Argentina, 100% remoto",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 91,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4480196398/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Es el mayor puntaje técnico, en una empresa crypto como Chicks Gold. Piden 4+ años e inglés excelente.",
+   "note": "Primeros 25",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "100% remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Crypto",
+     "tone": "ok"
+    },
+    {
+     "label": "4+ años",
+     "tone": "warn"
+    },
+    {
+     "label": "Inglés alto",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "f7a60e5a6442",
+   "title": "QA UX/UI Specialist",
+   "company": "DevUps",
+   "location": "Remoto desde cualquier país",
+   "source": "Torre VE",
+   "family": "qa",
+   "score": 88,
+   "salary": "",
+   "url": "https://torre.ai/post/kWRgM0ew-devups-qa-uxui-qa-uxui-specialist",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Nuevo (19-oct). Encaja de lleno con tu perfil: QA visual comparando el diseño de Figma con la interfaz construida, más HTML/CSS y accesibilidad. Pide 2+ años, inglés conversacional y español fluido.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "QA + diseño",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés conversacional",
+     "tone": "ok"
+    },
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "d03744b15758",
+   "title": "Quality Assurance Automation Engineer",
+   "company": "Forte Group",
+   "location": "México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 85,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4477812949/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Empresa remote-first enfocada en QA, nivel intermedio. Su stack incluye .NET/Azure.",
+   "note": "154 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remote-first",
+     "tone": "ok"
+    },
+    {
+     "label": "Intermedio",
+     "tone": "ok"
+    },
+    {
+     "label": ".NET",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "28fec4c6740f",
+   "title": "QA Manual / Functional Analyst",
+   "company": "DevUps",
+   "location": "Remoto desde cualquier país",
+   "source": "Torre VE",
+   "family": "qa",
+   "score": 80,
+   "salary": "",
+   "url": "https://torre.ai/post/PW9pvP4r-devups-qa-manual-functional-analyst",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Pide 2+ años de QA funcional, Postman, Jira y SQL, con inglés conversacional. Publicada en julio, pero sigue abierta.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "2+ años",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés conversacional",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "a068c2e4559a",
+   "title": "Quality Assurance Engineer",
+   "company": "Paying.co (Mojave Payment Technologies)",
+   "location": "Remoto · zonas GMT-8 a GMT0",
+   "source": "Torre VE",
+   "family": "qa",
+   "score": 80,
+   "salary": "",
+   "url": "https://torre.ai/post/NwBpJ1gr-mojave-payment-technologies-quality-assurance-engineer",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "QA de apps de pago, pensado para alguien con un par de años de QA: tu experiencia en pagos cripto y fiat encaja. Paga $13–16/h, con inglés conversacional.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Pagos",
+     "tone": "ok"
+    },
+    {
+     "label": "$13–16/h",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés conversacional",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "61247e930fd1",
+   "title": "AI-assisted QA Engineer: web and iPhone, Playwright + Claude Code",
+   "company": "Startup healthtech (Reino Unido)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "qa",
+   "score": 80,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022106059865925666756",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Freelance a tiempo completo, $8–15/h, con Playwright y Claude Code. Cliente con $38k gastados y 4.86 de valoración.",
+   "note": "15–20 propuestas",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Playwright",
+     "tone": "ok"
+    },
+    {
+     "label": "Full-time",
+     "tone": "ok"
+    },
+    {
+     "label": "$8–15/h",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "dd1f72587bea",
+   "title": "Mid Frontend React Engineer",
+   "company": "Encora Inc.",
+   "location": "Remoto (Bolivia · Lima · Bogotá)",
+   "source": "LinkedIn",
+   "family": "frontend",
+   "score": 80,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4477869905/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Modalidad remota y nivel mid. Piden 3+ años de frontend. La misma oferta está publicada en tres países; la de Bolivia tiene menos postulantes.",
+   "note": "25 solicitudes en Bolivia",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "3+ años",
+     "tone": "warn"
+    },
+    {
+     "label": "AWS",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "dfa51852d200",
+   "title": "Quality Engineer (Junior SDET)",
+   "company": "TrueML",
+   "location": "México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 79,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4478148643/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden 1–2 años de experiencia en testing: tu perfil exacto. Mencionan Python, que no está en tu CV.",
+   "note": "113 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Junior",
+     "tone": "ok"
+    },
+    {
+     "label": "1–2 años",
+     "tone": "ok"
+    },
+    {
+     "label": "Python",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "e7273dec0177",
+   "title": "Analista QA Automatizador",
+   "company": "Stefanini LATAM",
+   "location": "Santiago, Chile",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 79,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4478490354/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Oferta en español. No indica años ni modalidad; confírmalo antes de postular.",
+   "note": "35 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Español",
+     "tone": "ok"
+    },
+    {
+     "label": "Modalidad sin confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "5c0110a2d78d",
+   "title": "Desarrollador Frontend React: de Figma a web app pixel-perfect",
+   "company": "Startup (EE. UU.)",
+   "location": "Upwork · remoto · en español",
+   "source": "Upwork",
+   "family": "frontend",
+   "score": 78,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022109728374208138548",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Convertir diseños de Figma en React con fidelidad total al diseño, en español. Combina justo tu diseño y tu frontend.",
+   "note": "5–10 propuestas",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Español",
+     "tone": "ok"
+    },
+    {
+     "label": "Figma → React",
+     "tone": "ok"
+    },
+    {
+     "label": "Part-time",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "d85333a7b642",
+   "title": "Diseñador UX/UI",
+   "company": "DevUps",
+   "location": "Remoto desde cualquier país",
+   "source": "Torre VE",
+   "family": "design",
+   "score": 78,
+   "salary": "",
+   "url": "https://torre.ai/post/awyLjq2W-devups-diseador-uxui-uxui-designer",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Wireframes, mockups y design system en Figma. Pide 2+ años e inglés conversacional.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Figma",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés conversacional",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "96692a615306",
+   "title": "Quality Assurance Engineer",
+   "company": "Seeed",
+   "location": "Colombia",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 76,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479203424/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Puesto full-time y remoto, de nivel inicial.",
+   "note": "197 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Sin experiencia",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "3ee38d7de8b3",
+   "title": "QA Full Stack (QA Integral)",
+   "company": "Makers Solutions",
+   "location": "Remoto · GMT-7 a GMT-3",
+   "source": "Torre VE",
+   "family": "qa",
+   "score": 75,
+   "salary": "",
+   "url": "https://torre.ai/post/JWOq8A4d-makers-solutions-qa-full-stack-1",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Fintech de inversiones, todo en español. Paga 1.000–1.300 USD al mes, negociable. Cierra el 28 de octubre.",
+   "note": "Cierra 28-oct",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Solo español",
+     "tone": "ok"
+    },
+    {
+     "label": "Fintech",
+     "tone": "ok"
+    },
+    {
+     "label": "Cierra 28-oct",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "a4047c47fde0",
+   "title": "QA Automation Engineer",
+   "company": "DevUps",
+   "location": "Remoto desde cualquier país",
+   "source": "Torre VE",
+   "family": "qa",
+   "score": 75,
+   "salary": "",
+   "url": "https://torre.ai/post/8wDYEMod-devups-qa-automation-engineer",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Cypress, Playwright, CI/CD y API testing: tu stack. Pide 3+ años (tienes ~2) e inglés conversacional.",
+   "note": "—",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Cypress/Playwright",
+     "tone": "ok"
+    },
+    {
+     "label": "3+ años",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "2bec387ddcde",
+   "title": "Graphic Designer",
+   "company": "Catch Creation",
+   "location": "100% remoto",
+   "source": "WeRemoto",
+   "family": "design",
+   "score": 75,
+   "salary": "",
+   "url": "https://job-boards.greenhouse.io/catchcreationllc/jobs/4056121009",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Pide 1+ año, Photoshop, Illustrator, Figma y nociones de UI/UX para e-commerce. Tu perfil encaja con todo.",
+   "note": "Vence 9-nov",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "1+ año",
+     "tone": "ok"
+    },
+    {
+     "label": "Figma + Adobe",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "49c7db84333f",
+   "title": "Web Designer & Growth Specialist (AI-Driven)",
+   "company": "Contalink",
+   "location": "México · 100% remoto",
+   "source": "LinkedIn",
+   "family": "design",
+   "score": 75,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479753412/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "SaaS contable que factura más de 10M USD al año. Piden Figma, HTML/CSS y diseño responsive. Confirma si aceptan candidatos fuera de México.",
+   "note": "81 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "100% remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Figma + HTML/CSS",
+     "tone": "ok"
+    },
+    {
+     "label": "¿Solo México?",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "aeb22f1b9c25",
+   "title": "Diseñador gráfico",
+   "company": "Efiempresa",
+   "location": "Venezuela",
+   "source": "LinkedIn",
+   "family": "design",
+   "score": 75,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479030085/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Empresa en Venezuela. Piden Illustrator, Photoshop, Figma y Canva. No indica modalidad.",
+   "note": "139 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Venezuela",
+     "tone": "ok"
+    },
+    {
+     "label": "Modalidad sin confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "44dcfa52b583",
+   "title": "General Virtual Assistant – Data Entry",
+   "company": "Tucker's Farm",
+   "location": "Remoto desde cualquier país",
+   "source": "Torre VE",
+   "family": "admin",
+   "score": 75,
+   "salary": "",
+   "url": "https://torre.ai/post/KWN1D52r-tuckers-farm-general-virtual-assistant-data-entry",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "1.500 USD al mes: data entry, hojas de cálculo e investigación online, con inglés conversacional. Cierra el 24 de octubre.",
+   "note": "Cierra 24-oct",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "1.500 USD/mes",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés conversacional",
+     "tone": "ok"
+    },
+    {
+     "label": "Cierra 24-oct",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "e32a769d8e83",
+   "title": "Accounting Assistant (Bilingual English/Spanish) – Entry Level",
+   "company": "Accounting Group of South Florida",
+   "location": "Venezuela",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 75,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4480157911/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Nivel de entrada, publicada para Venezuela, con 400–600 USD al mes. Agendar citas y atender clientes en inglés y español.",
+   "note": "89 solicitudes",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Venezuela",
+     "tone": "ok"
+    },
+    {
+     "label": "Entry level",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés hablado",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "b6973c9ece30",
+   "title": "QA Engineer (Automation and AI tooling)",
+   "company": "Zipdev",
+   "location": "Argentina",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 72,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4480142031/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Empresa de talento remoto LATAM. Mencionan Selenium, BDD y k6, que no están en tu CV.",
+   "note": "33 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Selenium/k6",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "6aed8dc383b9",
+   "title": "Desarrollador Front-End",
+   "company": "DevUps",
+   "location": "Remoto desde cualquier país",
+   "source": "Torre VE",
+   "family": "frontend",
+   "score": 72,
+   "salary": "",
+   "url": "https://torre.ai/post/ldEoXY1W-devups-desarrollador-front-end-front-end-developer",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Pide 2+ años, React o Angular, TypeScript y Tailwind, maquetar a partir de diseños, e inglés conversacional.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "React/TS",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés conversacional",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "32c53a0714f1",
+   "title": "Manual QA + Playwright AI Automation for Travel Platform",
+   "company": "ReserveX (Canadá)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "qa",
+   "score": 72,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022109845873511146005",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "QA manual más automatización con Playwright en una plataforma SaaS de viajes. Contrato de más de 6 meses; paga poco ($5–10/h).",
+   "note": "10–15 propuestas",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Playwright",
+     "tone": "ok"
+    },
+    {
+     "label": "Postman",
+     "tone": "ok"
+    },
+    {
+     "label": "$5–10/h",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "580bb9f418ec",
+   "title": "UX/UI Designer & Graphic Designer (Figma, Adobe)",
+   "company": "Agencia (EE. UU.)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "design",
+   "score": 72,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022110708703711560970",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Apoyar a su diseñador fuera del horario de EE. UU. a $10–30/h, según demanda. Cliente con valoración de 5.0.",
+   "note": "10–15 propuestas",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Figma + Adobe",
+     "tone": "ok"
+    },
+    {
+     "label": "$10–30/h",
+     "tone": "ok"
+    },
+    {
+     "label": "Según demanda",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "445e37e55d4b",
+   "title": "Virtual Executive Administrative Coordinator I",
+   "company": "Job Duck",
+   "location": "Remoto (empleadores de EE. UU.)",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 72,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479551176/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "100% remoto, tiempo completo y largo plazo, con 1.060–1.150 USD al mes. Piden buen inglés escrito y hablado.",
+   "note": "75 solicitudes",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "100% remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "~1.100 USD/mes",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "383cf8384e52",
+   "title": "QA Automatizador",
+   "company": "Credicorp Capital",
+   "location": "Lima, Perú",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 71,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4480114211/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Basta con inglés básico o técnico. Piden 4 años como QA, al menos 1 automatizando.",
+   "note": "Primeros 25",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Inglés básico",
+     "tone": "ok"
+    },
+    {
+     "label": "4 años",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "d9d11bf7c919",
+   "title": "QA Engineer",
+   "company": "Ford México",
+   "location": "Naucalpan, México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 71,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4466616663/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden 2–3 años, encaja bien, pero exigen inglés avanzado.",
+   "note": "196 solicitudes",
+   "fit": "ingles",
+   "tags": [
+    {
+     "label": "2–3 años",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés avanzado",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "db26db0994c8",
+   "title": "Especialista QA",
+   "company": "Jacidi",
+   "location": "Valencia, Venezuela",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 70,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4480380077/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Nueva (19-oct). Nivel sin experiencia, empresa venezolana, inglés intermedio solo para lectura. No indica modalidad: confírmala.",
+   "note": "Primeros 25",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Venezuela",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés lectura",
+     "tone": "ok"
+    },
+    {
+     "label": "Modalidad sin confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "ce0bee861e6d",
+   "title": "Automation Testing Specialist",
+   "company": "Evertec",
+   "location": "Bogotá, Colombia",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 70,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479188043/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden mínimo 3 años de automatización. Usan Selenium, TestNG y C#.",
+   "note": "26 solicitudes",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "3 años",
+     "tone": "warn"
+    },
+    {
+     "label": "Selenium/C#",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "9e818667aebc",
+   "title": "QA Automation Engineer (Playwright + TypeScript)",
+   "company": "Fintech de pagos (EE. UU.)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "qa",
+   "score": 70,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022107921954712490845",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Largo plazo y tiempo completo. El cliente pide nivel experto, pero tiene pocas propuestas y $77k gastados en Upwork.",
+   "note": "Menos de 5 propuestas",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Playwright + TS",
+     "tone": "ok"
+    },
+    {
+     "label": "Pocas propuestas",
+     "tone": "ok"
+    },
+    {
+     "label": "Nivel experto",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "f3b049326594",
+   "title": "Middle UX-UI Designer",
+   "company": "Evaluar",
+   "location": "LATAM · 100% remoto",
+   "source": "LinkedIn",
+   "family": "design",
+   "score": 70,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479001799/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Producto con alcance en LATAM, 100% remoto. Piden Figma, wireframes y design system.",
+   "note": "194 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "Mid",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "7746a9b454dd",
+   "title": "YouTube Thumbnail Designer – canal true crime en español",
+   "company": "Canal 'Sus Nombres' (España)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "design",
+   "score": 70,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022111867806399830607",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden nativo de español de LATAM y Photoshop. Pocas propuestas: buena entrada para conseguir tu primera reseña en Upwork.",
+   "note": "Menos de 5 propuestas",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Español LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "Pocas propuestas",
+     "tone": "ok"
+    },
+    {
+     "label": "$50 fijo",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "541262ea2db4",
+   "title": "Web Project Coordinator",
+   "company": "Bionic Talent (cliente EE. UU.)",
+   "location": "Remoto global",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 70,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479625356/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Equipo totalmente remoto de WordPress y Shopify. Tu experiencia en web, QA y Jira/Azure Boards encaja con coordinar proyectos.",
+   "note": "Primeros 25",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Pocos postulantes",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "89d6ec5f07ab",
+   "title": "Mid Manual Tester",
+   "company": "SweatWorks",
+   "location": "Remoto · GMT-5 a GMT-1",
+   "source": "Torre VE",
+   "family": "qa",
+   "score": 70,
+   "salary": "",
+   "url": "https://torre.ai/post/NwqMMDRw-sweatworks-mid-manual-tester",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "2.000–3.000 USD al mes con seguro médico, QA manual con Jira y UAT. Piden inglés fluido. Cierra el 5 de noviembre.",
+   "note": "Cierra 5-nov",
+   "fit": "ingles",
+   "tags": [
+    {
+     "label": "2.000–3.000 USD",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés fluido",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "c1552798110d",
+   "title": "React Developer",
+   "company": "ttg Talent Solutions",
+   "location": "Colombia, remoto",
+   "source": "LinkedIn",
+   "family": "frontend",
+   "score": 68,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4477908945/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Remoto, con inglés mínimo B1/B2 (tu nivel). Tiene muchos postulantes.",
+   "note": "Más de 200 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés B1/B2",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "d437c24bc8c9",
+   "title": "Desarrollador Frontend/React.js",
+   "company": "Indra Group",
+   "location": "Perú, 100% remoto",
+   "source": "LinkedIn",
+   "family": "frontend",
+   "score": 67,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479842305/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "100% remoto y en español. Piden 3 años de frontend, así que tu experiencia de UI y React tendrá que pesar.",
+   "note": "146 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "100% remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "3 años",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "fc57d6eb5a26",
+   "title": "QA Automation Engineer (Playwright & AI) - Remote - Latin America",
+   "company": "FullStack",
+   "location": "Remoto LATAM (publicada en 12 ciudades)",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 67,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4477824510/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Es tu stack exacto (Playwright) y es remoto para LATAM, pero piden inglés avanzado y 4+ años.",
+   "note": "Primeros 25",
+   "fit": "ingles",
+   "tags": [
+    {
+     "label": "Playwright",
+     "tone": "ok"
+    },
+    {
+     "label": "Remote LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés avanzado",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "d1946f73e988",
+   "title": "QA Analyst (Mexico, Remote)",
+   "company": "Varicent",
+   "location": "México, remoto",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 66,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479176242/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden 0–2 años e inglés B2, tu techo. Hay pocos postulantes todavía.",
+   "note": "Primeros 25",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "0–2 años",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés B2",
+     "tone": "warn"
+    },
+    {
+     "label": "Pocos postulantes",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "ff7ce4c4c10e",
+   "title": "QA Engineer - Remote Latam",
+   "company": "Puzzle Consulting Services",
+   "location": "Remoto LATAM",
+   "source": "Jobgether",
+   "family": "qa",
+   "score": 65,
+   "salary": "",
+   "url": "https://jobs.ashbyhq.com/puzzle-consulting-services/5a094004-638e-4f42-8c57-ed475fdee21f/application",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Nivel mid, sueldo en USD. Pide 3+ años, testing de móvil y API, CI/CD y uso de herramientas de IA para programar.",
+   "note": "—",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "3+ años",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "2403bca9ab53",
+   "title": "QA Analyst",
+   "company": "Zaelot",
+   "location": "100% remoto desde cualquier país",
+   "source": "Get on Board",
+   "family": "qa",
+   "score": 65,
+   "salary": "",
+   "url": "https://www.getonbrd.com/jobs/qa-engineer-zaelot-remote",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Semi senior, 3.500–4.000 USD al mes. Es QA de datos e IA (pipelines, APIs, UAT). La postulación va en inglés.",
+   "note": "413 postulaciones",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Cualquier país",
+     "tone": "ok"
+    },
+    {
+     "label": "Muy competida",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "9f348da2ba1b",
+   "title": "Diseñador Gráfico con Motion Graphics",
+   "company": "Remote Talent LATAM (agencia española)",
+   "location": "LATAM · remoto",
+   "source": "WeRemoto",
+   "family": "design",
+   "score": 65,
+   "salary": "",
+   "url": "https://apply.workable.com/remote-talent-latam/j/7212173FD6/apply/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "700 USD al mes, en español. Pide 2–4 años en agencia, After Effects y artes finales para impresión.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Español",
+     "tone": "ok"
+    },
+    {
+     "label": "After Effects",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "1f5efa042da6",
+   "title": "Web and UX Designers — talent pool",
+   "company": "Sagan Recruitment",
+   "location": "Remoto mundial · horario EE. UU.",
+   "source": "WeRemoto",
+   "family": "design",
+   "score": 65,
+   "salary": "",
+   "url": "https://www.weremoto.com/job-posts/id-web-and-ux-designers-remote-sagan-recruitment",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Contratista con 2.000–3.500 USD al mes. Sagan te asigna a clientes de EE. UU. según tu experiencia. También tienen un pool de diseño gráfico (2.000–3.000 USD).",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Buen sueldo",
+     "tone": "ok"
+    },
+    {
+     "label": "Contratista",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "8cb3a1483877",
+   "title": "Product Designer",
+   "company": "Wherex",
+   "location": "Chile (opera en LATAM)",
+   "source": "LinkedIn",
+   "family": "design",
+   "score": 65,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479749382/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Compras B2B en Chile, Perú, Colombia y México. Piden Figma, UX y design system. Revisa la modalidad.",
+   "note": "180 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "UX/UI",
+     "tone": "ok"
+    },
+    {
+     "label": "Modalidad sin confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "00af449d94dd",
+   "title": "Freelance Graphic Designer for Ongoing Small Jobs",
+   "company": "Cliente EE. UU. (4.96)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "design",
+   "score": 65,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022111996551690613753",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Logos, vectorizado, tarjetas y papelería a $7–15/h, más de 30 h/semana y más de 6 meses. Piden portafolio.",
+   "note": "20–50 propuestas",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Largo plazo",
+     "tone": "ok"
+    },
+    {
+     "label": "Illustrator",
+     "tone": "ok"
+    },
+    {
+     "label": "Muchas propuestas",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "e12d803178b2",
+   "title": "Data Entry Specialist",
+   "company": "Remote Talent LATAM (cliente de seguros EE. UU.)",
+   "location": "LATAM · remoto",
+   "source": "WeRemoto",
+   "family": "admin",
+   "score": 65,
+   "salary": "",
+   "url": "https://apply.workable.com/remote-talent-latam/j/B0AF3FCDC9/apply/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "1.200 USD al mes. Actualizar una base de datos de agencias en un CRM. Piden inglés sólido y CV en inglés.",
+   "note": "—",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "1.200 USD/mes",
+     "tone": "ok"
+    },
+    {
+     "label": "CV en inglés",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "9302f61a72da",
+   "title": "Data Entry Jr.",
+   "company": "VUMI",
+   "location": "Medellín, Colombia",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 65,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4476487517/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Data entry junior con inglés básico. Probablemente pide residir en Colombia: confírmalo.",
+   "note": "106 solicitudes",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Inglés básico",
+     "tone": "ok"
+    },
+    {
+     "label": "Residencia por confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "8d1453c46e1d",
+   "title": "Software QA Analyst",
+   "company": "Communities.Tech",
+   "location": "Remoto LATAM",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 63,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479822548/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Remoto explícito para LATAM y nivel inicial. Incluye clases de inglés semanales.",
+   "note": "Más de 200 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remote LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "Sin experiencia",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "a156cb315a12",
+   "title": "ABL - Automation Tester",
+   "company": "Capgemini",
+   "location": "Aguascalientes, México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 62,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479577001/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden 2 a 4 años de QA manual con pruebas de APIs. Tu experiencia con Postman sirve.",
+   "note": "Primeros 25",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "2–4 años",
+     "tone": "warn"
+    },
+    {
+     "label": "APIs",
+     "tone": "ok"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "bd634d0df366",
+   "title": "Quality Assurance Analyst",
+   "company": "The Functionary",
+   "location": "Ciudad de México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 60,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4477826720/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden 1–3 años de QA. Mencionan Selenium y Python.",
+   "note": "58 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "1–3 años",
+     "tone": "ok"
+    },
+    {
+     "label": "Selenium",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "bcf33dccd41a",
+   "title": "Manual QA Engineer",
+   "company": "Madiff",
+   "location": "Remoto desde cualquier país",
+   "source": "Jobgether",
+   "family": "qa",
+   "score": 60,
+   "salary": "",
+   "url": "https://madiffpl.zohorecruit.com/jobs/Careers/300725000052275001/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "QA manual con contrato B2B de largo plazo. Pide 3 años, Jira/ALM, SQL básico y APIs.",
+   "note": "—",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "3 años",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "86b9201d8f8b",
+   "title": "Graphic Designer I",
+   "company": "HighLevel",
+   "location": "Indeed México · desde casa",
+   "source": "Indeed",
+   "family": "design",
+   "score": 60,
+   "salary": "",
+   "url": "https://to.indeed.com/aawdzlgvqtml",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "SaaS de marketing con equipo remoto. Publicada en agosto: confirma que siga abierta y si exige residir en México.",
+   "note": "—",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Junior",
+     "tone": "ok"
+    },
+    {
+     "label": "Residencia por confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "e2468b699ff6",
+   "title": "Virtual Assistant",
+   "company": "CS Outsource",
+   "location": "Venezuela · fully remote",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 60,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4477942582/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Totalmente remoto desde Venezuela. Piden inglés escrito y verbal excelente.",
+   "note": "139 solicitudes",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Venezuela",
+     "tone": "ok"
+    },
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés alto",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "51bf121fc308",
+   "title": "Matching Operations Coordinator",
+   "company": "Toptal",
+   "location": "Venezuela · fully remote",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 60,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4458913854/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Toptal es 100% remota y contrata en Venezuela. La postulación debe ir en inglés.",
+   "note": "Más de 200 solicitudes",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "100% remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "a3b98aca0829",
+   "title": "Administrative / Executive Assistant",
+   "company": "Scoutly",
+   "location": "América Latina · remoto",
+   "source": "LinkedIn",
+   "family": "admin",
+   "score": 60,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4472938852/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Para empresas de EE. UU., con 1.400–2.500 USD al mes más bonos. Piden inglés excelente.",
+   "note": "Más de 200 solicitudes",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Remoto LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "Buen sueldo",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés alto",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "ad99bdccd1d3",
+   "title": "QA Analyst Jr",
+   "company": "MRM",
+   "location": "Buenos Aires",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 60,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4346644135/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Junior y remoto, con dos visitas a la oficina al mes. Piden inglés avanzado.",
+   "note": "Más de 200 solicitudes",
+   "fit": "ingles",
+   "tags": [
+    {
+     "label": "Junior",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés avanzado",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "e559198d450a",
+   "title": "QA Funcional Junior [Banca]",
+   "company": "IDM Technology",
+   "location": "Lima, Perú",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 59,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4476460392/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Junior con 1–2 años de QA. Es QA manual en banca; tu experiencia manual de un año cuenta aquí.",
+   "note": "30 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Junior",
+     "tone": "ok"
+    },
+    {
+     "label": "Manual",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "2d9f29ef8cc5",
+   "title": "QA Automation Engineer",
+   "company": "Acme",
+   "location": "Remote",
+   "source": "Test",
+   "family": "qa",
+   "score": 57,
+   "salary": "",
+   "url": "https://example.com/job/good",
+   "apply_email": "",
+   "posted": "2026-10-18",
+   "found": "2026-10-19",
+   "summary": "Playwright and Cypress automation for web apps",
+   "curated": false
+  },
+  {
+   "id": "3255f1bc9b8b",
+   "title": "QA/QC Intern",
+   "company": "Flowmingo AI (Y Combinator)",
+   "location": "Remoto global",
+   "source": "WeRemoto",
+   "family": "qa",
+   "score": 55,
+   "salary": "",
+   "url": "https://talent.flowmingo.ai/jobs/qa-qc-intern-1764836347536-jch1kh",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Pasantía de QA en apps móviles y navegadores. Paga poco, pero se entra rápido y suma una startup de YC al CV.",
+   "note": "—",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Entrada fácil",
+     "tone": "ok"
+    },
+    {
+     "label": "Pasantía",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "275eba5c6850",
+   "title": "Web Designer at AIOS — Remote",
+   "company": "AIOS",
+   "location": "Global · remoto async",
+   "source": "LinkedIn",
+   "family": "design",
+   "score": 55,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4478399316/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Paga $75k–150k al año con equity, totalmente remoto y async en tu zona horaria. Es exigente: pide portafolio fuerte e inglés escrito.",
+   "note": "143 solicitudes",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Muy competida",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "2a218a107de0",
+   "title": "Executive, Personal & Virtual Assistants — talent pool",
+   "company": "Sagan Recruitment",
+   "location": "Remoto mundial · horario EE. UU.",
+   "source": "WeRemoto",
+   "family": "admin",
+   "score": 55,
+   "salary": "",
+   "url": "https://www.weremoto.com/job-posts/id-executive-personal-virtual-assistants-remote-sagan-recruitment",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Contratista con 1.500–1.800 USD al mes para ejecutivos de EE. UU.",
+   "note": "—",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "1.500–1.800 USD",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "8faa7ddfd485",
+   "title": "Asistente Virtual Bilingüe (medio tiempo)",
+   "company": "Madriz Collective | SERHANT",
+   "location": "Remoto · 10am–3pm ET",
+   "source": "Torre VE",
+   "family": "admin",
+   "score": 55,
+   "salary": "",
+   "url": "https://torre.ai/post/6WZzzDmW-madriz-collective-at-serhant-asistente-virtual-bilinge",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Inmobiliaria del sur de Florida, 300–600 USD al mes por 5 horas diarias. Piden inglés fluido.",
+   "note": "—",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Medio tiempo",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés fluido",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "9a5d97e693f7",
+   "title": "Bilingual (Spanish/English) Weekend Intake Specialist",
+   "company": "Bufete de abogados (California)",
+   "location": "Upwork · remoto",
+   "source": "Upwork",
+   "family": "admin",
+   "score": 55,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022111890012518642681",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Atender llamadas y mensajes los fines de semana y llenar formularios de ingreso de clientes, a $5–6/h. Requiere inglés hablado.",
+   "note": "10–15 propuestas",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Fines de semana",
+     "tone": "ok"
+    },
+    {
+     "label": "Inglés hablado",
+     "tone": "warn"
+    },
+    {
+     "label": "$5–6/h",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "1d3a1ad9e75c",
+   "title": "Asistente Virtual Temporal – contenido para redes",
+   "company": "Cliente de Panamá (5.0)",
+   "location": "Upwork · remoto · en español",
+   "source": "Upwork",
+   "family": "admin",
+   "score": 55,
+   "salary": "",
+   "url": "https://www.upwork.com/jobs/~022111570968037555641",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Crear piezas en Canva para Pinterest, YouTube y Facebook. En español; $50 fijo, corto.",
+   "note": "15–20 propuestas",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Español",
+     "tone": "ok"
+    },
+    {
+     "label": "Canva",
+     "tone": "ok"
+    },
+    {
+     "label": "$50 fijo",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "a6187835db33",
+   "title": "QA Automatizado con Postman",
+   "company": "Montebit",
+   "location": "Ciudad de México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 54,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4478113005/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Inglés B1 y foco en Postman. Piden 4 años de QA.",
+   "note": "37 solicitudes",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Inglés B1",
+     "tone": "ok"
+    },
+    {
+     "label": "4 años",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "5ba280e44dee",
+   "title": "Programador full stack",
+   "company": "Yummy",
+   "location": "Venezuela",
+   "source": "LinkedIn",
+   "family": "frontend",
+   "score": 50,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479588747/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Empresa venezolana y en español. Piden 2–3 años; su stack incluye C#/.NET.",
+   "note": "Más de 200 solicitudes",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Venezuela",
+     "tone": "ok"
+    },
+    {
+     "label": "C#/.NET",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "fa515fbf4346",
+   "title": "React Native 100% remoto",
+   "company": "Infortec Consultores (España)",
+   "location": "Madrid · 100% remoto",
+   "source": "Infortec",
+   "family": "frontend",
+   "score": 50,
+   "salary": "",
+   "url": "https://empleo.infortec.net/jobs/react-native-100-remoto",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Pide ~2 años de React Native. Es una consultora española con contrato indefinido español: probablemente exige residir en España.",
+   "note": "—",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "React Native",
+     "tone": "ok"
+    },
+    {
+     "label": "¿Residencia en España?",
+     "tone": "bad"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "954804dfd324",
+   "title": "Asistente virtual bilingüe — ventas y administración",
+   "company": "Premium Painting",
+   "location": "Indeed México · desde casa",
+   "source": "Indeed",
+   "family": "admin",
+   "score": 50,
+   "salary": "",
+   "url": "https://to.indeed.com/aacpyt8xzcxp",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Medio tiempo y bilingüe. Revisa si exige residir en México.",
+   "note": "—",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Medio tiempo",
+     "tone": "ok"
+    },
+    {
+     "label": "Residencia por confirmar",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "corip-senior-qa",
+   "title": "Senior QA – Talento Tech Bilingüe (imagen)",
+   "company": "Reclutador sin nombre (corip.work@gmail.com)",
+   "location": "100% remoto · contractor · horario EST",
+   "source": "Correo",
+   "family": "qa",
+   "score": 45,
+   "salary": "",
+   "url": "",
+   "apply_email": "corip.work@gmail.com",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Las 4 vacantes del afiche son senior y bilingües. Te dejé un borrador en Gmail presentándote como QA de ~2 años y abierto a nivel mid, con tarifa de 15 USD/h. Adjunta el CV en inglés antes de enviarlo.",
+   "note": "Por correo",
+   "fit": "ingles",
+   "tags": [
+    {
+     "label": "Borrador listo",
+     "tone": "ok"
+    },
+    {
+     "label": "Senior",
+     "tone": "bad"
+    },
+    {
+     "label": "Sin empresa visible",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  }
+ ]
+}

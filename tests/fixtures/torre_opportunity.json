@@ -1,0 +1,7 @@
+{"id":"kWRgM0ew","status":"open","objective":"QA UX/UI (QA UX/UI Specialist)","organizations":[{"name":"DevUps"}],
+ "place":{"remote":true,"anywhere":true,"timezone":false},
+ "languages":[{"language":{"name":"English"},"fluency":"conversational"},{"language":{"name":"Spanish"},"fluency":"fully-fluent"}],
+ "strengths":[{"name":"Figma"},{"name":"HTML"},{"name":"CSS"},{"name":"Jira"}],
+ "details":[{"code":"responsibilities","content":"Validate designs against implemented UI for pixel accuracy. 2+ years of experience in QA."}],
+ "compensation":{"data":{"minAmount":1500,"maxAmount":2000,"currency":"USD","periodicity":"monthly"}},
+ "created":"2026-10-10T12:00:00Z"}

@@ -1,69 +1,79 @@
-from datetime import datetime, timezone
+"""RF-7 (spec 004): Get on Board vía su API pública.
+
+GET https://www.getonbrd.com/api/v0/search/jobs?query=<q>&per_page=50&expand=["company"]
+Solo se conservan ofertas `fully_remote` (trabajables desde cualquier país) y de
+nivel hasta semi-senior (seniority id <= 3).
+"""
+import re
+from datetime import UTC, datetime
 
 import requests
-from bs4 import BeautifulSoup
 
 from src.scrapers.base import BaseScraper, JobPost
 
+API = "https://www.getonbrd.com/api/v0/search/jobs"
+UA = "Mozilla/5.0 (job-bot; +https://github.com/JEJS-IA97/Apply)"
+
+
+def _strip(html: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html or "")).strip()
+
 
 class GetOnBoardScraper(BaseScraper):
-    BASE = "https://www.getonbrd.com"
+    trusts_freshness = True
+    max_requests = 12
 
     def __init__(self):
         super().__init__("GetOnBoard")
 
     def scrape(self, keywords: list[str]) -> list[JobPost]:
-        jobs = []
+        jobs: dict[str, JobPost] = {}
         for kw in self.unique_keywords(keywords):
             try:
-                resp = requests.get(
-                    f"{self.BASE}/search",
-                    params={"q": f"{kw} remote"},
-                    headers={"User-Agent": "Mozilla/5.0"},
-                    timeout=15
+                resp = self.request(
+                    API, params={"query": kw, "per_page": 50, "expand": '["company"]'},
+                    headers={"User-Agent": UA}, timeout=20,
                 )
-                if resp.status_code != 200:
-                    continue
-                soup = BeautifulSoup(resp.text, "html.parser")
-                for card in soup.select("[class*='JobCard'], [class*='job-card'], .job-tile"):
-                    job = self._parse_card(card)
-                    if job:
-                        jobs.append(job)
-            except Exception:  # noqa: BLE001, S112
+            except requests.RequestException:
+                break
+            if resp is None:
+                break
+            if resp.status_code != 200:
                 continue
-        return self.filter_keyword_jobs(jobs, keywords)
+            try:
+                items = resp.json().get("data", [])
+            except ValueError:
+                continue
+            for item in items:
+                job = self.parse_item(item)
+                if job and job.url not in jobs:
+                    jobs[job.url] = job
+        return self.filter_keyword_jobs(list(jobs.values()), keywords)
 
-    def _parse_card(self, card) -> JobPost | None:
-        link_el = card.select_one("a[href*='/jobs/'], a[href*='/empleos/']")
-        if not link_el:
+    @staticmethod
+    def parse_item(item: dict) -> JobPost | None:
+        a = item.get("attributes") or {}
+        if not a.get("remote") or a.get("remote_modality") != "fully_remote":
             return None
-        href = link_el.get("href", "")
-        if href and not href.startswith("http"):
-            href = f"{self.BASE}{href}"
-        title_el = card.select_one("[class*='title'], h2, h3")
-        title = title_el.get_text(strip=True) if title_el else ""
-        company_el = card.select_one("[class*='company'], [class*='org']")
-        company = company_el.get_text(strip=True) if company_el else ""
-        location_el = card.select_one("[class*='location'], [data-test='location']")
-        location = location_el.get_text(strip=True) if location_el else ""
-        desc_el = card.select_one("p, [class*='description'], [class*='desc']")
-        desc = desc_el.get_text(strip=True) if desc_el else ""
+        seniority = ((a.get("seniority") or {}).get("data") or {}).get("id")
+        if seniority and int(seniority) >= 4:
+            return None
+        company = ((((a.get("company") or {}).get("data") or {}).get("attributes")) or {}).get("name", "")
+        description = " ".join(_strip(a.get(k, "")) for k in ("description", "functions", "desirable", "benefits"))
+        salary = None
+        if a.get("min_salary") or a.get("max_salary"):
+            salary = f"{a.get('min_salary') or ''}-{a.get('max_salary') or ''} USD/mes"
+        posted = None
+        if a.get("published_at"):
+            posted = datetime.fromtimestamp(int(a["published_at"]), tz=UTC)
+        url = (item.get("links") or {}).get("public_url") or ""
+        if not url or not a.get("title"):
+            return None
         return JobPost(
-            title=title, company=company, location=location,
-            description=desc, url=href, source=self.name,
-            posted_date=datetime.now(timezone.utc), is_remote="remote" in location.lower(),
-            apply_url=href, apply_button_active=True
+            title=a["title"], company=company, location="Remote (Worldwide)",
+            description=description, url=url, source="GetOnBoard",
+            posted_date=posted, is_remote=True, apply_url=url, salary=salary,
         )
 
     def verify_job_active(self, url: str) -> bool:
-        try:
-            resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-            if resp.status_code != 200:
-                return False
-            soup = BeautifulSoup(resp.text, "html.parser")
-            text = resp.text.lower()
-            if "not available" in text or "closed" in text:
-                return False
-            return bool(soup.select_one("[class*='apply'], [class*='postular'], a[href*='apply']")) or "apply" in text
-        except Exception:  # noqa: BLE001
-            return False
+        return True

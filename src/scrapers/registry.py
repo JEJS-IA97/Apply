@@ -86,6 +86,16 @@ def _build_builtin() -> BaseScraper:
     return BuiltInScraper()
 
 
+def _build_torre() -> BaseScraper:
+    from src.scrapers.torre import TorreScraper
+    return TorreScraper()
+
+
+def _build_getonboard() -> BaseScraper:
+    from src.scrapers.getonboard import GetOnBoardScraper
+    return GetOnBoardScraper()
+
+
 def _reddit_status() -> tuple:
     if config.reddit_client_id and config.reddit_client_secret:
         return "enabled", ""
@@ -121,6 +131,8 @@ def list_sources() -> list[SourceSpec]:
         SourceSpec("web3career", "job_board", "enabled", builder=_build_web3career, max_requests=5),
         SourceSpec("infojobs", "job_board", "enabled", builder=_build_infojobs, max_requests=5),
         SourceSpec("builtin", "job_board", "enabled", builder=_build_builtin, max_requests=3),
+        SourceSpec("torre", "job_board", "enabled", builder=_build_torre, max_requests=30),
+        SourceSpec("getonboard", "job_board", "enabled", builder=_build_getonboard, max_requests=12),
         SourceSpec("reddit", "forum", reddit_status, reddit_reason,
                    builder=_build_reddit if reddit_status == "enabled" else None, max_requests=15),
         SourceSpec("linkedin_posts", "post", posts_status, posts_reason,
@@ -133,8 +145,6 @@ def list_sources() -> list[SourceSpec]:
                    f"API pública devuelve 403 desde el entorno ({EVIDENCE})"),
         SourceSpec("telegram", "post", "pending",
                    "Requiere TELEGRAM_API_ID/TELEGRAM_API_HASH y la dependencia telethon"),
-        SourceSpec("getonboard", "job_board", "pending",
-                   f"Listado renderizado por JS y /search devuelve 404 ({EVIDENCE})"),
         SourceSpec("levelsfiy", "job_board", "pending", f"SPA sin API pública ({EVIDENCE})"),
         SourceSpec("arc", "job_board", "pending", f"SPA sin API pública ({EVIDENCE})"),
         SourceSpec("lemonio", "job_board", "pending", f"Sin listado público (solo landing) ({EVIDENCE})"),

@@ -7,6 +7,7 @@ from src.apply.batch import BatchReport, run_batch
 from src.apply.ledger import ApplicationLedger
 from src.apply.maintenance import FamilyStatus
 from src.config import apply_mode_from, config
+from src.exporter import export_jobs
 from src.notifier.email_sender import EmailNotifier
 from src.profile import load_cv
 from src.scrapers.base import JobPost, normalize_url
@@ -178,6 +179,12 @@ def main():
     print(f"Tras filtros CV (score>={matcher.min_score}): {len(filtered)}")
     log_excluded(matcher)
 
+    try:
+        total = export_jobs(filtered)
+        print(f"docs/data/jobs.json actualizado ({total} ofertas en la web)")
+    except OSError as exc:
+        print(f"No se pudo exportar docs/data/jobs.json: {exc}")
+
     if not filtered:
         print("No matching jobs found")
         if db.is_connected():
@@ -190,7 +197,8 @@ def main():
             continue
         new_jobs.append(job)
 
-    print(f"Nuevas (no enviadas antes): {len(new_jobs)}")
+    new_jobs = new_jobs[: matcher.report_limit]
+    print(f"Nuevas (no enviadas antes, max {matcher.report_limit}): {len(new_jobs)}")
 
     if not new_jobs:
         print("All jobs already sent previously")
@@ -235,7 +243,9 @@ def main():
         notifier = EmailNotifier(
             from_addr=config.email_from,
             password=config.email_password,
-            to_addr=config.email_to
+            to_addr=config.email_to,
+            smtp_server=config.smtp_server,
+            smtp_port=config.smtp_port,
         )
         sent = notifier.send_jobs_report(new_jobs)
         print(f"\nEmail {'sent' if sent else 'FAILED'}")

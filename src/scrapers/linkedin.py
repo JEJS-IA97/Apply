@@ -1,5 +1,6 @@
 import re
-from datetime import datetime, timezone
+import time
+from datetime import UTC, datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -37,6 +38,7 @@ def extract_job_id(html_or_url: str) -> str | None:
 class LinkedInScraper(BaseScraper):
     trusts_freshness = True
     max_requests = 40
+    request_delay = 2.0  # RF-6 (spec 004): LinkedIn bloquea las ráfagas
 
     def __init__(self, email: str = "", password: str = ""):
         super().__init__("LinkedIn")
@@ -91,6 +93,8 @@ class LinkedInScraper(BaseScraper):
         for kw, loc in self._search_terms():
             if self.requests_made >= self.max_requests:
                 break
+            if self.requests_made and self.request_delay:
+                time.sleep(self.request_delay)
             try:
                 params = {"keywords": kw, "location": loc, "start": 0, **params_base}
                 resp = self.request(GUEST_API, params=params, timeout=20, headers={
@@ -138,7 +142,7 @@ class LinkedInScraper(BaseScraper):
         posted = None
         if time_el and time_el.get("datetime"):
             try:
-                posted = datetime.strptime(time_el["datetime"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                posted = datetime.strptime(time_el["datetime"], "%Y-%m-%d").replace(tzinfo=UTC)
             except ValueError:
                 posted = None
 
@@ -159,6 +163,8 @@ class LinkedInScraper(BaseScraper):
         job_id = extract_job_id(job.url)
         if not job_id:
             return None
+        if self.requests_made and self.request_delay:
+            time.sleep(self.request_delay)
         try:
             resp = self.request(VIEW_URL.format(job_id=job_id), timeout=15, headers={"User-Agent": UA})
         except requests.RequestException:
