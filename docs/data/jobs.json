@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T14:28+00:00",
+ "updated": "2026-10-19T18:13+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -36,6 +36,34 @@
     }
    ],
    "curated": true
+  },
+  {
+   "id": "96692a615306",
+   "title": "Quality Assurance Engineer",
+   "company": "Seeed",
+   "location": "Colombia",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 89,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479203424",
+   "apply_email": "",
+   "posted": "2026-10-13",
+   "found": "2026-10-19",
+   "summary": "Puesto full-time y remoto, de nivel inicial.",
+   "curated": true,
+   "fit": "encaja",
+   "note": "197 solicitudes",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Sin experiencia",
+     "tone": "ok"
+    }
+   ]
   },
   {
    "id": "f7a60e5a6442",
@@ -340,34 +368,6 @@
     },
     {
      "label": "Inglés conversacional",
-     "tone": "ok"
-    }
-   ],
-   "curated": true
-  },
-  {
-   "id": "96692a615306",
-   "title": "Quality Assurance Engineer",
-   "company": "Seeed",
-   "location": "Colombia",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 76,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479203424/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Puesto full-time y remoto, de nivel inicial.",
-   "note": "197 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "Sin experiencia",
      "tone": "ok"
     }
    ],
@@ -1348,6 +1348,22 @@
     }
    ],
    "curated": true
+  },
+  {
+   "id": "b6ec902f5d37",
+   "title": "100–150 USD/hr | Fully Remote Open Source Applied Engineer Talent Network Part-time, remote, and paid by the hour. ✅ Designing evals for cod",
+   "company": "",
+   "location": "Remote",
+   "source": "Mastodon",
+   "family": "qa",
+   "score": 64,
+   "salary": "",
+   "url": "https://mastodon.social/@nearskill/117466627563956940",
+   "apply_email": "",
+   "posted": "2026-10-19",
+   "found": "2026-10-19",
+   "summary": "100–150 USD/hr | Fully Remote Open Source Applied Engineer Talent Network Part-time, remote, and paid by the hour. ✅ Designing evals for coding tasks in Python, Java, C, JS or TS ✅ Writing test cases that measure system behavior ✅ A GitHub record of steady contributions in the last year ✅ Git and CI/CD workflow comfort",
+   "curated": false
   },
   {
    "id": "8d1453c46e1d",
