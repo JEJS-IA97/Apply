@@ -1,0 +1,7 @@
+{"data":[
+ {"id":"qa-engineer-zaelot-remote","attributes":{"title":"QA Analyst","remote":true,"remote_modality":"fully_remote","seniority":{"data":{"id":3}},
+   "description":"<p>Test data pipelines and APIs with Postman.</p>","functions":"","desirable":"","benefits":"","min_salary":3500,"max_salary":4000,"published_at":1791331200,
+   "company":{"data":{"attributes":{"name":"Zaelot"}}}},"links":{"public_url":"https://www.getonbrd.com/jobs/qa-engineer-zaelot-remote"}},
+ {"id":"senior-x","attributes":{"title":"Senior QA","remote":true,"remote_modality":"fully_remote","seniority":{"data":{"id":4}},"published_at":1791331200},"links":{"public_url":"https://www.getonbrd.com/jobs/senior-x"}},
+ {"id":"local-x","attributes":{"title":"QA Automation (Azure)","remote":true,"remote_modality":"remote_local","seniority":{"data":{"id":3}},"published_at":1791331200},"links":{"public_url":"https://www.getonbrd.com/jobs/local-x"}}
+]}

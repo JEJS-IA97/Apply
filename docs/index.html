@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de postulación</title>
+<meta name="description" content="Ofertas de empleo filtradas para José Jiménez, con postulación por correo desde Gmail.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231F3FCC'/%3E%3Crect x='7' y='9' width='3' height='14' fill='%23fff'/%3E%3Crect x='14' y='5' width='3' height='18' fill='%23fff'/%3E%3Crect x='21' y='13' width='3' height='10' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ground:#F2F3F1; --surface:#FFFFFF; --ink:#121316; --ink-2:#4A4E57; --ink-3:#6B707A;
+  --rule:#D5D8DD; --rule-strong:#121316;
+  --band:#1F3FCC; --band-ink:#FFFFFF; --band-ink-2:#C9D2FF; --band-rule:rgba(255,255,255,.28);
+  --qa:#1F3FCC; --frontend:#0B7A5C; --design:#C2410C; --admin:#8A6700; --generic:#5B606B;
+  --tick-qa:#FFFFFF; --tick-frontend:#6EE7B7; --tick-design:#FF9F6E; --tick-admin:#FFD447; --tick-generic:#AEB6D6;
+  --ok:#0B7A5C; --warn:#9A6200; --bad:#B42318;
+  --focus:#1F3FCC; --select:#C9D2FF;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ui:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1014; --surface:#161920; --ink:#ECEEF2; --ink-2:#B4B9C4; --ink-3:#8C93A0;
+    --rule:#2A2F39; --rule-strong:#ECEEF2;
+    --band:#1A2E9E; --band-ink-2:#B9C4FF;
+    --qa:#8FA4FF; --frontend:#5FD3A6; --design:#FF8E5E; --admin:#E7C04A; --generic:#A3A9B5;
+    --ok:#5FD3A6; --warn:#E7B04A; --bad:#FF7B6E; --focus:#8FA4FF; --select:#2B3C8F;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1014; --surface:#161920; --ink:#ECEEF2; --ink-2:#B4B9C4; --ink-3:#8C93A0;
+  --rule:#2A2F39; --rule-strong:#ECEEF2;
+  --band:#1A2E9E; --band-ink-2:#B9C4FF;
+  --qa:#8FA4FF; --frontend:#5FD3A6; --design:#FF8E5E; --admin:#E7C04A; --generic:#A3A9B5;
+  --ok:#5FD3A6; --warn:#E7B04A; --bad:#FF7B6E; --focus:#8FA4FF; --select:#2B3C8F;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 15px/1.5 var(--ui);font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased}
+::selection{background:var(--select);color:var(--ink)}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.band :focus-visible{outline-color:#fff}
+button,input,select,textarea{font:inherit;color:inherit}
+html{scrollbar-color:var(--rule) transparent}
+.wrap{max-width:1360px;margin:0 auto;padding:0 32px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.i{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- band ---------- */
+.band{background:var(--band);color:var(--band-ink)}
+.band-top{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;padding-top:28px}
+h1{margin:0;font-weight:800;font-variation-settings:"wdth" 82;font-size:clamp(2rem,4.2vw,3.25rem);line-height:.95;letter-spacing:-.02em}
+.byline{margin:10px 0 0;color:var(--band-ink-2);font-size:14px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--band-rule)}
+.tab{appearance:none;border:0;background:none;color:var(--band-ink-2);padding:10px 0 12px;margin-left:28px;cursor:pointer;display:flex;align-items:baseline;gap:8px;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .15s ease,border-color .15s ease}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{color:#fff;border-bottom-color:#fff}
+.tab b{font-weight:800;font-variation-settings:"wdth" 75;font-size:22px;font-variant-numeric:tabular-nums;line-height:1}
+.tab span{font-size:13px;letter-spacing:.01em}
+
+/* signature: score axis */
+.axis{padding:22px 0 26px}
+.axis-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:10px;font-size:13px;color:var(--band-ink-2)}
+.axis-head strong{color:#fff;font-weight:600}
+.axis-reset{appearance:none;background:none;border:1px solid var(--band-rule);color:#fff;font-size:12px;padding:3px 10px;cursor:pointer;transition:background-color .15s ease,transform .16s var(--ease-out)}
+.axis-reset:hover{background:rgba(255,255,255,.12)}
+.axis-reset:active{transform:scale(.97)}
+.axis-reset[hidden]{display:none}
+.plot{position:relative;height:84px;touch-action:none;cursor:crosshair;user-select:none}
+.plot-base{position:absolute;left:0;right:0;bottom:18px;height:1px;background:var(--band-rule)}
+.ticks{position:absolute;inset:0 0 18px 0}
+.tick{position:absolute;bottom:0;width:3px;margin-left:-1px;border:0;padding:0;cursor:pointer;opacity:.95;transition:opacity .15s ease,transform .18s var(--ease-out);transform-origin:bottom}
+.tick.out{opacity:.22}
+.tick.hot{transform:scaleY(1.18);opacity:1}
+.shade{position:absolute;top:0;bottom:18px;background:rgba(5,12,60,.45);pointer-events:none}
+.thresh{position:absolute;top:-4px;bottom:12px;width:0;border-left:1px dashed rgba(255,255,255,.7);pointer-events:none}
+.thresh span{position:absolute;top:-2px;left:6px;font-size:11px;color:#fff;white-space:nowrap}
+.handle{position:absolute;top:0;bottom:18px;width:14px;margin-left:-7px;cursor:ew-resize;display:flex;justify-content:center;background:none;border:0;padding:0}
+.handle::before{content:"";width:2px;height:100%;background:#fff}
+.handle::after{content:"";position:absolute;top:50%;width:10px;height:22px;margin-top:-11px;background:#fff}
+.scale{position:absolute;left:0;right:0;bottom:0;height:16px;font-size:11px;color:var(--band-ink-2);font-variant-numeric:tabular-nums}
+.scale span{position:absolute;transform:translateX(-50%)}
+.scale span:first-child{transform:none}.scale span:last-child{transform:translateX(-100%)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;font-size:12px;color:var(--band-ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+
+/* ---------- layout ---------- */
+.desk{display:grid;grid-template-columns:232px minmax(0,1fr);gap:40px;padding-top:28px;padding-bottom:80px}
+.filters{position:sticky;top:20px;align-self:start}
+.filters summary{display:none}
+.f-group{border-top:1px solid var(--rule-strong);padding:12px 0 20px}
+.f-label{display:block;font-size:12px;font-weight:600;margin:0 0 10px;letter-spacing:.02em}
+.search{position:relative}
+.search svg{position:absolute;left:10px;top:50%;margin-top:-8px;color:var(--ink-3)}
+input[type=search],select,.c-field input,.c-field textarea{width:100%;background:var(--surface);border:1px solid var(--rule);border-radius:0;padding:9px 10px;transition:border-color .15s ease}
+input[type=search]{padding-left:34px}
+input::placeholder,textarea::placeholder{color:var(--ink-3)}
+input[type=search]:hover,select:hover{border-color:var(--ink-3)}
+input[type=search]:focus,select:focus,.c-field input:focus,.c-field textarea:focus{border-color:var(--focus);outline:none;box-shadow:0 0 0 1px var(--focus)}
+.check{display:flex;align-items:center;gap:10px;padding:5px 0;cursor:pointer;font-size:14px}
+.check input{accent-color:var(--ink);width:16px;height:16px;margin:0}
+.check .sw{width:10px;height:10px;flex:none}
+.check .n{margin-left:auto;color:var(--ink-3);font-variant-numeric:tabular-nums;font-size:13px}
+
+/* ---------- list ---------- */
+.list-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--rule-strong);padding-bottom:10px}
+.list-head h2{margin:0;font-size:15px;font-weight:600}
+.list-head p{margin:0;color:var(--ink-3);font-size:13px}
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:4px 24px;padding:20px 0 22px;border-bottom:1px solid var(--rule);transition:opacity .2s ease,background-color .2s ease}
+.row.flash{background:color-mix(in srgb,var(--select) 45%,transparent)}
+.row.is-applied,.row.is-hidden{opacity:.62}
+.score{grid-row:1 / span 2;font-weight:850;font-variation-settings:"wdth" 70;font-size:44px;line-height:.9;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--fam)}
+.score small{display:block;margin-top:6px;font-weight:500;font-variation-settings:"wdth" 100;font-size:11px;letter-spacing:.02em;color:var(--ink-3)}
+.main{min-width:0}
+.title{margin:0;font-size:18px;line-height:1.25;font-weight:650;letter-spacing:-.005em;text-wrap:balance}
+.title a{text-decoration:none}
+.title a:hover{text-decoration:underline}
+.company{margin:3px 0 0;color:var(--ink-2)}
+.meta{margin:8px 0 0;font-size:13px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:2px 14px}
+.meta .fam{color:var(--fam);font-weight:600}
+.summary{margin:10px 0 0;max-width:68ch;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:4px 14px;margin:10px 0 0;padding:0;list-style:none;font-size:12.5px;font-weight:500}
+.tags li{display:flex;align-items:center;gap:6px}
+.tags li::before{content:"";width:6px;height:6px;background:currentColor}
+.t-ok{color:var(--ok)}.t-warn{color:var(--warn)}.t-bad{color:var(--bad)}
+.actions{grid-column:3;grid-row:1 / span 2;display:flex;flex-direction:column;align-items:stretch;gap:8px;min-width:176px}
+.btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border:1px solid var(--rule-strong);background:transparent;color:var(--ink);font-size:13.5px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .15s ease,color .15s ease,border-color .15s ease,transform .16s var(--ease-out)}
+.btn:hover{background:var(--ink);color:var(--ground)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--band);border-color:var(--band);color:#fff}
+.btn.primary:hover{background:color-mix(in srgb,var(--band) 82%,#000)}
+.btn.quiet{border-color:var(--rule);color:var(--ink-2);font-weight:500}
+.btn.quiet:hover{border-color:var(--ink);background:transparent;color:var(--ink)}
+.btn[aria-pressed="true"]{background:var(--ok);border-color:var(--ok);color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.mailtag{display:inline-flex;align-items:center;gap:6px;color:var(--band);font-weight:600}
+:root[data-theme="dark"] .mailtag{color:var(--qa)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mailtag{color:var(--qa)}}
+
+/* compose (expands in place) */
+.compose{grid-column:2 / -1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .24s var(--ease-out)}
+.compose.open{grid-template-rows:1fr}
+.compose > div{overflow:hidden;min-height:0}
+.c-inner{margin-top:16px;padding:18px 0 4px;border-top:1px solid var(--rule-strong);display:grid;gap:12px}
+.c-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.c-top p{margin:0;font-size:13px;color:var(--ink-2)}
+.seg{display:inline-flex;border:1px solid var(--rule)}
+.seg button{appearance:none;border:0;background:none;padding:5px 12px;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.c-field{display:grid;gap:5px}
+.c-field span{font-size:12px;font-weight:600}
+.c-field textarea{min-height:240px;resize:vertical;line-height:1.55}
+.c-attach{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:color-mix(in srgb,var(--admin) 12%,var(--surface));font-size:13px}
+.c-attach code{font-family:inherit;font-weight:600;overflow-wrap:anywhere}
+.c-btns{display:flex;flex-wrap:wrap;gap:8px}
+.c-after{font-size:13px;color:var(--ink-2);margin:0}
+
+/* states */
+.state{padding:56px 0;max-width:46ch}
+.state h3{margin:0 0 6px;font-size:18px}
+.state p{margin:0 0 16px;color:var(--ink-2)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,12px);opacity:0;background:var(--ink);color:var(--ground);padding:10px 16px;font-size:13.5px;display:flex;gap:14px;align-items:center;transition:opacity .2s ease,transform .24s var(--ease-out);pointer-events:none;z-index:5}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast button{appearance:none;background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:0;font-weight:600}
+footer{border-top:1px solid var(--rule);padding:18px 0 40px;color:var(--ink-3);font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer button{appearance:none;background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:0}
+
+/* responsive */
+@media (max-width:1020px){
+  .row{grid-template-columns:64px minmax(0,1fr)}
+  .score{font-size:38px}
+  .actions{grid-column:2;grid-row:auto;flex-direction:row;flex-wrap:wrap;min-width:0;margin-top:14px}
+  .compose{grid-column:1 / -1}
+}
+@media (max-width:820px){
+  .wrap{padding:0 16px}
+  .band-top{grid-template-columns:1fr;gap:18px;padding-top:22px}
+  .tab{margin:0 22px 0 0}
+  .desk{grid-template-columns:1fr;gap:16px;padding-top:16px}
+  .filters{position:static}
+  .filters summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule);padding:12px 0;font-weight:600}
+  .filters summary::-webkit-details-marker{display:none}
+  .filters summary span{font-weight:400;color:var(--ink-3);font-size:13px}
+  .filters:not([open]) .f-body{display:none}
+  .f-body{padding-top:12px}
+  .row{grid-template-columns:52px minmax(0,1fr);gap:4px 14px}
+  .score{font-size:32px}
+  .title{font-size:16.5px}
+  .actions .btn{flex:1 1 auto}
+  .plot{height:72px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:0s !important}
+}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <div class="band-top">
+      <div>
+        <h1>Mesa de postulación</h1>
+        <p class="byline" id="byline">José Jiménez · cargando ofertas…</p>
+      </div>
+      <nav class="tabs" role="tablist" aria-label="Estado de las ofertas">
+        <button class="tab" role="tab" data-view="pending" aria-selected="true"><b id="n-pending">–</b><span>Pendientes</span></button>
+        <button class="tab" role="tab" data-view="applied" aria-selected="false"><b id="n-applied">–</b><span>Postuladas</span></button>
+        <button class="tab" role="tab" data-view="hidden" aria-selected="false"><b id="n-hidden">–</b><span>Descartadas</span></button>
+      </nav>
+    </div>
+    <section class="axis" aria-labelledby="axis-title">
+      <div class="axis-head">
+        <span id="axis-title"><strong id="axis-range">Puntaje 0–100</strong> · <span id="axis-count">0 ofertas</span> · arrastra sobre la escala para acotar</span>
+        <button class="axis-reset" id="axis-reset" hidden>Quitar rango</button>
+      </div>
+      <div class="plot" id="plot" aria-label="Distribución de ofertas por puntaje de 0 a 100">
+        <div class="plot-base"></div>
+        <div class="ticks" id="ticks"></div>
+        <div class="shade" id="shade-l"></div><div class="shade" id="shade-r"></div>
+        <div class="thresh" id="thresh"><span>umbral 55</span></div>
+        <button class="handle" id="h-lo" aria-label="Puntaje mínimo" role="slider" aria-valuemin="0" aria-valuemax="100"></button>
+        <button class="handle" id="h-hi" aria-label="Puntaje máximo" role="slider" aria-valuemin="0" aria-valuemax="100"></button>
+        <div class="scale"><span style="left:0">0</span><span style="left:25%">25</span><span style="left:50%">50</span><span style="left:75%">75</span><span style="left:100%">100</span></div>
+      </div>
+      <div class="legend" id="legend"></div>
+    </section>
+  </div>
+</header>
+
+<main class="wrap desk">
+  <details class="filters" id="filters" open>
+    <summary>Filtros <span id="f-summary">todos</span></summary>
+    <div class="f-body">
+      <div class="f-group">
+        <label class="f-label" for="q">Buscar</label>
+        <div class="search">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+          <input type="search" id="q" placeholder="Título, empresa, Figma…" autocomplete="off">
+        </div>
+      </div>
+      <fieldset class="f-group" style="border-left:0;border-right:0;border-bottom:0;margin:0;min-width:0">
+        <legend class="f-label" style="padding:0;float:left;width:100%">Familia</legend>
+        <div id="f-family" style="clear:both"></div>
+      </fieldset>
+      <div class="f-group">
+        <label class="f-label" for="f-source">Fuente</label>
+        <select id="f-source"><option value="">Todas las fuentes</option></select>
+      </div>
+      <div class="f-group">
+        <label class="check"><input type="checkbox" id="f-email"> Solo postulación por correo <span class="n" id="n-email"></span></label>
+      </div>
+      <div class="f-group">
+        <label class="f-label" for="f-sort">Orden</label>
+        <select id="f-sort">
+          <option value="score">Mejor puntaje primero</option>
+          <option value="found">Más recientes primero</option>
+          <option value="company">Empresa (A–Z)</option>
+        </select>
+      </div>
+    </div>
+  </details>
+
+  <section aria-labelledby="list-title">
+    <div class="list-head">
+      <h2 id="list-title">Pendientes</h2>
+      <p id="list-sub"></p>
+    </div>
+    <ol class="rows" id="rows"><li class="state"><p>Cargando ofertas…</p></li></ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>El estado (postulada, descartada) se guarda solo en este navegador.</span>
+    <span><button id="theme">Cambiar tema</button></span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toast-msg"></span><button id="toast-undo">Deshacer</button></div>
+
+<script>
+(() => {
+"use strict";
+const FROM = "jose.e.jimenez.1411@gmail.com";
+const STORE = "mesa-estado-v1";
+const FAMILIES = {
+  qa:       {label:"QA y testing",      cv:"Jose-Jimenez-QA-Automation-Engineer-CV (1).pdf"},
+  frontend: {label:"Frontend",          cv:"DEV CV.pdf"},
+  design:   {label:"Diseño UI/UX y gráfico", cv:"JOSE_JIMENEZ_CV_HYBRID.pdf"},
+  admin:    {label:"Administrativo y asistente", cv:"JOSE_JIMENEZ_INGENIERO_INFORMATICO_CV.pdf"},
+  generic:  {label:"Otros",             cv:"JOSE_JIMENEZ_CV_HYBRID.pdf"}
+};
+const FIT = {encaja:["Encaja bien","ok"], intentar:["Vale intentar","warn"], puente:["Ingreso puente","warn"], ingles:["Piden inglés avanzado","bad"]};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const famOf = j => FAMILIES[j.family] ? j.family : "generic";
+const icon = {
+  out:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  mail:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13"/><path d="M4 6.5l8 6 8-6"/></svg>',
+  check:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  x:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  clip:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 12.5l6-6a3 3 0 0 1 4.2 4.2l-7.6 7.6a5 5 0 0 1-7.1-7.1L11 4.2"/></svg>'
+};
+
+/* ---------- state ---------- */
+let jobs = [], marks = {};
+try { marks = JSON.parse(localStorage.getItem(STORE) || "{}") || {}; } catch (e) { marks = {}; }
+const save = () => { try { localStorage.setItem(STORE, JSON.stringify(marks)); } catch (e) {} };
+const ui = {view:"pending", q:"", fams:new Set(), source:"", email:false, sort:"score", lo:0, hi:100, open:null, lang:{}};
+const statusOf = j => (marks[j.id] && marks[j.id].s) || "pending";
+
+/* ---------- email drafting ---------- */
+const isSpanish = j => /\b(de|para|con|y|analista|diseñador|diseñadora|asistente|desarrollador|pruebas|vacante|bilingüe|remoto)\b/i.test(j.title + " " + (j.location||""));
+const wantsRate = j => /tarifa|hourly|rate|por hora/i.test((j.summary||"") + " " + (j.title||""));
+const PITCH = {
+  es:{
+    qa:"Soy QA Automation Engineer. De febrero de 2025 a abril de 2026 trabajé en remoto para Chicks Gold Inc.: construí y mantuve una suite E2E en Cypress con TypeScript bajo POM, automaticé los flujos de compra y pago (cripto y fiat) y la validación de una plataforma de cambio. También trabajo con Playwright, Postman y CI en GitHub Actions y Azure DevOps.",
+    frontend:"Soy desarrollador front-end con React, React Native y TypeScript, y vengo de QA Automation, así que entrego interfaces con pruebas E2E (Cypress, Playwright) desde el primer día.",
+    design:"Soy diseñador gráfico y UI/UX (TSU en diseño) con 5 años usando Figma, Illustrator y Photoshop. Además programo front-end (React, HTML y CSS), así que mis diseños llegan listos para construirse.",
+    admin:"Soy ingeniero en informática con experiencia en trabajo remoto. Manejo Excel, Google Workspace, Notion y herramientas de gestión, me organizo bien con tareas repetitivas y escribo en español e inglés (B1–B2).",
+    generic:"Soy ingeniero en informática con experiencia en QA Automation, desarrollo front-end y diseño UI."
+  },
+  en:{
+    qa:"I'm a QA Automation Engineer. From February 2025 to April 2026 I worked remotely for Chicks Gold Inc., where I built and maintained a Cypress + TypeScript E2E suite using POM, automated purchase and payment flows (crypto and fiat) and validated a crypto-to-fiat exchange platform. I also work with Playwright, Postman and CI on GitHub Actions and Azure DevOps.",
+    frontend:"I'm a front-end developer working with React, React Native and TypeScript. I come from QA Automation, so I ship interfaces with E2E coverage (Cypress, Playwright) from day one.",
+    design:"I'm a graphic and UI/UX designer with a design degree and 5 years of Figma, Illustrator and Photoshop. I also code front-end (React, HTML, CSS), so my designs are ready to build.",
+    admin:"I'm a computer engineer with remote work experience. I'm comfortable with Excel, Google Workspace, Notion and project tools, I'm organised with repetitive work, and I write in Spanish and English (B1–B2).",
+    generic:"I'm a computer engineer with experience in QA Automation, front-end development and UI design."
+  }
+};
+function draft(j, lang){
+  const f = famOf(j), es = lang === "es";
+  const role = j.title.replace(/\s*\(imagen\)\s*/i, "").trim();
+  const subject = es ? `Postulación: ${role} — José Jiménez` : `Application: ${role} — José Jiménez`;
+  const rate = wantsRate(j) ? (es ? "\n\nMi tarifa es de 15 USD por hora, negociable según el alcance." : "\n\nMy rate is 15 USD per hour, negotiable depending on scope.") : "";
+  const body = es
+    ? `Hola,\n\nVi la vacante de ${role}${j.company && !/reclutador/i.test(j.company) ? " en " + j.company : ""} y quiero postularme.\n\n${PITCH.es[f]}\n\nEstoy en Venezuela (UTC-4), tengo disponibilidad inmediata para trabajo remoto y adjunto mi CV.${rate}\n\nLinkedIn: https://www.linkedin.com/in/jejs97\nGitHub: https://github.com/JEJS-IA97\n\nSaludos,\nJosé Eduardo Jiménez Suárez\n${FROM}`
+    : `Hello,\n\nI saw the ${role} opening${j.company && !/reclutador/i.test(j.company) ? " at " + j.company : ""} and I'd like to apply.\n\n${PITCH.en[f]}\n\nI'm based in Venezuela (UTC-4), available immediately for remote work, and my CV is attached.${rate}\n\nLinkedIn: https://www.linkedin.com/in/jejs97\nGitHub: https://github.com/JEJS-IA97\n\nBest regards,\nJosé Eduardo Jiménez Suárez\n${FROM}`;
+  return {subject, body};
+}
+const gmailUrl = (to, su, body) => "https://mail.google.com/mail/?" + new URLSearchParams({authuser:FROM, view:"cm", fs:"1", to, su, body}).toString();
+
+/* ---------- filtering ---------- */
+function matches(j, ignoreRange){
+  if (statusOf(j) !== ui.view) return false;
+  if (ui.fams.size && !ui.fams.has(famOf(j))) return false;
+  if (ui.source && j.source !== ui.source) return false;
+  if (ui.email && !j.apply_email) return false;
+  if (!ignoreRange && (j.score < ui.lo || j.score > ui.hi)) return false;
+  if (ui.q){
+    const hay = [j.title,j.company,j.location,j.summary,j.source,(j.tags||[]).map(t=>t.label).join(" ")].join(" ").toLowerCase();
+    if (!ui.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+function sorted(list){
+  const by = {
+    score:(a,b)=>b.score-a.score || (b.found||"").localeCompare(a.found||""),
+    found:(a,b)=>(b.found||"").localeCompare(a.found||"") || b.score-a.score,
+    company:(a,b)=>(a.company||"").localeCompare(b.company||"","es")
+  }[ui.sort];
+  return list.slice().sort(by);
+}
+
+/* ---------- render ---------- */
+function renderCounts(){
+  const c = {pending:0, applied:0, hidden:0};
+  jobs.forEach(j => c[statusOf(j)]++);
+  for (const k in c) $("#n-"+k).textContent = c[k];
+  $("#n-email").textContent = jobs.filter(j => j.apply_email && statusOf(j) === ui.view).length;
+}
+function renderAxis(){
+  const box = $("#ticks"); box.innerHTML = "";
+  const inView = jobs.filter(j => matches(j, true));
+  const stack = {};
+  inView.sort((a,b)=>a.score-b.score).forEach(j => {
+    const s = Math.max(0, Math.min(100, j.score)), n = stack[s] = (stack[s]||0) + 1;
+    const t = document.createElement("button");
+    t.className = "tick" + (s < ui.lo || s > ui.hi ? " out" : "");
+    t.style.left = s + "%";
+    t.style.height = Math.min(100, 34 + (n-1) * 14) + "%";
+    t.style.background = `var(--tick-${famOf(j)})`;
+    t.style.zIndex = 10 - n;
+    t.dataset.id = j.id;
+    t.setAttribute("aria-label", `${j.score} · ${j.title} · ${j.company}`);
+    t.title = `${j.score} · ${j.title} — ${j.company}`;
+    box.appendChild(t);
+  });
+  const shown = inView.filter(j => j.score >= ui.lo && j.score <= ui.hi).length;
+  $("#axis-range").textContent = `Puntaje ${ui.lo}–${ui.hi}`;
+  $("#axis-count").textContent = `${shown} ${shown === 1 ? "oferta" : "ofertas"}`;
+  $("#shade-l").style.cssText = `left:0;width:${ui.lo}%`;
+  $("#shade-r").style.cssText = `left:${ui.hi}%;right:0`;
+  $("#h-lo").style.left = ui.lo + "%"; $("#h-hi").style.left = ui.hi + "%";
+  $("#h-lo").setAttribute("aria-valuenow", ui.lo); $("#h-hi").setAttribute("aria-valuenow", ui.hi);
+  $("#thresh").style.left = "55%";
+  $("#axis-reset").hidden = ui.lo === 0 && ui.hi === 100;
+}
+function renderFilters(){
+  const base = jobs.filter(j => statusOf(j) === ui.view);
+  const counts = {}; base.forEach(j => counts[famOf(j)] = (counts[famOf(j)]||0) + 1);
+  $("#f-family").innerHTML = Object.keys(FAMILIES).filter(f => counts[f] || ui.fams.has(f)).map(f =>
+    `<label class="check"><input type="checkbox" value="${f}" ${ui.fams.has(f) ? "checked" : ""}><span class="sw" style="background:var(--${f})"></span>${FAMILIES[f].label}<span class="n">${counts[f]||0}</span></label>`).join("");
+  const parts = [];
+  if (ui.fams.size) parts.push([...ui.fams].map(f => FAMILIES[f].label).join(", "));
+  if (ui.source) parts.push(ui.source);
+  if (ui.email) parts.push("por correo");
+  if (ui.q) parts.push(`“${ui.q}”`);
+  $("#f-summary").textContent = parts.join(" · ") || "todos";
+}
+function rowHTML(j){
+  const f = famOf(j), st = statusOf(j), fit = FIT[j.fit];
+  const tags = (fit ? [{label:fit[0], tone:fit[1]}] : []).concat(j.tags || []);
+  const meta = [`<span class="fam">${esc(FAMILIES[f].label)}</span>`, esc(j.source), esc(j.location)];
+  if (j.salary) meta.push(esc(j.salary));
+  if (j.note && j.note !== "—" && j.note !== "Por correo") meta.push(esc(j.note));
+  if (j.apply_email) meta.push(`<span class="mailtag">${icon.mail}Por correo: ${esc(j.apply_email)}</span>`);
+  const link = j.url ? `<a class="btn quiet" href="${esc(j.url)}" target="_blank" rel="noopener">${icon.out}Ver oferta</a>` : "";
+  const mailBtn = j.apply_email ? `<button class="btn primary" data-act="compose" aria-expanded="${ui.open === j.id}" aria-controls="c-${j.id}">${icon.mail}Redactar correo</button>` : "";
+  return `<li class="row is-${st}" id="r-${j.id}" style="--fam:var(--${f})">
+    <div class="score" aria-label="Puntaje ${j.score} de 100">${j.score}<small>de 100</small></div>
+    <div class="main">
+      <h3 class="title">${j.url ? `<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>` : esc(j.title)}</h3>
+      <p class="company">${esc(j.company)}</p>
+      <p class="meta">${meta.join("<span aria-hidden='true'>·</span>")}</p>
+      ${j.summary ? `<p class="summary">${esc(j.summary)}</p>` : ""}
+      ${tags.length ? `<ul class="tags">${tags.map(t => `<li class="t-${esc(t.tone)}">${esc(t.label)}</li>`).join("")}</ul>` : ""}
+    </div>
+    <div class="actions">
+      ${mailBtn}${link}
+      <button class="btn" data-act="applied" aria-pressed="${st === "applied"}">${icon.check}${st === "applied" ? "Postulada" : "Marcar postulada"}</button>
+      <button class="btn quiet" data-act="hidden">${st === "hidden" ? "Recuperar" : icon.x + "Descartar"}</button>
+    </div>
+    ${j.apply_email ? `<div class="compose${ui.open === j.id ? " open" : ""}" id="c-${j.id}"><div>${ui.open === j.id ? composeHTML(j) : ""}</div></div>` : ""}
+  </li>`;
+}
+function composeHTML(j){
+  const lang = ui.lang[j.id] || (isSpanish(j) ? "es" : "en");
+  const d = draft(j, lang), cv = FAMILIES[famOf(j)].cv;
+  return `<div class="c-inner">
+    <div class="c-top">
+      <p>Se abre Gmail con la cuenta <strong>${FROM}</strong>. Revisas, adjuntas y envías tú.</p>
+      <div class="seg" role="group" aria-label="Idioma del correo">
+        <button data-lang="es" aria-pressed="${lang === "es"}">Español</button><button data-lang="en" aria-pressed="${lang === "en"}">English</button>
+      </div>
+    </div>
+    <label class="c-field"><span>Para</span><input value="${esc(j.apply_email)}" data-f="to" inputmode="email"></label>
+    <label class="c-field"><span>Asunto</span><input value="${esc(d.subject)}" data-f="su"></label>
+    <label class="c-field"><span>Mensaje</span><textarea data-f="body">${esc(d.body)}</textarea></label>
+    <div class="c-attach">${icon.clip}<span>Gmail no permite adjuntar desde un enlace. Al abrirse, adjunta <code>${esc(cv)}</code> desde tu carpeta <code>apply/cvs</code>.</span></div>
+    <div class="c-btns">
+      <button class="btn primary" data-act="gmail">${icon.mail}Abrir en Gmail</button>
+      <button class="btn quiet" data-act="copy">Copiar mensaje</button>
+      <a class="btn quiet" data-act="mailto" href="#">Usar otra app de correo</a>
+    </div>
+    <p class="c-after" id="after-${j.id}" hidden>¿Ya lo enviaste? <button class="btn" data-act="applied" style="min-height:30px;margin-left:6px">${icon.check}Marcar postulada</button></p>
+  </div>`;
+}
+function render(){
+  renderCounts(); renderAxis(); renderFilters();
+  const names = {pending:"Pendientes", applied:"Postuladas", hidden:"Descartadas"};
+  $("#list-title").textContent = names[ui.view];
+  const list = sorted(jobs.filter(j => matches(j)));
+  const total = jobs.filter(j => statusOf(j) === ui.view).length;
+  $("#list-sub").textContent = list.length === total ? `${total} en total` : `${list.length} de ${total}`;
+  const rows = $("#rows");
+  if (!list.length){
+    const filtered = total > 0;
+    rows.innerHTML = `<li class="state"><h3>${filtered ? "Ninguna oferta con estos filtros" : ui.view === "pending" ? "No quedan pendientes" : ui.view === "applied" ? "Aún no marcas ninguna como postulada" : "No has descartado ninguna"}</h3>
+      <p>${filtered ? `Hay ${total} en ${names[ui.view].toLowerCase()}, pero el rango ${ui.lo}–${ui.hi} y los filtros las dejan fuera.` : ui.view === "pending" ? "Revisaste todo. El bot agrega ofertas nuevas cada día a las 8:00 (hora de Venezuela)." : "Cuando marques una oferta aparecerá aquí."}</p>
+      ${filtered ? `<button class="btn" id="clear-all">Quitar filtros</button>` : ""}</li>`;
+    const c = $("#clear-all"); if (c) c.onclick = clearAll;
+    return;
+  }
+  rows.innerHTML = list.map(rowHTML).join("");
+}
+function clearAll(){ Object.assign(ui, {q:"", source:"", email:false, lo:0, hi:100}); ui.fams.clear(); $("#q").value = ""; $("#f-source").value = ""; $("#f-email").checked = false; render(); }
+
+/* ---------- actions ---------- */
+let undo = null, toastTimer = 0;
+function toast(msg, undoFn){
+  undo = undoFn; $("#toast-msg").textContent = msg; $("#toast-undo").hidden = !undoFn;
+  $("#toast").classList.add("show"); clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => $("#toast").classList.remove("show"), 4200);
+}
+$("#toast-undo").onclick = () => { if (undo) undo(); $("#toast").classList.remove("show"); };
+function setStatus(id, s){
+  const prev = marks[id];
+  if (s === "pending" || (prev && prev.s === s)) delete marks[id]; else marks[id] = {s, at:new Date().toISOString()};
+  save(); if (ui.open === id) ui.open = null; render();
+  const j = jobs.find(x => x.id === id), now = statusOf(j);
+  const msg = now === "applied" ? "Marcada como postulada" : now === "hidden" ? "Oferta descartada" : "Devuelta a pendientes";
+  toast(`${msg}: ${j.title}`, () => { if (prev) marks[id] = prev; else delete marks[id]; save(); render(); });
+}
+function fieldVals(row){ const g = k => row.querySelector(`[data-f="${k}"]`).value; return {to:g("to"), su:g("su"), body:g("body")}; }
+$("#rows").addEventListener("click", e => {
+  const b = e.target.closest("[data-act],[data-lang]"); if (!b) return;
+  const row = b.closest(".row"), id = row.id.slice(2), j = jobs.find(x => x.id === id);
+  if (b.dataset.lang){ ui.lang[id] = b.dataset.lang; row.querySelector(".compose > div").innerHTML = composeHTML(j); return; }
+  const act = b.dataset.act;
+  if (act === "compose"){
+    const opening = ui.open !== id; ui.open = opening ? id : null;
+    document.querySelectorAll(".compose.open").forEach(c => {
+      if (c.id === "c-" + id) return;
+      c.classList.remove("open");
+      c.closest(".row").querySelector('[data-act="compose"]').setAttribute("aria-expanded", "false");
+    });
+    const c = row.querySelector(".compose");
+    if (opening){ c.firstElementChild.innerHTML = composeHTML(j); requestAnimationFrame(() => c.classList.add("open")); }
+    else c.classList.remove("open");
+    b.setAttribute("aria-expanded", String(opening));
+    if (opening) setTimeout(() => { const s = c.querySelector('[data-f="su"]'); s && s.focus({preventScroll:true}); }, 250);
+    return;
+  }
+  if (act === "gmail"){ const v = fieldVals(row); window.open(gmailUrl(v.to, v.su, v.body), "_blank", "noopener"); row.querySelector(".c-after").hidden = false; return; }
+  if (act === "mailto"){ e.preventDefault(); const v = fieldVals(row); location.href = `mailto:${encodeURIComponent(v.to)}?subject=${encodeURIComponent(v.su)}&body=${encodeURIComponent(v.body)}`; row.querySelector(".c-after").hidden = false; return; }
+  if (act === "copy"){ const v = fieldVals(row); (navigator.clipboard ? navigator.clipboard.writeText(`${v.su}\n\n${v.body}`) : Promise.reject()).then(() => toast("Mensaje copiado"), () => toast("No se pudo copiar; selecciona el texto a mano")); return; }
+  if (act === "applied") return setStatus(id, statusOf(j) === "applied" ? "pending" : "applied");
+  if (act === "hidden") return setStatus(id, statusOf(j) === "hidden" ? "pending" : "hidden");
+});
+
+/* tabs */
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+  ui.view = t.dataset.view; ui.open = null;
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", String(x === t)));
+  render();
+}));
+/* filters */
+let qTimer = 0;
+$("#q").addEventListener("input", e => { clearTimeout(qTimer); qTimer = setTimeout(() => { ui.q = e.target.value.trim(); render(); }, 120); });
+$("#f-family").addEventListener("change", e => { const v = e.target.value; e.target.checked ? ui.fams.add(v) : ui.fams.delete(v); render(); });
+$("#f-source").addEventListener("change", e => { ui.source = e.target.value; render(); });
+$("#f-email").addEventListener("change", e => { ui.email = e.target.checked; render(); });
+$("#f-sort").addEventListener("change", e => { ui.sort = e.target.value; render(); });
+$("#axis-reset").onclick = () => { ui.lo = 0; ui.hi = 100; render(); };
+if (matchMedia("(max-width:820px)").matches) $("#filters").open = false;
+
+/* signature: brush the score axis */
+const plot = $("#plot");
+const pct = x => { const r = plot.getBoundingClientRect(); return Math.round(Math.max(0, Math.min(100, (x - r.left) / r.width * 100))); };
+let drag = null;
+plot.addEventListener("pointerdown", e => {
+  const tick = e.target.closest(".tick");
+  const p = pct(e.clientX), h = e.target.closest(".handle");
+  drag = h ? {mode: h.id === "h-lo" ? "lo" : "hi"} : {mode:"brush", start:p, x:e.clientX, prev:[ui.lo, ui.hi], tick: tick && tick.dataset.id, moved:false};
+  if (!h) e.preventDefault();
+  plot.setPointerCapture(e.pointerId); renderAxis();
+});
+plot.addEventListener("pointermove", e => {
+  if (!drag) return; const p = pct(e.clientX);
+  if (drag.mode === "lo") ui.lo = Math.min(p, ui.hi);
+  else if (drag.mode === "hi") ui.hi = Math.max(p, ui.lo);
+  else {
+    if (!drag.moved && Math.abs(e.clientX - drag.x) < 4) return;
+    drag.moved = true; ui.lo = Math.min(drag.start, p); ui.hi = Math.max(drag.start, p);
+  }
+  renderAxis();
+});
+const endDrag = () => { if (!drag) return; const d = drag; drag = null; if (d.mode === "brush" && !d.moved){ [ui.lo, ui.hi] = d.prev; if (d.tick) return jumpTo(d.tick); }
+  if (d.mode === "brush" && ui.hi - ui.lo < 2){ [ui.lo, ui.hi] = d.prev; } render(); };
+plot.addEventListener("pointerup", endDrag); plot.addEventListener("pointercancel", endDrag);
+[["#h-lo","lo"],["#h-hi","hi"]].forEach(([sel,k]) => $(sel).addEventListener("keydown", e => {
+  const d = {ArrowLeft:-1, ArrowDown:-1, ArrowRight:1, ArrowUp:1, PageDown:-10, PageUp:10}[e.key]; if (!d) return;
+  e.preventDefault();
+  if (k === "lo") ui.lo = Math.max(0, Math.min(ui.hi, ui.lo + d)); else ui.hi = Math.min(100, Math.max(ui.lo, ui.hi + d));
+  render(); $(sel).focus();
+}));
+/* tick → row */
+$("#ticks").addEventListener("click", e => {
+  const t = e.target.closest(".tick"); if (t && e.detail === 0) jumpTo(t.dataset.id);
+});
+function jumpTo(id){
+  const j = jobs.find(x => x.id === id);
+  if (j.score < ui.lo || j.score > ui.hi){ ui.lo = 0; ui.hi = 100; }
+  render();
+  const r = document.getElementById("r-" + id); if (!r) return;
+  r.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion:reduce)").matches ? "auto" : "smooth", block:"center"});
+  r.classList.add("flash"); setTimeout(() => r.classList.remove("flash"), 1200);
+}
+$("#rows").addEventListener("pointerover", e => {
+  const r = e.target.closest(".row"); document.querySelectorAll(".tick.hot").forEach(t => t.classList.remove("hot"));
+  if (r){ const t = document.querySelector(`.tick[data-id="${r.id.slice(2)}"]`); t && t.classList.add("hot"); }
+});
+
+/* theme */
+$("#theme").onclick = () => {
+  const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+  document.documentElement.dataset.theme = cur === "dark" ? "light" : "dark";
+  try { localStorage.setItem("mesa-tema", document.documentElement.dataset.theme); } catch (e) {}
+};
+try { const t = localStorage.getItem("mesa-tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+
+/* ---------- load ---------- */
+function fmtDate(iso){
+  const d = new Date(iso.replace(/([+-]\d\d:\d\d)$/, "$1")); if (isNaN(d)) return iso;
+  return d.toLocaleString("es-VE", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone:"America/Caracas"});
+}
+function load(){
+  $("#rows").innerHTML = `<li class="state"><p>Cargando ofertas…</p></li>`;
+  fetch("data/jobs.json", {cache:"no-store"}).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }).then(data => {
+    jobs = (data.jobs || []).filter(j => j && j.id && j.title).map(j => ({...j, score:Number(j.score)||0}));
+    $("#byline").textContent = `José Jiménez · actualizado ${fmtDate(data.updated || "")} · ${jobs.length} ofertas en la base`;
+    const sources = [...new Set(jobs.map(j => j.source).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"es"));
+    $("#f-source").innerHTML = `<option value="">Todas las fuentes</option>` + sources.map(s => `<option>${esc(s)}</option>`).join("");
+    $("#legend").innerHTML = Object.keys(FAMILIES).filter(f => jobs.some(j => famOf(j) === f)).map(f => `<span><i style="background:var(--tick-${f})"></i>${FAMILIES[f].label}</span>`).join("");
+    render();
+  }).catch(err => {
+    $("#byline").textContent = "José Jiménez · sin datos";
+    $("#rows").innerHTML = `<li class="state"><h3>No se pudieron cargar las ofertas</h3><p>No se encontró <code>data/jobs.json</code> (${esc(err.message)}). Si abriste el archivo desde tu disco, usa la página de GitHub Pages o un servidor local.</p><button class="btn" id="retry">Reintentar</button></li>`;
+    $("#retry").onclick = load;
+  });
+}
+load();
+})();
+</script>
+</body>
+</html>

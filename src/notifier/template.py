@@ -143,6 +143,7 @@ def generar_html(jobs: list[JobPost], fecha: str) -> str:
                         <td style="text-align: center; padding: 10px;">
                             <span style="font-size: 28px; font-weight: 700; color: {PRIMARY};">{len(jobs)}</span>
                             <span style="font-size: 13px; color: #666; display: block;">vacantes nuevas encontradas</span>
+                            <a href="{config.pages_url}" style="font-size: 13px; color: {ACCENT}; display: block; margin-top: 4px;">Ver todas y postular desde la web &rarr;</a>
                         </td>
                     </tr>
                 </table>
@@ -197,7 +198,8 @@ def generar_texto(jobs: list[JobPost], fecha: str) -> str:
     if not jobs:
         return f"Job Bot Report - {fecha}\n\nNo se encontraron vacantes nuevas hoy."
     mode = config.apply_mode
-    lines = [f"Job Bot Report - {fecha}", f"{len(jobs)} vacantes nuevas encontradas", ""]
+    lines = [f"Job Bot Report - {fecha}", f"{len(jobs)} vacantes nuevas encontradas",
+             f"Ver todas y postular desde la web: {config.pages_url}", ""]
     for i, j in enumerate(jobs, 1):
         lines.extend([
             f"{i}. {j.title} ({j.match_score}%)",

@@ -40,6 +40,8 @@ class JobPost:
     cover_letter: str | None = None
     excluded_reason: str | None = None
     post_source: bool = False
+    family: str | None = None
+    apply_email: str | None = None
 
 
 class BaseScraper(ABC):

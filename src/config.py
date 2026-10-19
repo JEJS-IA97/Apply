@@ -23,9 +23,13 @@ def load_env_file() -> None:
 load_env_file()
 
 
-def env(key: str, default: str = "") -> str:
-    val = os.getenv(key)
-    return val if val else default
+def env(key: str, default: str = "", *aliases: str) -> str:
+    """RF-8 (spec 004): acepta nombres alternativos de variables."""
+    for name in (key, *aliases):
+        val = os.getenv(name)
+        if val:
+            return val
+    return default
 
 
 def apply_mode_from(value: str) -> str:
@@ -41,12 +45,12 @@ def apply_paused_from(value: str) -> bool:
 
 @dataclass
 class Config:
-    mongo_uri: str | None = env("MONGO_URI") or None
+    mongo_uri: str | None = env("MONGO_URI", "", "DATABASE_URL") or None
     mongo_db: str = env("MONGO_DB", "job_bot")
-    email_from: str = env("EMAIL_FROM")
-    email_password: str = env("EMAIL_PASSWORD")
-    email_to: str = env("EMAIL_TO", "jose.e.jimenez.1411@gmail.com")
-    smtp_server: str = env("SMTP_SERVER", "smtp.gmail.com")
+    email_from: str = env("EMAIL_FROM", "", "SMTP_USER")
+    email_password: str = env("EMAIL_PASSWORD", "", "SMTP_PASS")
+    email_to: str = env("EMAIL_TO", "jose.e.jimenez.1411@gmail.com", "REPORT_TO")
+    smtp_server: str = env("SMTP_SERVER", "smtp.gmail.com", "SMTP_HOST")
     smtp_port: int = int(env("SMTP_PORT", "587"))
     linkedin_email: str = env("LINKEDIN_EMAIL")
     linkedin_password: str = env("LINKEDIN_PASSWORD")
@@ -64,8 +68,11 @@ class Config:
         "Software Development Engineer in Test", "Quality Assurance Automation",
         "React Developer", "Playwright", "Cypress",
         "QA Analyst", "Quality Assurance", "Manual QA",
-        "QA Tester", "Automation Tester"
+        "QA Tester", "Automation Tester",
+        "UI Designer", "UX Designer", "Product Designer", "Graphic Designer", "Web Designer",
+        "Virtual Assistant", "Administrative Assistant", "Data Entry",
     ])
+    pages_url: str = env("PAGES_URL", "https://jejs-ia97.github.io/Apply/")
     max_days_old: int = int(os.getenv("MAX_DAYS_OLD", "7"))
     output_format: str = os.getenv("OUTPUT_FORMAT", "email")
     apply_mode: str = field(default_factory=lambda: apply_mode_from(env("APPLY_MODE", "assist")))

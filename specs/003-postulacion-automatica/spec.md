@@ -76,4 +76,4 @@ Nota de stack: se propone **Playwright (Python)** y no Cypress, porque Cypress e
 
 ## Dudas abiertas
 
-- Ninguna. T0–T6 completadas el 2026-10-06 (fase 1 + fase 2 cerradas; ver `tasks.md`). Pendientes operativos fuera del alcance de la spec: rotación de credenciales del `.env` expuesto en el historial de git (RNF-2, decisión del usuario) y revalidación de familias ATS demovidas.
+- Ninguna. T0–T6 completadas el 2026-10-06 (fase 1 + fase 2 cerradas; ver `tasks.md`). Pendiente operativo cerrado: las credenciales del `.env` viejo expuesto en el historial de git fueron **revertidas/cambiadas por el usuario** (confirmado 2026-10-06); `.env` des-trackeado en `7685efc`. Queda solo la revalidación manual de familias ATS demovidas.
