@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T17:51+00:00",
+ "updated": "2026-10-29T18:00+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -1420,6 +1420,22 @@
     }
    ],
    "curated": true
+  },
+  {
+   "id": "fcdf35f87b4a",
+   "title": "User Acceptance Test Engineer",
+   "company": "Booming Games",
+   "location": "Pressig",
+   "source": "Arbeitnow",
+   "family": "qa",
+   "score": 61,
+   "salary": "",
+   "url": "https://www.arbeitnow.com/jobs/companies/booming-games/user-acceptance-test-engineer-pressig-155748",
+   "apply_email": "",
+   "posted": "2026-10-29",
+   "found": "2026-10-29",
+   "summary": "<h2>About the role</h2> <p>We are looking for an iGaming specialist who is passionate about testing our fabulous Casino Games and being the “voice of quality” for our products.</p> <h2>Responsibilities</h2> <ul> <li>Analyse users’ stories, use cases and requirements for validity and feasibility.</li> <li>Develop and re",
+   "curated": false
   },
   {
    "id": "bd634d0df366",
