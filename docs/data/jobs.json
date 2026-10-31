@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T17:41+00:00",
+ "updated": "2026-10-31T16:44+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -1683,6 +1683,22 @@
    "posted": "2026-10-18",
    "found": "2026-10-19",
    "summary": "Playwright and Cypress automation for web apps",
+   "curated": false
+  },
+  {
+   "id": "4b5338333e47",
+   "title": "QA Engineer - Manual & Automation",
+   "company": "Sonatafy Technology",
+   "location": "Colombia",
+   "source": "Himalayas",
+   "family": "qa",
+   "score": 55,
+   "salary": "",
+   "url": "https://himalayas.app/companies/sonatafy-technology/jobs/qa-engineer-manual-automation?utm_source=api",
+   "apply_email": "",
+   "posted": "2026-10-31",
+   "found": "2026-10-31",
+   "summary": "THIS OPENING IS AVAILABLE FOR CANDIDATES IN LATIN AMERICA, NOT LIMITED TO ONLY COLOMBIA.",
    "curated": false
   },
   {
