@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T19:02+00:00",
+ "updated": "2026-11-03T21:01+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -601,6 +601,35 @@
    "applicants": null
   },
   {
+   "title": "Talent pool QA / Frontend para equipos de EE. UU.",
+   "company": "CUP Latam",
+   "location": "LATAM · 100% remoto",
+   "source": "LinkedIn (post)",
+   "family": "qa",
+   "score": 70,
+   "url": "",
+   "apply_email": "florencia@cuplatam.com",
+   "note": "Enviar CV en inglés",
+   "summary": "Reclutadora que conecta a talento de LATAM con empresas de EE. UU. (desarrollo, QA, data). Pide CV o LinkedIn por correo; entrevistan y avisan cuando hay un rol.",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Toda LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "CV en inglés",
+     "tone": "warn"
+    }
+   ],
+   "id": "cup-latam-pool",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-03",
+   "applicants": null,
+   "curated": true
+  },
+  {
    "id": "db26db0994c8",
    "title": "Especialista QA",
    "company": "Jacidi",
@@ -785,35 +814,6 @@
    ],
    "curated": true,
    "applicants": null
-  },
-  {
-   "title": "Talent pool QA / Frontend para equipos de EE. UU.",
-   "company": "CUP Latam",
-   "location": "LATAM · 100% remoto",
-   "source": "LinkedIn (post)",
-   "family": "qa",
-   "score": 70,
-   "url": "",
-   "apply_email": "florencia@cuplatam.com",
-   "note": "Enviar CV en inglés",
-   "summary": "Reclutadora que conecta a talento de LATAM con empresas de EE. UU. (desarrollo, QA, data). Pide CV o LinkedIn por correo; entrevistan y avisan cuando hay un rol.",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Toda LATAM",
-     "tone": "ok"
-    },
-    {
-     "label": "CV en inglés",
-     "tone": "warn"
-    }
-   ],
-   "id": "cup-latam-pool",
-   "salary": "",
-   "posted": "",
-   "found": "2026-11-03",
-   "applicants": null,
-   "curated": true
   },
   {
    "id": "fc57d6eb5a26",
@@ -1048,35 +1048,6 @@
    "applicants": null
   },
   {
-   "id": "a156cb315a12",
-   "title": "ABL - Automation Tester",
-   "company": "Capgemini",
-   "location": "Aguascalientes, México",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 62,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479577001/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Piden 2 a 4 años de QA manual con pruebas de APIs. Tu experiencia con Postman sirve.",
-   "note": "Primeros 25",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "2–4 años",
-     "tone": "warn"
-    },
-    {
-     "label": "APIs",
-     "tone": "ok"
-    }
-   ],
-   "curated": true,
-   "applicants": null
-  },
-  {
    "title": "Asistente virtual para despachos (talento desde Venezuela)",
    "company": "Asistente Virtual OK",
    "location": "España · remoto desde Venezuela",
@@ -1108,6 +1079,35 @@
    "found": "2026-11-03",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "a156cb315a12",
+   "title": "ABL - Automation Tester",
+   "company": "Capgemini",
+   "location": "Aguascalientes, México",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 62,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4479577001/",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-10-19",
+   "summary": "Piden 2 a 4 años de QA manual con pruebas de APIs. Tu experiencia con Postman sirve.",
+   "note": "Primeros 25",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "2–4 años",
+     "tone": "warn"
+    },
+    {
+     "label": "APIs",
+     "tone": "ok"
+    }
+   ],
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "fcdf35f87b4a",
@@ -1212,23 +1212,6 @@
    ],
    "curated": true,
    "applicants": 30
-  },
-  {
-   "id": "2d9f29ef8cc5",
-   "title": "QA Automation Engineer",
-   "company": "Acme",
-   "location": "Remote",
-   "source": "Test",
-   "family": "qa",
-   "score": 57,
-   "salary": "",
-   "url": "https://example.com/job/good",
-   "apply_email": "",
-   "posted": "2026-10-18",
-   "found": "2026-10-19",
-   "summary": "Playwright and Cypress automation for web apps",
-   "curated": false,
-   "applicants": null
   },
   {
    "id": "c26d9e2e5ba8",
