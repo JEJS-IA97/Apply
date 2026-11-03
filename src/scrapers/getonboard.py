@@ -73,6 +73,7 @@ class GetOnBoardScraper(BaseScraper):
             title=a["title"], company=company, location="Remote (Worldwide)",
             description=description, url=url, source="GetOnBoard",
             posted_date=posted, is_remote=True, apply_url=url, salary=salary,
+            applicants=a.get("applications_count"),
         )
 
     def verify_job_active(self, url: str) -> bool:

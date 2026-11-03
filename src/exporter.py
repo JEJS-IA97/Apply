@@ -46,6 +46,7 @@ def to_record(job: JobPost, now: datetime) -> dict:
         "apply_email": email or "",
         "posted": job.posted_date.date().isoformat() if job.posted_date else "",
         "found": now.date().isoformat(),
+        "applicants": job.applicants,
         "summary": re.sub(r"\s+", " ", job.description or "").strip()[:320],
         "curated": False,
     }
