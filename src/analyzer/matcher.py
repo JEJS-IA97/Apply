@@ -75,6 +75,7 @@ class JobMatcher:
         self.relevance_patterns = [re.compile(p, re.IGNORECASE) for p in rel.get("title_patterns", [])]
         self.min_score = float(rel.get("min_score", 55))
         self.report_limit = int(rel.get("report_limit", 20))
+        self.max_applicants = int(rel.get("max_applicants", 50))
 
     def filter_jobs(self, jobs: list[JobPost]) -> list[JobPost]:
         filtered = []
@@ -136,6 +137,8 @@ class JobMatcher:
             return "idioma_publicacion"
         if not self._is_remote_ok(job):
             return "no_remoto"
+        if job.applicants is not None and job.applicants > self.max_applicants:
+            return "demasiadas_postulaciones"
         return ""
 
     def _has_non_latin_script(self, job: JobPost) -> bool:

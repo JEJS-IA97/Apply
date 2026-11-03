@@ -35,35 +35,8 @@
      "tone": "bad"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "96692a615306",
-   "title": "Quality Assurance Engineer",
-   "company": "Seeed",
-   "location": "Colombia",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 89,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479203424",
-   "apply_email": "",
-   "posted": "2026-10-13",
-   "found": "2026-10-19",
-   "summary": "Puesto full-time y remoto, de nivel inicial.",
    "curated": true,
-   "fit": "encaja",
-   "note": "197 solicitudes",
-   "tags": [
-    {
-     "label": "Remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "Sin experiencia",
-     "tone": "ok"
-    }
-   ]
+   "applicants": null
   },
   {
    "id": "f7a60e5a6442",
@@ -95,38 +68,40 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
-   "id": "d03744b15758",
-   "title": "Quality Assurance Automation Engineer",
-   "company": "Forte Group",
-   "location": "México",
-   "source": "LinkedIn",
+   "title": "QA Automation Engineer",
+   "company": "Consultec-TI",
+   "location": "Venezuela · 100% remoto",
+   "source": "Consultec",
    "family": "qa",
-   "score": 85,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4477812949/",
+   "score": 82,
+   "url": "https://empleo.consultec-ti.com/jobs/8657824-qa-automation-engineer",
    "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Empresa remote-first enfocada en QA, nivel intermedio. Su stack incluye .NET/Azure.",
-   "note": "154 solicitudes",
+   "note": "Formulario preparado el 3-nov",
+   "summary": "Consultora venezolana. Piden 2+ años en automatización con Selenium, Playwright o Cypress, JS/TS, Postman, POM, GitHub Actions y Git. Encaja con tu stack.",
    "fit": "encaja",
    "tags": [
     {
-     "label": "Remote-first",
+     "label": "Venezuela",
      "tone": "ok"
     },
     {
-     "label": "Intermedio",
+     "label": "Cypress/Playwright",
      "tone": "ok"
     },
     {
-     "label": ".NET",
+     "label": "2+ años",
      "tone": "warn"
     }
    ],
+   "id": "2e8f96c2195d",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-03",
+   "applicants": null,
    "curated": true
   },
   {
@@ -155,7 +130,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "a068c2e4559a",
@@ -187,7 +163,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "61247e930fd1",
@@ -219,7 +196,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 20
   },
   {
    "id": "dd1f72587bea",
@@ -251,39 +229,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "dfa51852d200",
-   "title": "Quality Engineer (Junior SDET)",
-   "company": "TrueML",
-   "location": "México",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 79,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4478148643/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Piden 1–2 años de experiencia en testing: tu perfil exacto. Mencionan Python, que no está en tu CV.",
-   "note": "113 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Junior",
-     "tone": "ok"
-    },
-    {
-     "label": "1–2 años",
-     "tone": "ok"
-    },
-    {
-     "label": "Python",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": 25
   },
   {
    "id": "e7273dec0177",
@@ -311,7 +258,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 35
   },
   {
    "id": "5c0110a2d78d",
@@ -343,7 +291,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 10
   },
   {
    "id": "d85333a7b642",
@@ -371,7 +320,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "3ee38d7de8b3",
@@ -403,7 +353,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "a4047c47fde0",
@@ -431,7 +382,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "2bec387ddcde",
@@ -459,67 +411,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "49c7db84333f",
-   "title": "Web Designer & Growth Specialist (AI-Driven)",
-   "company": "Contalink",
-   "location": "México · 100% remoto",
-   "source": "LinkedIn",
-   "family": "design",
-   "score": 75,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479753412/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "SaaS contable que factura más de 10M USD al año. Piden Figma, HTML/CSS y diseño responsive. Confirma si aceptan candidatos fuera de México.",
-   "note": "81 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "100% remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "Figma + HTML/CSS",
-     "tone": "ok"
-    },
-    {
-     "label": "¿Solo México?",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
-  },
-  {
-   "id": "aeb22f1b9c25",
-   "title": "Diseñador gráfico",
-   "company": "Efiempresa",
-   "location": "Venezuela",
-   "source": "LinkedIn",
-   "family": "design",
-   "score": 75,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479030085/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Empresa en Venezuela. Piden Illustrator, Photoshop, Figma y Canva. No indica modalidad.",
-   "note": "139 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Venezuela",
-     "tone": "ok"
-    },
-    {
-     "label": "Modalidad sin confirmar",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "44dcfa52b583",
@@ -551,39 +444,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "e32a769d8e83",
-   "title": "Accounting Assistant (Bilingual English/Spanish) – Entry Level",
-   "company": "Accounting Group of South Florida",
-   "location": "Venezuela",
-   "source": "LinkedIn",
-   "family": "admin",
-   "score": 75,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4480157911/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Nivel de entrada, publicada para Venezuela, con 400–600 USD al mes. Agendar citas y atender clientes en inglés y español.",
-   "note": "89 solicitudes",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "Venezuela",
-     "tone": "ok"
-    },
-    {
-     "label": "Entry level",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés hablado",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "b6973c9ece30",
@@ -611,7 +473,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 33
   },
   {
    "id": "6aed8dc383b9",
@@ -639,7 +502,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "32c53a0714f1",
@@ -671,7 +535,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 15
   },
   {
    "id": "580bb9f418ec",
@@ -703,39 +568,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "445e37e55d4b",
-   "title": "Virtual Executive Administrative Coordinator I",
-   "company": "Job Duck",
-   "location": "Remoto (empleadores de EE. UU.)",
-   "source": "LinkedIn",
-   "family": "admin",
-   "score": 72,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479551176/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "100% remoto, tiempo completo y largo plazo, con 1.060–1.150 USD al mes. Piden buen inglés escrito y hablado.",
-   "note": "75 solicitudes",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "100% remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "~1.100 USD/mes",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": 15
   },
   {
    "id": "383cf8384e52",
@@ -763,35 +597,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "d9d11bf7c919",
-   "title": "QA Engineer",
-   "company": "Ford México",
-   "location": "Naucalpan, México",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 71,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4466616663/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Piden 2–3 años, encaja bien, pero exigen inglés avanzado.",
-   "note": "196 solicitudes",
-   "fit": "ingles",
-   "tags": [
-    {
-     "label": "2–3 años",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés avanzado",
-     "tone": "bad"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "db26db0994c8",
@@ -823,7 +630,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "ce0bee861e6d",
@@ -851,7 +659,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 26
   },
   {
    "id": "9e818667aebc",
@@ -883,35 +692,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "f3b049326594",
-   "title": "Middle UX-UI Designer",
-   "company": "Evaluar",
-   "location": "LATAM · 100% remoto",
-   "source": "LinkedIn",
-   "family": "design",
-   "score": 70,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479001799/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Producto con alcance en LATAM, 100% remoto. Piden Figma, wireframes y design system.",
-   "note": "194 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Remoto LATAM",
-     "tone": "ok"
-    },
-    {
-     "label": "Mid",
-     "tone": "ok"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": 5
   },
   {
    "id": "7746a9b454dd",
@@ -943,7 +725,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 5
   },
   {
    "id": "541262ea2db4",
@@ -971,7 +754,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "89d6ec5f07ab",
@@ -999,62 +783,36 @@
      "tone": "bad"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
-   "id": "c1552798110d",
-   "title": "React Developer",
-   "company": "ttg Talent Solutions",
-   "location": "Colombia, remoto",
-   "source": "LinkedIn",
-   "family": "frontend",
-   "score": 68,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4477908945/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Remoto, con inglés mínimo B1/B2 (tu nivel). Tiene muchos postulantes.",
-   "note": "Más de 200 solicitudes",
+   "title": "Talent pool QA / Frontend para equipos de EE. UU.",
+   "company": "CUP Latam",
+   "location": "LATAM · 100% remoto",
+   "source": "LinkedIn (post)",
+   "family": "qa",
+   "score": 70,
+   "url": "",
+   "apply_email": "florencia@cuplatam.com",
+   "note": "Enviar CV en inglés",
+   "summary": "Reclutadora que conecta a talento de LATAM con empresas de EE. UU. (desarrollo, QA, data). Pide CV o LinkedIn por correo; entrevistan y avisan cuando hay un rol.",
    "fit": "encaja",
    "tags": [
     {
-     "label": "Remoto",
+     "label": "Toda LATAM",
      "tone": "ok"
     },
     {
-     "label": "Inglés B1/B2",
-     "tone": "ok"
-    }
-   ],
-   "curated": true
-  },
-  {
-   "id": "d437c24bc8c9",
-   "title": "Desarrollador Frontend/React.js",
-   "company": "Indra Group",
-   "location": "Perú, 100% remoto",
-   "source": "LinkedIn",
-   "family": "frontend",
-   "score": 67,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479842305/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "100% remoto y en español. Piden 3 años de frontend, así que tu experiencia de UI y React tendrá que pesar.",
-   "note": "146 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "100% remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "3 años",
+     "label": "CV en inglés",
      "tone": "warn"
     }
    ],
+   "id": "cup-latam-pool",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-03",
+   "applicants": null,
    "curated": true
   },
   {
@@ -1087,7 +845,8 @@
      "tone": "bad"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "d1946f73e988",
@@ -1119,7 +878,8 @@
      "tone": "ok"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "ff7ce4c4c10e",
@@ -1147,35 +907,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "2403bca9ab53",
-   "title": "QA Analyst",
-   "company": "Zaelot",
-   "location": "100% remoto desde cualquier país",
-   "source": "Get on Board",
-   "family": "qa",
-   "score": 65,
-   "salary": "",
-   "url": "https://www.getonbrd.com/jobs/qa-engineer-zaelot-remote",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Semi senior, 3.500–4.000 USD al mes. Es QA de datos e IA (pipelines, APIs, UAT). La postulación va en inglés.",
-   "note": "413 postulaciones",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "Cualquier país",
-     "tone": "ok"
-    },
-    {
-     "label": "Muy competida",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "9f348da2ba1b",
@@ -1203,7 +936,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "1f5efa042da6",
@@ -1231,35 +965,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "8cb3a1483877",
-   "title": "Product Designer",
-   "company": "Wherex",
-   "location": "Chile (opera en LATAM)",
-   "source": "LinkedIn",
-   "family": "design",
-   "score": 65,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479749382/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Compras B2B en Chile, Perú, Colombia y México. Piden Figma, UX y design system. Revisa la modalidad.",
-   "note": "180 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "UX/UI",
-     "tone": "ok"
-    },
-    {
-     "label": "Modalidad sin confirmar",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "00af449d94dd",
@@ -1291,7 +998,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 50
   },
   {
    "id": "e12d803178b2",
@@ -1319,35 +1027,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "9302f61a72da",
-   "title": "Data Entry Jr.",
-   "company": "VUMI",
-   "location": "Medellín, Colombia",
-   "source": "LinkedIn",
-   "family": "admin",
-   "score": 65,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4476487517/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Data entry junior con inglés básico. Probablemente pide residir en Colombia: confírmalo.",
-   "note": "106 solicitudes",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "Inglés básico",
-     "tone": "ok"
-    },
-    {
-     "label": "Residencia por confirmar",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "b6ec902f5d37",
@@ -1363,35 +1044,8 @@
    "posted": "2026-10-19",
    "found": "2026-10-19",
    "summary": "100–150 USD/hr | Fully Remote Open Source Applied Engineer Talent Network Part-time, remote, and paid by the hour. ✅ Designing evals for coding tasks in Python, Java, C, JS or TS ✅ Writing test cases that measure system behavior ✅ A GitHub record of steady contributions in the last year ✅ Git and CI/CD workflow comfort",
-   "curated": false
-  },
-  {
-   "id": "8d1453c46e1d",
-   "title": "Software QA Analyst",
-   "company": "Communities.Tech",
-   "location": "Remoto LATAM",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 63,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479822548/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Remoto explícito para LATAM y nivel inicial. Incluye clases de inglés semanales.",
-   "note": "Más de 200 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Remote LATAM",
-     "tone": "ok"
-    },
-    {
-     "label": "Sin experiencia",
-     "tone": "ok"
-    }
-   ],
-   "curated": true
+   "curated": false,
+   "applicants": null
   },
   {
    "id": "a156cb315a12",
@@ -1419,6 +1073,40 @@
      "tone": "ok"
     }
    ],
+   "curated": true,
+   "applicants": null
+  },
+  {
+   "title": "Asistente virtual para despachos (talento desde Venezuela)",
+   "company": "Asistente Virtual OK",
+   "location": "España · remoto desde Venezuela",
+   "source": "LinkedIn (post)",
+   "family": "admin",
+   "score": 62,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=%22Asistente%20Virtual%20OK%22",
+   "apply_email": "",
+   "note": "Contactar a Iosu de Isusi Aburto",
+   "summary": "Contratan asistentes virtuales en Venezuela para administradores de fincas en España: llamadas, incidencias, proveedores y seguimiento. En español.",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Venezuela",
+     "tone": "ok"
+    },
+    {
+     "label": "Español",
+     "tone": "ok"
+    },
+    {
+     "label": "Contacto por DM",
+     "tone": "warn"
+    }
+   ],
+   "id": "b7f7ca7d04b9",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-03",
+   "applicants": null,
    "curated": true
   },
   {
@@ -1435,35 +1123,8 @@
    "posted": "2026-10-29",
    "found": "2026-10-29",
    "summary": "<h2>About the role</h2> <p>We are looking for an iGaming specialist who is passionate about testing our fabulous Casino Games and being the “voice of quality” for our products.</p> <h2>Responsibilities</h2> <ul> <li>Analyse users’ stories, use cases and requirements for validity and feasibility.</li> <li>Develop and re",
-   "curated": false
-  },
-  {
-   "id": "bd634d0df366",
-   "title": "Quality Assurance Analyst",
-   "company": "The Functionary",
-   "location": "Ciudad de México",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 60,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4477826720/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Piden 1–3 años de QA. Mencionan Selenium y Python.",
-   "note": "58 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "1–3 años",
-     "tone": "ok"
-    },
-    {
-     "label": "Selenium",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": false,
+   "applicants": null
   },
   {
    "id": "bcf33dccd41a",
@@ -1491,7 +1152,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "86b9201d8f8b",
@@ -1519,127 +1181,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "e2468b699ff6",
-   "title": "Virtual Assistant",
-   "company": "CS Outsource",
-   "location": "Venezuela · fully remote",
-   "source": "LinkedIn",
-   "family": "admin",
-   "score": 60,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4477942582/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Totalmente remoto desde Venezuela. Piden inglés escrito y verbal excelente.",
-   "note": "139 solicitudes",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "Venezuela",
-     "tone": "ok"
-    },
-    {
-     "label": "Remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés alto",
-     "tone": "bad"
-    }
-   ],
-   "curated": true
-  },
-  {
-   "id": "51bf121fc308",
-   "title": "Matching Operations Coordinator",
-   "company": "Toptal",
-   "location": "Venezuela · fully remote",
-   "source": "LinkedIn",
-   "family": "admin",
-   "score": 60,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4458913854/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Toptal es 100% remota y contrata en Venezuela. La postulación debe ir en inglés.",
-   "note": "Más de 200 solicitudes",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "100% remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
-  },
-  {
-   "id": "a3b98aca0829",
-   "title": "Administrative / Executive Assistant",
-   "company": "Scoutly",
-   "location": "América Latina · remoto",
-   "source": "LinkedIn",
-   "family": "admin",
-   "score": 60,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4472938852/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Para empresas de EE. UU., con 1.400–2.500 USD al mes más bonos. Piden inglés excelente.",
-   "note": "Más de 200 solicitudes",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "Remoto LATAM",
-     "tone": "ok"
-    },
-    {
-     "label": "Buen sueldo",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés alto",
-     "tone": "bad"
-    }
-   ],
-   "curated": true
-  },
-  {
-   "id": "ad99bdccd1d3",
-   "title": "QA Analyst Jr",
-   "company": "MRM",
-   "location": "Buenos Aires",
-   "source": "LinkedIn",
-   "family": "qa",
-   "score": 60,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4346644135/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Junior y remoto, con dos visitas a la oficina al mes. Piden inglés avanzado.",
-   "note": "Más de 200 solicitudes",
-   "fit": "ingles",
-   "tags": [
-    {
-     "label": "Junior",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés avanzado",
-     "tone": "bad"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "e559198d450a",
@@ -1667,7 +1210,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 30
   },
   {
    "id": "2d9f29ef8cc5",
@@ -1683,7 +1227,8 @@
    "posted": "2026-10-18",
    "found": "2026-10-19",
    "summary": "Playwright and Cypress automation for web apps",
-   "curated": false
+   "curated": false,
+   "applicants": null
   },
   {
    "id": "c26d9e2e5ba8",
@@ -1699,7 +1244,8 @@
    "posted": "2026-10-31",
    "found": "2026-11-01",
    "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
-   "curated": false
+   "curated": false,
+   "applicants": null
   },
   {
    "id": "4b5338333e47",
@@ -1715,7 +1261,8 @@
    "posted": "2026-10-31",
    "found": "2026-10-31",
    "summary": "THIS OPENING IS AVAILABLE FOR CANDIDATES IN LATIN AMERICA, NOT LIMITED TO ONLY COLOMBIA.",
-   "curated": false
+   "curated": false,
+   "applicants": null
   },
   {
    "id": "3255f1bc9b8b",
@@ -1743,35 +1290,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "275eba5c6850",
-   "title": "Web Designer at AIOS — Remote",
-   "company": "AIOS",
-   "location": "Global · remoto async",
-   "source": "LinkedIn",
-   "family": "design",
-   "score": 55,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4478399316/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Paga $75k–150k al año con equity, totalmente remoto y async en tu zona horaria. Es exigente: pide portafolio fuerte e inglés escrito.",
-   "note": "143 solicitudes",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Remoto global",
-     "tone": "ok"
-    },
-    {
-     "label": "Muy competida",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "2a218a107de0",
@@ -1799,7 +1319,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "8faa7ddfd485",
@@ -1827,7 +1348,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "9a5d97e693f7",
@@ -1859,7 +1381,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 15
   },
   {
    "id": "1d3a1ad9e75c",
@@ -1891,7 +1414,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": 20
   },
   {
    "id": "a6187835db33",
@@ -1919,35 +1443,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
-  },
-  {
-   "id": "5ba280e44dee",
-   "title": "Programador full stack",
-   "company": "Yummy",
-   "location": "Venezuela",
-   "source": "LinkedIn",
-   "family": "frontend",
-   "score": 50,
-   "salary": "",
-   "url": "https://www.linkedin.com/jobs/view/4479588747/",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Empresa venezolana y en español. Piden 2–3 años; su stack incluye C#/.NET.",
-   "note": "Más de 200 solicitudes",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "Venezuela",
-     "tone": "ok"
-    },
-    {
-     "label": "C#/.NET",
-     "tone": "warn"
-    }
-   ],
-   "curated": true
+   "curated": true,
+   "applicants": 37
   },
   {
    "id": "fa515fbf4346",
@@ -1975,7 +1472,8 @@
      "tone": "bad"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "954804dfd324",
@@ -2003,7 +1501,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   },
   {
    "id": "corip-senior-qa",
@@ -2035,7 +1534,8 @@
      "tone": "warn"
     }
    ],
-   "curated": true
+   "curated": true,
+   "applicants": null
   }
  ]
 }

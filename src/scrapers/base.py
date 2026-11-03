@@ -42,6 +42,7 @@ class JobPost:
     post_source: bool = False
     family: str | None = None
     apply_email: str | None = None
+    applicants: int | None = None
 
 
 class BaseScraper(ABC):
@@ -158,3 +159,20 @@ class BaseScraper(ABC):
                 return True
 
         return False
+
+
+APPLICANTS_RE = re.compile(r"(\d[\d.,]*)\s*(?:\+\s*)?(?:applicants|postulaci|solicitud|candidat|propuestas|proposals)", re.IGNORECASE)
+
+
+def parse_applicants(text: str | None) -> int | None:
+    """RF-12 (spec 004): convierte "Over 200 applicants", "113 solicitudes" o
+    "Be among the first 25 applicants" en un número; None si no lo indica."""
+    if not text:
+        return None
+    m = APPLICANTS_RE.search(text)
+    if not m:
+        return None
+    n = int(re.sub(r"[.,]", "", m.group(1)))
+    if re.search(r"(over|más de|mas de|\+)", text, re.IGNORECASE):
+        n += 1
+    return n
