@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from src.profile import load_cv
-from src.scrapers.base import BaseScraper, JobPost
+from src.scrapers.base import BaseScraper, JobPost, parse_applicants
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
 GUEST_API = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
@@ -176,6 +176,9 @@ class LinkedInScraper(BaseScraper):
         if resp.status_code != 200:
             return None
         soup = BeautifulSoup(resp.text, "html.parser")
+        caption = soup.select_one(".num-applicants__caption, .num-applicants__figure")
+        if caption:
+            job.applicants = parse_applicants(caption.get_text(" ", strip=True))
         markup = soup.select_one(".show-more-less-html__markup, #job-details")
         if markup:
             text = re.sub(r"\s+", " ", markup.get_text(" ", strip=True)).strip()

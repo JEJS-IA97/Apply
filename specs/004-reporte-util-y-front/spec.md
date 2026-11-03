@@ -38,3 +38,7 @@ José reporta (2026-10-19) que el correo diario solo trae ofertas "senior" o con
 
 - Envío automático de correos de postulación.
 - Scraping de sitios que requieren login o tienen anti-bot (Indeed, Glassdoor…).
+
+
+### RF-12: límite de postulantes (añadido el 3-nov-2026)
+Una oferta con más de `relevance_filter.max_applicants` postulantes (por defecto 50) se excluye con el motivo `demasiadas_postulaciones`. El conteo sale de LinkedIn (`.num-applicants__caption`, por ejemplo "Over 200 applicants" → 201) y de Get on Board (`applications_count`). Si la fuente no lo informa, la oferta no se excluye. La web oculta también las ofertas curadas cuyo `applicants` supere el límite.

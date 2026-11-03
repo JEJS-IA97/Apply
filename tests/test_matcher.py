@@ -179,3 +179,21 @@ def test_design_and_admin_families_are_relevant():
     assert fam_a[0] == "admin"
     result = matcher.filter_jobs([design])
     assert len(result) == 1
+
+
+def test_rf12_excluye_demasiadas_postulaciones():
+    """RF-12 (spec 004): más de 50 postulantes => fuera; sin dato => no se excluye."""
+    from src.scrapers.base import parse_applicants
+    assert parse_applicants("Over 200 applicants") == 201
+    assert parse_applicants("Be among the first 25 applicants") == 25
+    assert parse_applicants("113 solicitudes") == 113
+    assert parse_applicants("Más de 200 solicitudes") == 201
+    assert parse_applicants("Primeros 25") is None
+    m = JobMatcher()
+    job = JobPost(title="QA Automation Engineer", company="Acme", location="Remote LATAM",
+                  description="Cypress Playwright TypeScript Postman remote LATAM", url="https://x/1",
+                  source="LinkedIn", is_remote=True)
+    job.applicants = 229
+    assert m._exclusion_reason(job) == "demasiadas_postulaciones"
+    job.applicants = None
+    assert m._exclusion_reason(job) != "demasiadas_postulaciones"
