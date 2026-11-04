@@ -1,7 +1,8 @@
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from src.analyzer.cover_letter import CoverLetterGenerator
+from src.analyzer.freshness import verify_freshness
 from src.analyzer.matcher import JobMatcher
 from src.apply.batch import BatchReport, run_batch
 from src.apply.ledger import ApplicationLedger
@@ -155,7 +156,7 @@ def run_auto(
 def main():
     mode = effective_apply_mode()
     print("=" * 60)
-    print(f"Job Scraper Bot - {datetime.now(timezone.utc).isoformat()}")
+    print(f"Job Scraper Bot - {datetime.now(UTC).isoformat()}")
     print(f"Modo de postulacion: {mode}")
     print("=" * 60)
 
@@ -178,6 +179,11 @@ def main():
     filtered = matcher.filter_jobs(deduped)
     print(f"Tras filtros CV (score>={matcher.min_score}): {len(filtered)}")
     log_excluded(matcher)
+
+    filtered, stale = verify_freshness(filtered, max_age_days=matcher.max_post_age_days)
+    for job, reason in stale:
+        print(f"  [frescura] {reason}: {job.source} | {job.title[:70]}")
+    print(f"Tras verificar fecha y cierre (RF-15): {len(filtered)}")
 
     try:
         total = export_jobs(filtered)

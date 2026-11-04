@@ -76,6 +76,7 @@ class JobMatcher:
         self.min_score = float(rel.get("min_score", 55))
         self.report_limit = int(rel.get("report_limit", 20))
         self.max_applicants = int(rel.get("max_applicants", 50))
+        self.max_post_age_days = int(rel.get("max_post_age_days", 14))
         self.blocked_sources = [b.lower() for b in rel.get("blocked_sources", [])]
 
     def filter_jobs(self, jobs: list[JobPost]) -> list[JobPost]:

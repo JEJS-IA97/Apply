@@ -45,3 +45,15 @@ Una oferta con más de `relevance_filter.max_applicants` postulantes (por defect
 
 ### RF-13: fuentes que cobran por postular (añadido el 4-nov-2026)
 Las ofertas cuya URL o fuente pertenezca a `relevance_filter.blocked_sources` (Upwork, Freelancer, Workana: cobran Connects, bids o membresía para postular) se excluyen con el motivo `fuente_de_pago`. Regla de José: no se paga por postular.
+
+### RF-14: Telegram (añadido el 4-nov-2026)
+El bot lee los grupos y canales listados en `TELEGRAM_CHATS` (ids como `-1004380156934` o @usuarios, separados por coma) con la sesión de José (`TELEGRAM_SESSION`, generada una sola vez con `scripts/telegram_login.py`) y `TELEGRAM_API_ID`/`TELEGRAM_API_HASH`. Solo lee mensajes de los últimos `MAX_DAYS_OLD` días que parezcan vacantes. Nunca escribe, reacciona ni se une a chats. Sin esas variables, la fuente queda `pending` con el motivo.
+
+### RF-15: verificación de fecha y cierre (añadido el 4-nov-2026)
+Después del matcher:
+- se excluye toda oferta con fecha de publicación anterior a `relevance_filter.max_post_age_days` (14 días) por `publicacion_vieja`;
+- en las ofertas que vienen de publicaciones (`post_source`), se excluyen por `oferta_cerrada` las que dicen en su texto que la convocatoria está cerrada;
+- además, para esas mismas ofertas se abre su enlace (hasta 40 por ejecución). Se excluye la oferta si el enlace da 404/410, si el JSON-LD `JobPosting` tiene `validThrough` vencido, si `datePosted` es viejo o si la página indica que ya no se aceptan postulaciones;
+- si el enlace no responde, la oferta se conserva.
+
+Es determinista y no usa Gemini.

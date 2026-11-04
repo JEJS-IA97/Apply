@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T15:17+00:00",
+ "updated": "2026-11-04T16:05+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -684,6 +684,35 @@
    "applicants": null
   },
   {
+   "title": "Social Media Manager (Instagram/TikTok)",
+   "company": "Social Latam (Nicolás Martínez Alarcón)",
+   "location": "100% remoto · full time · USD",
+   "family": "design",
+   "score": 66,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=Nicol%C3%A1s%20Mart%C3%ADnez%20Alarc%C3%B3n%20Social%20Media%20Manager",
+   "apply_email": "",
+   "note": "Postular por DM con portafolio",
+   "summary": "Agencia de reputación ejecutiva en LATAM. Buscan Social Media Manager de Instagram y TikTok, especialista en YouTube y editor de video. Pago en USD, disponibilidad inmediata.",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Pide portafolio",
+     "tone": "warn"
+    }
+   ],
+   "id": "45e96e92c580",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
+  },
+  {
    "id": "d1946f73e988",
    "title": "QA Analyst (Mexico, Remote)",
    "company": "Varicent",
@@ -715,35 +744,6 @@
    ],
    "curated": true,
    "applicants": null
-  },
-  {
-   "title": "Social Media Manager (Instagram/TikTok)",
-   "company": "Social Latam (Nicolás Martínez Alarcón)",
-   "location": "100% remoto · full time · USD",
-   "family": "design",
-   "score": 66,
-   "url": "https://www.linkedin.com/search/results/content/?keywords=Nicol%C3%A1s%20Mart%C3%ADnez%20Alarc%C3%B3n%20Social%20Media%20Manager",
-   "apply_email": "",
-   "note": "Postular por DM con portafolio",
-   "summary": "Agencia de reputación ejecutiva en LATAM. Buscan Social Media Manager de Instagram y TikTok, especialista en YouTube y editor de video. Pago en USD, disponibilidad inmediata.",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "Remoto",
-     "tone": "ok"
-    },
-    {
-     "label": "Pide portafolio",
-     "tone": "warn"
-    }
-   ],
-   "id": "45e96e92c580",
-   "source": "LinkedIn (post)",
-   "salary": "",
-   "posted": "",
-   "found": "2026-11-04",
-   "applicants": null,
-   "curated": true
   },
   {
    "id": "ff7ce4c4c10e",
@@ -958,6 +958,35 @@
    "applicants": null
   },
   {
+   "title": "Community Manager",
+   "company": "WOW Studio Media",
+   "location": "LATAM (modalidad por confirmar)",
+   "family": "design",
+   "score": 60,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=WOW%20Studio%20Media%20community%20manager",
+   "apply_email": "info@wowmedialatam.com",
+   "note": "Enviar CV o portafolio",
+   "summary": "Agencia de medios en LATAM que busca Community Manager. Solo piden CV o portafolio al correo; confirmar si es remoto.",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Por correo",
+     "tone": "ok"
+    },
+    {
+     "label": "Modalidad por confirmar",
+     "tone": "warn"
+    }
+   ],
+   "id": "1ef4e3cda518",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
+  },
+  {
    "id": "bcf33dccd41a",
    "title": "Manual QA Engineer",
    "company": "Madiff",
@@ -1014,35 +1043,6 @@
    ],
    "curated": true,
    "applicants": null
-  },
-  {
-   "title": "Community Manager",
-   "company": "WOW Studio Media",
-   "location": "LATAM (modalidad por confirmar)",
-   "family": "design",
-   "score": 60,
-   "url": "https://www.linkedin.com/search/results/content/?keywords=WOW%20Studio%20Media%20community%20manager",
-   "apply_email": "info@wowmedialatam.com",
-   "note": "Enviar CV o portafolio",
-   "summary": "Agencia de medios en LATAM que busca Community Manager. Solo piden CV o portafolio al correo; confirmar si es remoto.",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "Por correo",
-     "tone": "ok"
-    },
-    {
-     "label": "Modalidad por confirmar",
-     "tone": "warn"
-    }
-   ],
-   "id": "1ef4e3cda518",
-   "source": "LinkedIn (post)",
-   "salary": "",
-   "posted": "",
-   "found": "2026-11-04",
-   "applicants": null,
-   "curated": true
   },
   {
    "id": "e559198d450a",
@@ -1120,23 +1120,6 @@
    "curated": false
   },
   {
-   "id": "c26d9e2e5ba8",
-   "title": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor",
-   "company": "",
-   "location": "Remote",
-   "source": "Mastodon",
-   "family": "frontend",
-   "score": 56,
-   "salary": "",
-   "url": "https://aus.social/@gMoon/117538096696766280",
-   "apply_email": "",
-   "posted": "2026-10-31",
-   "found": "2026-11-01",
-   "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
-   "curated": false,
-   "applicants": null
-  },
-  {
    "title": "Content Creator / Community Manager",
    "company": "AQM (Arquimarkets)",
    "location": "Remoto (por confirmar)",
@@ -1164,6 +1147,23 @@
    "found": "2026-11-04",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "c26d9e2e5ba8",
+   "title": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor",
+   "company": "",
+   "location": "Remote",
+   "source": "Mastodon",
+   "family": "frontend",
+   "score": 56,
+   "salary": "",
+   "url": "https://aus.social/@gMoon/117538096696766280",
+   "apply_email": "",
+   "posted": "2026-10-31",
+   "found": "2026-11-01",
+   "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
+   "curated": false,
+   "applicants": null
   },
   {
    "id": "4b5338333e47",

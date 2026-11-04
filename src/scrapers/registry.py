@@ -76,6 +76,24 @@ def _build_linkedin_posts() -> BaseScraper:
     return LinkedInPostsScraper(email=config.linkedin_email, password=config.linkedin_password)
 
 
+def _telegram_status() -> tuple[str, str]:
+    """RF-14 (spec 004)."""
+    from src.scrapers.telegram import telethon_available
+    missing = [n for n, v in (("TELEGRAM_API_ID", config.telegram_api_id), ("TELEGRAM_API_HASH", config.telegram_api_hash),
+                              ("TELEGRAM_SESSION", config.telegram_session), ("TELEGRAM_CHATS", config.telegram_chats)) if not v]
+    if missing:
+        return "pending", "Faltan " + ", ".join(missing) + " (TELEGRAM_SESSION se genera con scripts/telegram_login.py)"
+    if not telethon_available():
+        return "pending", "Falta la dependencia telethon (pip install -r requirements.txt)"
+    return "enabled", ""
+
+
+def _build_telegram() -> BaseScraper:
+    from src.scrapers.telegram import TelegramScraper, parse_chats
+    return TelegramScraper(config.telegram_api_id, config.telegram_api_hash, config.telegram_session,
+                           parse_chats(config.telegram_chats), days=config.max_days_old or 7)
+
+
 def _build_infojobs() -> BaseScraper:
     from src.scrapers.infojobs import InfoJobsScraper
     return InfoJobsScraper()
@@ -119,6 +137,7 @@ def list_sources() -> list[SourceSpec]:
     con estado y causa. Las fuentes bloqueadas nunca se construyen."""
     reddit_status, reddit_reason = _reddit_status()
     posts_status, posts_reason = _linkedin_posts_status()
+    tg_status, tg_reason = _telegram_status()
 
     sources = [
         SourceSpec("remotive", "job_board", "enabled", builder=_build_remotive),
@@ -135,6 +154,8 @@ def list_sources() -> list[SourceSpec]:
         SourceSpec("getonboard", "job_board", "enabled", builder=_build_getonboard, max_requests=12),
         SourceSpec("reddit", "forum", reddit_status, reddit_reason,
                    builder=_build_reddit if reddit_status == "enabled" else None, max_requests=15),
+        SourceSpec("telegram", "post", tg_status, tg_reason,
+                   builder=_build_telegram if tg_status == "enabled" else None, max_requests=1),
         SourceSpec("linkedin_posts", "post", posts_status, posts_reason,
                    builder=_build_linkedin_posts if posts_status == "enabled" else None, max_requests=12),
 
@@ -143,8 +164,6 @@ def list_sources() -> list[SourceSpec]:
                    f"403 Forbidden desde el entorno ({EVIDENCE}); fuente anti-bot, RF-10 prohíbe eludir controles"),
         SourceSpec("bluesky", "post", "disabled",
                    f"API pública devuelve 403 desde el entorno ({EVIDENCE})"),
-        SourceSpec("telegram", "post", "pending",
-                   "Requiere TELEGRAM_API_ID/TELEGRAM_API_HASH y la dependencia telethon"),
         SourceSpec("levelsfiy", "job_board", "pending", f"SPA sin API pública ({EVIDENCE})"),
         SourceSpec("arc", "job_board", "pending", f"SPA sin API pública ({EVIDENCE})"),
         SourceSpec("lemonio", "job_board", "pending", f"Sin listado público (solo landing) ({EVIDENCE})"),
