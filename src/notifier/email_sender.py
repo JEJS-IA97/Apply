@@ -1,5 +1,5 @@
 import smtplib
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -18,7 +18,7 @@ class EmailNotifier:
         self.smtp_port = smtp_port
 
     def send_jobs_report(self, jobs: list[JobPost]) -> bool:
-        fecha = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        fecha = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
         html = generar_html(jobs, fecha)
         text = generar_texto(jobs, fecha)
 
@@ -36,10 +36,15 @@ class EmailNotifier:
             msg.attach(MIMEText(text, "plain", "utf-8"))
             msg.attach(MIMEText(html, "html", "utf-8"))
 
-            with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
-                server.starttls()
-                server.login(self.from_addr, self.password)
-                server.send_message(msg)
+            if int(self.smtp_port) == 465:  # SSL directo (Gmail 465)
+                with smtplib.SMTP_SSL(self.smtp_server, 465, timeout=30) as server:
+                    server.login(self.from_addr, self.password)
+                    server.send_message(msg)
+            else:  # STARTTLS (587)
+                with smtplib.SMTP(self.smtp_server, self.smtp_port, timeout=30) as server:
+                    server.starttls()
+                    server.login(self.from_addr, self.password)
+                    server.send_message(msg)
             return True
         except Exception as e:  # noqa: BLE001
             print(f"  Email error: {e}")

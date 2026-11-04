@@ -20,15 +20,22 @@ def telethon_available() -> bool:
     return importlib.util.find_spec("telethon") is not None
 
 
-def parse_chats(raw: str) -> list[int | str]:
-    """"-1004380156934, @canal, t.me/otro" -> [-1004380156934, "canal", "otro"]."""
-    chats: list[int | str] = []
+def parse_chats(raw: str) -> list[int | str | tuple[int | str, int]]:
+    """"-1004380156934, @canal, t.me/otro, -1004380156934_9" ->
+    [-1004380156934, "canal", "otro", (-1004380156934, 9)]. El sufijo _N es un
+    tema (topic) de un grupo con foros, como lo muestra web.telegram.org."""
+    chats: list[int | str | tuple[int | str, int]] = []
     for token in re.split(r"[,\s;]+", raw or ""):
         token = token.strip().rstrip("/")
         if not token:
             continue
         token = re.sub(r"^(https?://)?(t\.me/|web\.telegram\.org/\w/#)", "", token).lstrip("@")
-        chats.append(int(token) if token.lstrip("-").isdigit() else token)
+        topic = None
+        m = re.fullmatch(r"(-?\d+)_(\d+)", token)
+        if m:
+            token, topic = m.group(1), int(m.group(2))
+        chat = int(token) if token.lstrip("-").isdigit() else token
+        chats.append((chat, topic) if topic else chat)
     return chats
 
 
@@ -82,15 +89,18 @@ class TelegramScraper(BaseScraper):
                 self.disabled_reason = "TELEGRAM_SESSION inválida o expirada: ejecuta scripts/telegram_login.py"
                 return []
             await client.get_dialogs(limit=500)  # carga en caché los chats por id
-            for chat in self.chats:
+            for item in self.chats:
+                chat, topic = item if isinstance(item, tuple) else (item, None)
                 try:
                     entity = await client.get_entity(chat)
                 except (ValueError, TypeError) as exc:
                     print(f"    [Telegram] chat {chat} no accesible: {exc}")
                     continue
                 title = getattr(entity, "title", None) or str(chat)
+                if topic:
+                    title = f"{title} #{topic}"
                 username = getattr(entity, "username", None)
-                async for msg in client.iter_messages(entity, limit=self.per_chat):
+                async for msg in client.iter_messages(entity, limit=self.per_chat, reply_to=topic):
                     if msg.date and msg.date < since:
                         break
                     link = (f"https://t.me/{username}/{msg.id}" if username

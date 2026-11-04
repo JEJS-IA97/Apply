@@ -10,6 +10,7 @@ NOW = datetime(2026, 11, 4, tzinfo=UTC)
 
 def test_parse_chats():
     assert parse_chats("-1004380156934, @vacantes t.me/remotos") == [-1004380156934, "vacantes", "remotos"]
+    assert parse_chats("-1004380156934_9,-1004380156934_80") == [(-1004380156934, 9), (-1004380156934, 80)]
 
 
 def test_message_to_job_vacante_y_ruido():

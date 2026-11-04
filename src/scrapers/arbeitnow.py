@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import requests
 
@@ -6,6 +6,7 @@ from src.scrapers.base import BaseScraper, JobPost
 
 
 class ArbeitnowScraper(BaseScraper):
+    trusts_freshness = True  # la API solo lista ofertas vigentes; el GET por oferta da 403 desde Actions
     """Arbeitnow's public Job Board API: free, no key, no auth, no anti-bot wall.
     Docs: https://arbeitnow.com/blog/job-board-api/
     Mostly Europe/remote roles pulled from ATSs (Greenhouse, Recruitee, etc).
@@ -50,7 +51,7 @@ class ArbeitnowScraper(BaseScraper):
         posted = None
         if ts:
             try:
-                posted = datetime.fromtimestamp(int(ts), tz=timezone.utc)
+                posted = datetime.fromtimestamp(int(ts), tz=UTC)
             except (ValueError, TypeError, OSError):
                 posted = None
         return JobPost(
