@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T16:05+00:00",
+ "updated": "2026-11-04T16:55+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -229,6 +229,23 @@
    "applicants": 35
   },
   {
+   "id": "d54a8a6af03f",
+   "title": "Estamos buscando Full Stack Developer",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "frontend",
+   "score": 78,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1477",
+   "apply_email": "recursosparahumanos.by@gmail.com",
+   "posted": "2026-10-28",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "⚙️ ¡Estamos buscando Full Stack Developer! 📣 Estamos acompañando a una consultora de tecnología e inteligencia artificial en la búsqueda de un/a Full Stack Developer que quiera crecer en proyectos innovadores, 100% remoto. ⚙️¿Cuál será tu desafío? -Desarrollar aplicaciones web de punta a punta, desde la interfaz hasta ",
+   "curated": false
+  },
+  {
    "id": "d85333a7b642",
    "title": "Diseñador UX/UI",
    "company": "DevUps",
@@ -413,6 +430,23 @@
    "found": "2026-11-04",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "bb8eb4a769d4",
+   "title": "Estamos buscando Diseñador/a Gráfico/a Freelance",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 72,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1544",
+   "apply_email": "grecia.gutierrez@backap.com.pe",
+   "posted": "2026-11-02",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Estamos buscando Diseñador/a Gráfico/a Freelance! Buscamos a alguien que convierta ideas en piezas visuales que comuniquen y generen impacto. ¿Qué harás? ✔️ Participar en un taller de cocreación con el cliente para construir juntos la marca: naming, paleta de color, ruta visual y tono ✔️ Desarrollar identidad de marca:",
+   "curated": false
   },
   {
    "id": "b6973c9ece30",
@@ -746,6 +780,23 @@
    "applicants": null
   },
   {
+   "id": "766b19c96174",
+   "title": "Estoy contratando  Diseñador UX/UI",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "design",
+   "score": 65,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1541",
+   "apply_email": "info@dominioestudio.com",
+   "posted": "2026-11-02",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Estoy contratando — Diseñador UX/UI ¡Dominio Estudio busca un diseñador UX/UI creativo y apasionado para unirse a nuestro equipo! Si cuentas con entre 0 y 2 años de experiencia y te apasiona crear experiencias digitales limpias, intuitivas y atractivas, ¡nos encantaría saber de ti! 🎨✨ 💼 Cargo: Diseñador UX/UI para cont",
+   "curated": false
+  },
+  {
    "id": "ff7ce4c4c10e",
    "title": "QA Engineer - Remote Latam",
    "company": "Puzzle Consulting Services",
@@ -879,6 +930,40 @@
    "applicants": null
   },
   {
+   "id": "c883753fcb19",
+   "title": "En Harguin estamos buscando un/a Diseñador/a Gráfico/a para Redes Sociales",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "design",
+   "score": 63,
+   "salary": "",
+   "url": "https://docs.google.com/forms/d/e/1FAIpQLScNYUl5h9MD8fS_c0lCgywa5XhdkOMAroBBCjzgUGBcYrRaJQ/viewform",
+   "apply_email": "",
+   "posted": "2026-10-29",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "¡En Harguin estamos buscando un/a Diseñador/a Gráfico/a para Redes Sociales! ¿Te apasiona el diseño, explorar distintas identidades visuales y crear piezas que comuniquen ideas de manera creativa? ¡Esta oportunidad puede ser para vos! En Harguin, agencia de marketing, buscamos incorporar un/a Diseñador/a Gráfico/a con ",
+   "curated": false
+  },
+  {
+   "id": "b1a6ff642f46",
+   "title": "Nueva oportunidad en Ready  Analista UX (Diseño + Research)",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 63,
+   "salary": "",
+   "url": "https://ready-ats-dev.web.app/careers/analista-ux-diseno-con-research-717",
+   "apply_email": "carol@joinready.com",
+   "posted": "2026-10-28",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "🚀 ¡Nueva oportunidad en Ready! | Analista UX (Diseño + Research) En Ready estamos buscando un/a Analista UX que combine diseño y research para sumarse a un proyecto con un cliente del sector tech y construir experiencias digitales centradas en el usuario. ¿Qué buscamos? 🔹 Experiencia comprobable en UX Research (entrevi",
+   "curated": false
+  },
+  {
    "title": "Asistente virtual para despachos (talento desde Venezuela)",
    "company": "Asistente Virtual OK",
    "location": "España · remoto desde Venezuela",
@@ -985,6 +1070,23 @@
    "found": "2026-11-04",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "becbddc22dd1",
+   "title": "Estamos seleccionando Diseñador/a UX/UI para sumarse al equipo de una empresa en crecimiento.  Qué buscamos",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "design",
+   "score": 60,
+   "salary": "",
+   "url": "https://docs.google.com/forms/d/e/1FAIpQLSesC1qUkXrOmDoZw56L3UqaycGhdyLm5GuFOFVjmMZADEuNNQ/viewform",
+   "apply_email": "candidatos@consultoravos.com",
+   "posted": "2026-10-30",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Estamos seleccionando Diseñador/a UX/UI para sumarse al equipo de una empresa en crecimiento. ¿Qué buscamos? 🔹 Experiencia comprobable en diseño de interfaces (UI) e investigación de experiencia de usuario (UX). 🔹 Dominio de Figma y sistemas de diseño (Design Systems). 🔹 Trabajo en equipo junto a desarrolladores y área",
+   "curated": false
   },
   {
    "id": "bcf33dccd41a",
@@ -1164,6 +1266,23 @@
    "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
    "curated": false,
    "applicants": null
+  },
+  {
+   "id": "330ae630aa97",
+   "title": "Buscamos IT Recruiter en Colombia (100 Remoto) Colombia",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 55,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1552",
+   "apply_email": "edwin_diaz@epam.com",
+   "posted": "2026-11-03",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "🚀 ¡Buscamos IT Recruiter en Colombia! (100% Remoto) Colombia ¿Te apasiona conectar el mejor talento tecnológico con grandes retos globales? ¡Esta oportunidad es para ti! En EPAM estamos sumando a nuestro equipo a un/a Recruiter de Tecnología con ganas de crecer y marcar la diferencia. Buscamos a un profesional en admin",
+   "curated": false
   },
   {
    "id": "4b5338333e47",
