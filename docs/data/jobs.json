@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T16:55+00:00",
+ "updated": "2026-11-04T19:19+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -430,6 +430,23 @@
    "found": "2026-11-04",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "62835ecc4729",
+   "title": "Frontend Engineer (Intern)",
+   "company": "constructortech",
+   "location": "Bremen",
+   "source": "Arbeitnow",
+   "family": "frontend",
+   "score": 73,
+   "salary": "",
+   "url": "https://www.arbeitnow.com/jobs/companies/constructortech/frontend-engineer-intern-bremen-226532",
+   "apply_email": "",
+   "posted": "2026-11-04",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "&lt;div class=&quot;content-intro&quot;&gt;&lt;div&gt; &lt;h2&gt;Our mission&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;bub-content-body&quot;&gt; &lt;div class=&quot;field field--name-body field--type-text-with-summary field--label-hidden field__item&quot;&gt; &lt;p&gt;Constructor’s mission is to enable all education",
+   "curated": false
   },
   {
    "id": "bb8eb4a769d4",
