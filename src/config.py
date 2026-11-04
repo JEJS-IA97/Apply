@@ -59,6 +59,8 @@ class Config:
     telegram_api_id: str = env("TELEGRAM_API_ID")
     telegram_api_hash: str = env("TELEGRAM_API_HASH")
     telegram_phone: str = env("TELEGRAM_PHONE")
+    telegram_session: str = env("TELEGRAM_SESSION")
+    telegram_chats: str = env("TELEGRAM_CHATS")
     reddit_client_id: str = env("REDDIT_CLIENT_ID")
     reddit_client_secret: str = env("REDDIT_CLIENT_SECRET")
     reddit_user_agent: str = env("REDDIT_USER_AGENT", "job-bot/1.0")

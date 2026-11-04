@@ -36,6 +36,19 @@ jobs:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Nombres del .env de José (config.py los acepta como alias)
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          REPORT_TO: ${{ secrets.REPORT_TO }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          APPLY_MODE: ${{ secrets.APPLY_MODE }}
+          APPLY_DAILY_LIMIT: ${{ secrets.APPLY_DAILY_LIMIT }}
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
+          TELEGRAM_CHATS: ${{ secrets.TELEGRAM_CHATS }}
           PAGES_URL: https://jejs-ia97.github.io/Apply/
         run: python -m src.main
 

@@ -197,3 +197,12 @@ def test_rf12_excluye_demasiadas_postulaciones():
     assert m._exclusion_reason(job) == "demasiadas_postulaciones"
     job.applicants = None
     assert m._exclusion_reason(job) != "demasiadas_postulaciones"
+
+
+def test_rf13_excluye_fuentes_de_pago():
+    """RF-13 (spec 004): Upwork y similares cobran por postular => fuera."""
+    m = JobMatcher()
+    job = JobPost(title="QA Automation Engineer", company="Client", location="Remote",
+                  description="Cypress Playwright TypeScript", url="https://www.upwork.com/jobs/~01abc",
+                  source="Upwork", is_remote=True)
+    assert m._exclusion_reason(job) == "fuente_de_pago"

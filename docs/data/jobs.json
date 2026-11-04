@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T21:01+00:00",
+ "updated": "2026-11-04T16:05+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -167,39 +167,6 @@
    "applicants": null
   },
   {
-   "id": "61247e930fd1",
-   "title": "AI-assisted QA Engineer: web and iPhone, Playwright + Claude Code",
-   "company": "Startup healthtech (Reino Unido)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "qa",
-   "score": 80,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022106059865925666756",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Freelance a tiempo completo, $8–15/h, con Playwright y Claude Code. Cliente con $38k gastados y 4.86 de valoración.",
-   "note": "15–20 propuestas",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Playwright",
-     "tone": "ok"
-    },
-    {
-     "label": "Full-time",
-     "tone": "ok"
-    },
-    {
-     "label": "$8–15/h",
-     "tone": "ok"
-    }
-   ],
-   "curated": true,
-   "applicants": 20
-  },
-  {
    "id": "dd1f72587bea",
    "title": "Mid Frontend React Engineer",
    "company": "Encora Inc.",
@@ -260,39 +227,6 @@
    ],
    "curated": true,
    "applicants": 35
-  },
-  {
-   "id": "5c0110a2d78d",
-   "title": "Desarrollador Frontend React: de Figma a web app pixel-perfect",
-   "company": "Startup (EE. UU.)",
-   "location": "Upwork · remoto · en español",
-   "source": "Upwork",
-   "family": "frontend",
-   "score": 78,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022109728374208138548",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Convertir diseños de Figma en React con fidelidad total al diseño, en español. Combina justo tu diseño y tu frontend.",
-   "note": "5–10 propuestas",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "Español",
-     "tone": "ok"
-    },
-    {
-     "label": "Figma → React",
-     "tone": "ok"
-    },
-    {
-     "label": "Part-time",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 10
   },
   {
    "id": "d85333a7b642",
@@ -448,6 +382,39 @@
    "applicants": null
   },
   {
+   "title": "Social Media Manager",
+   "company": "Apréndika",
+   "location": "100% remoto LATAM (aviso: Colombia en remoto) · full time",
+   "family": "design",
+   "score": 74,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=Apr%C3%A9ndika%20Social%20Media%20Manager",
+   "apply_email": "aprendikarrhh@gmail.com",
+   "note": "Asunto: “Social Media Manager” + CV + portafolio + expectativa en USD",
+   "summary": "Gestión de redes de una marca de educación. Piden CV, portafolio o cuentas que hayas gestionado y expectativa salarial en USD. Publicada por Florencia Milan (HR).",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto LATAM",
+     "tone": "ok"
+    },
+    {
+     "label": "Community/Social",
+     "tone": "ok"
+    },
+    {
+     "label": "Pocos postulantes",
+     "tone": "ok"
+    }
+   ],
+   "id": "c02ea54d0e3f",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
+  },
+  {
    "id": "b6973c9ece30",
    "title": "QA Engineer (Automation and AI tooling)",
    "company": "Zipdev",
@@ -504,72 +471,6 @@
    ],
    "curated": true,
    "applicants": null
-  },
-  {
-   "id": "32c53a0714f1",
-   "title": "Manual QA + Playwright AI Automation for Travel Platform",
-   "company": "ReserveX (Canadá)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "qa",
-   "score": 72,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022109845873511146005",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "QA manual más automatización con Playwright en una plataforma SaaS de viajes. Contrato de más de 6 meses; paga poco ($5–10/h).",
-   "note": "10–15 propuestas",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Playwright",
-     "tone": "ok"
-    },
-    {
-     "label": "Postman",
-     "tone": "ok"
-    },
-    {
-     "label": "$5–10/h",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 15
-  },
-  {
-   "id": "580bb9f418ec",
-   "title": "UX/UI Designer & Graphic Designer (Figma, Adobe)",
-   "company": "Agencia (EE. UU.)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "design",
-   "score": 72,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022110708703711560970",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Apoyar a su diseñador fuera del horario de EE. UU. a $10–30/h, según demanda. Cliente con valoración de 5.0.",
-   "note": "10–15 propuestas",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Figma + Adobe",
-     "tone": "ok"
-    },
-    {
-     "label": "$10–30/h",
-     "tone": "ok"
-    },
-    {
-     "label": "Según demanda",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 15
   },
   {
    "id": "383cf8384e52",
@@ -692,72 +593,6 @@
    "applicants": 26
   },
   {
-   "id": "9e818667aebc",
-   "title": "QA Automation Engineer (Playwright + TypeScript)",
-   "company": "Fintech de pagos (EE. UU.)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "qa",
-   "score": 70,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022107921954712490845",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Largo plazo y tiempo completo. El cliente pide nivel experto, pero tiene pocas propuestas y $77k gastados en Upwork.",
-   "note": "Menos de 5 propuestas",
-   "fit": "intentar",
-   "tags": [
-    {
-     "label": "Playwright + TS",
-     "tone": "ok"
-    },
-    {
-     "label": "Pocas propuestas",
-     "tone": "ok"
-    },
-    {
-     "label": "Nivel experto",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 5
-  },
-  {
-   "id": "7746a9b454dd",
-   "title": "YouTube Thumbnail Designer – canal true crime en español",
-   "company": "Canal 'Sus Nombres' (España)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "design",
-   "score": 70,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022111867806399830607",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Piden nativo de español de LATAM y Photoshop. Pocas propuestas: buena entrada para conseguir tu primera reseña en Upwork.",
-   "note": "Menos de 5 propuestas",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Español LATAM",
-     "tone": "ok"
-    },
-    {
-     "label": "Pocas propuestas",
-     "tone": "ok"
-    },
-    {
-     "label": "$50 fijo",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 5
-  },
-  {
    "id": "541262ea2db4",
    "title": "Web Project Coordinator",
    "company": "Bionic Talent (cliente EE. UU.)",
@@ -847,6 +682,35 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "title": "Social Media Manager (Instagram/TikTok)",
+   "company": "Social Latam (Nicolás Martínez Alarcón)",
+   "location": "100% remoto · full time · USD",
+   "family": "design",
+   "score": 66,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=Nicol%C3%A1s%20Mart%C3%ADnez%20Alarc%C3%B3n%20Social%20Media%20Manager",
+   "apply_email": "",
+   "note": "Postular por DM con portafolio",
+   "summary": "Agencia de reputación ejecutiva en LATAM. Buscan Social Media Manager de Instagram y TikTok, especialista en YouTube y editor de video. Pago en USD, disponibilidad inmediata.",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Remoto",
+     "tone": "ok"
+    },
+    {
+     "label": "Pide portafolio",
+     "tone": "warn"
+    }
+   ],
+   "id": "45e96e92c580",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
   },
   {
    "id": "d1946f73e988",
@@ -967,39 +831,6 @@
    ],
    "curated": true,
    "applicants": null
-  },
-  {
-   "id": "00af449d94dd",
-   "title": "Freelance Graphic Designer for Ongoing Small Jobs",
-   "company": "Cliente EE. UU. (4.96)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "design",
-   "score": 65,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022111996551690613753",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Logos, vectorizado, tarjetas y papelería a $7–15/h, más de 30 h/semana y más de 6 meses. Piden portafolio.",
-   "note": "20–50 propuestas",
-   "fit": "encaja",
-   "tags": [
-    {
-     "label": "Largo plazo",
-     "tone": "ok"
-    },
-    {
-     "label": "Illustrator",
-     "tone": "ok"
-    },
-    {
-     "label": "Muchas propuestas",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 50
   },
   {
    "id": "e12d803178b2",
@@ -1127,6 +958,35 @@
    "applicants": null
   },
   {
+   "title": "Community Manager",
+   "company": "WOW Studio Media",
+   "location": "LATAM (modalidad por confirmar)",
+   "family": "design",
+   "score": 60,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=WOW%20Studio%20Media%20community%20manager",
+   "apply_email": "info@wowmedialatam.com",
+   "note": "Enviar CV o portafolio",
+   "summary": "Agencia de medios en LATAM que busca Community Manager. Solo piden CV o portafolio al correo; confirmar si es remoto.",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Por correo",
+     "tone": "ok"
+    },
+    {
+     "label": "Modalidad por confirmar",
+     "tone": "warn"
+    }
+   ],
+   "id": "1ef4e3cda518",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
+  },
+  {
    "id": "bcf33dccd41a",
    "title": "Manual QA Engineer",
    "company": "Madiff",
@@ -1212,6 +1072,81 @@
    ],
    "curated": true,
    "applicants": 30
+  },
+  {
+   "title": "Community Manager (colaboración)",
+   "company": "Síncope Studio",
+   "location": "Por confirmar",
+   "family": "design",
+   "score": 58,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=S%C3%ADncope%20Studio%20community%20manager",
+   "apply_email": "hola@sincopestudio.com",
+   "note": "Enviar CV y portafolio",
+   "summary": "Estudio de comunicación visual que busca un/a Community Manager para colaborar en proyectos de marcas. Piden experiencia en redes y contenido, buena redacción y sensibilidad visual.",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Por correo",
+     "tone": "ok"
+    },
+    {
+     "label": "Diseño + redes",
+     "tone": "ok"
+    }
+   ],
+   "id": "b09fcb0a9ef5",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
+  },
+  {
+   "id": "2d9f29ef8cc5",
+   "title": "QA Automation Engineer",
+   "company": "Acme",
+   "location": "Remote",
+   "source": "Test",
+   "family": "qa",
+   "score": 57,
+   "salary": "",
+   "url": "https://example.com/job/good",
+   "apply_email": "",
+   "posted": "2026-11-03",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Playwright and Cypress automation for web apps",
+   "curated": false
+  },
+  {
+   "title": "Content Creator / Community Manager",
+   "company": "AQM (Arquimarkets)",
+   "location": "Remoto (por confirmar)",
+   "family": "design",
+   "score": 56,
+   "url": "https://www.linkedin.com/search/results/content/?keywords=AQM%20Content%20Creator%20Community%20Manager",
+   "apply_email": "collins@arquimarkets.com",
+   "note": "Contacto: Christopher Collins",
+   "summary": "Buscan a alguien que viva en redes, entienda tendencias y formatos, escriba copys con voz humana y gestione comunidades.",
+   "fit": "intentar",
+   "tags": [
+    {
+     "label": "Por correo",
+     "tone": "ok"
+    },
+    {
+     "label": "Ubicación por confirmar",
+     "tone": "warn"
+    }
+   ],
+   "id": "5a578604ddc5",
+   "source": "LinkedIn (post)",
+   "salary": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "curated": true
   },
   {
    "id": "c26d9e2e5ba8",
@@ -1333,72 +1268,6 @@
    ],
    "curated": true,
    "applicants": null
-  },
-  {
-   "id": "9a5d97e693f7",
-   "title": "Bilingual (Spanish/English) Weekend Intake Specialist",
-   "company": "Bufete de abogados (California)",
-   "location": "Upwork · remoto",
-   "source": "Upwork",
-   "family": "admin",
-   "score": 55,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022111890012518642681",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Atender llamadas y mensajes los fines de semana y llenar formularios de ingreso de clientes, a $5–6/h. Requiere inglés hablado.",
-   "note": "10–15 propuestas",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "Fines de semana",
-     "tone": "ok"
-    },
-    {
-     "label": "Inglés hablado",
-     "tone": "warn"
-    },
-    {
-     "label": "$5–6/h",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 15
-  },
-  {
-   "id": "1d3a1ad9e75c",
-   "title": "Asistente Virtual Temporal – contenido para redes",
-   "company": "Cliente de Panamá (5.0)",
-   "location": "Upwork · remoto · en español",
-   "source": "Upwork",
-   "family": "admin",
-   "score": 55,
-   "salary": "",
-   "url": "https://www.upwork.com/jobs/~022111570968037555641",
-   "apply_email": "",
-   "posted": "",
-   "found": "2026-10-19",
-   "summary": "Crear piezas en Canva para Pinterest, YouTube y Facebook. En español; $50 fijo, corto.",
-   "note": "15–20 propuestas",
-   "fit": "puente",
-   "tags": [
-    {
-     "label": "Español",
-     "tone": "ok"
-    },
-    {
-     "label": "Canva",
-     "tone": "ok"
-    },
-    {
-     "label": "$50 fijo",
-     "tone": "warn"
-    }
-   ],
-   "curated": true,
-   "applicants": 20
   },
   {
    "id": "a6187835db33",

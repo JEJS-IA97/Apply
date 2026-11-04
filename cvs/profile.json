@@ -69,7 +69,7 @@
     "note": "RF-5 spec 004: umbral mínimo para entrar al reporte (antes 20).",
     "min_score": 55,
     "title_patterns": ["\\bqa\\b", "\\bsdet\\b", "\\bquality assurance\\b", "\\bquality engineer\\b", "\\bassurance\\b", "\\btest(?:ing|ers?)?\\b", "\\bcypress\\b", "\\bplaywright\\b", "\\bappium\\b", "\\bautomatizaci[oó]n\\b", "\\bpruebas?\\b", "\\bcalidad\\b", "\\bqa automation\\b", "\\btest automation\\b", "\\bmanual qa\\b", "\\bfront[- ]?end\\b", "\\breact(?:\\s+native)?\\b", "\\bui developer\\b", "ui/ux", "ux/ui", "\\bui designer", "\\bux designer", "product designer", "graphic designer", "dise[ñn]ador", "web designer", "virtual assistant", "asistente", "administrative assistant", "executive assistant", "data entry"],
-    "report_limit": 20, "max_applicants": 50
+    "report_limit": 20, "max_applicants": 50, "max_post_age_days": 14, "blocked_sources": ["upwork.com", "freelancer.com", "workana.com"]
   },
   "remote_type_filter": {
     "allowed": ["Remote", "Fully Remote", "100% Remote", "Work from Home", "Distributed", "Worldwide", "Global", "LATAM", "Latin America", "América Latina"],

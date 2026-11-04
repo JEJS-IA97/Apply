@@ -323,6 +323,9 @@ const statusOf = j => (marks[j.id] && marks[j.id].s) || "pending";
 /* ---------- email drafting ---------- */
 const isSpanish = j => /\b(de|para|con|y|analista|diseñador|diseñadora|asistente|desarrollador|pruebas|vacante|bilingüe|remoto)\b/i.test(j.title + " " + (j.location||""));
 const wantsRate = j => /tarifa|hourly|rate|por hora/i.test((j.summary||"") + " " + (j.title||""));
+const wantsSalary = j => /expectativa|salar|pretensi|salary/i.test((j.summary||"") + " " + (j.note||""));
+/* Promedio de mercado remoto LATAM (USD/mes) cuando la oferta no da rango */
+const SALARY = {qa:900, frontend:900, design:650, admin:550, generic:650};
 const PITCH = {
   es:{
     qa:"Soy QA Automation Engineer. De febrero de 2025 a abril de 2026 trabajé en remoto para Chicks Gold Inc.: construí y mantuve una suite E2E en Cypress con TypeScript bajo POM, automaticé los flujos de compra y pago (cripto y fiat) y la validación de una plataforma de cambio. También trabajo con Playwright, Postman y CI en GitHub Actions y Azure DevOps.",
@@ -343,7 +346,9 @@ function draft(j, lang){
   const f = famOf(j), es = lang === "es";
   const role = j.title.replace(/\s*\(imagen\)\s*/i, "").trim();
   const subject = es ? `Postulación: ${role} — José Jiménez` : `Application: ${role} — José Jiménez`;
-  const rate = wantsRate(j) ? (es ? "\n\nMi tarifa es de 15 USD por hora, negociable según el alcance." : "\n\nMy rate is 15 USD per hour, negotiable depending on scope.") : "";
+  const salary = SALARY[f] || SALARY.generic;
+  const rate = wantsRate(j) ? (es ? "\n\nMi tarifa es de 15 USD por hora, negociable según el alcance." : "\n\nMy rate is 15 USD per hour, negotiable depending on scope.")
+    : wantsSalary(j) ? (es ? `\n\nMi expectativa salarial es de ${salary} USD mensuales, abierta a conversar según el rol.` : `\n\nMy salary expectation is ${salary} USD per month, open to discussion depending on the role.`) : "";
   const body = es
     ? `Hola,\n\nVi la vacante de ${role}${j.company && !/reclutador/i.test(j.company) ? " en " + j.company : ""} y quiero postularme.\n\n${PITCH.es[f]}\n\nEstoy en Venezuela (UTC-4), tengo disponibilidad inmediata para trabajo remoto y adjunto mi CV.${rate}\n\nLinkedIn: https://www.linkedin.com/in/jejs97\nGitHub: https://github.com/JEJS-IA97\n\nSaludos,\nJosé Eduardo Jiménez Suárez\n${FROM}`
     : `Hello,\n\nI saw the ${role} opening${j.company && !/reclutador/i.test(j.company) ? " at " + j.company : ""} and I'd like to apply.\n\n${PITCH.en[f]}\n\nI'm based in Venezuela (UTC-4), available immediately for remote work, and my CV is attached.${rate}\n\nLinkedIn: https://www.linkedin.com/in/jejs97\nGitHub: https://github.com/JEJS-IA97\n\nBest regards,\nJosé Eduardo Jiménez Suárez\n${FROM}`;
