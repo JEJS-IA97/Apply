@@ -76,6 +76,7 @@ class JobMatcher:
         self.min_score = float(rel.get("min_score", 55))
         self.report_limit = int(rel.get("report_limit", 20))
         self.max_applicants = int(rel.get("max_applicants", 50))
+        self.blocked_sources = [b.lower() for b in rel.get("blocked_sources", [])]
 
     def filter_jobs(self, jobs: list[JobPost]) -> list[JobPost]:
         filtered = []
@@ -110,6 +111,9 @@ class JobMatcher:
         self.last_excluded.append((job.source, job.title, reason))
 
     def _exclusion_reason(self, job: JobPost) -> str:
+        link = f"{job.url} {job.apply_url or ''} {job.source}".lower()
+        if any(b in link or b.split(".")[0] == job.source.lower() for b in self.blocked_sources):
+            return "fuente_de_pago"
         trust = self.trust_filter.check(job.title, job.company, job.description)
         if trust:
             return trust
