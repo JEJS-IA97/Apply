@@ -200,6 +200,35 @@
    "applicants": 25
   },
   {
+   "id": "airtm-bf31d044",
+   "title": "Software Engineer - Frontend (contract)",
+   "company": "Alignerr (Labelbox) · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "frontend",
+   "score": 80,
+   "salary": "Hasta 120 USD/h",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Entrenamiento de IA con código frontend. Contrato remoto, pago por hora; requiere crear cuenta en Alignerr y pasar su evaluación.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
    "id": "e7273dec0177",
    "title": "Analista QA Automatizador",
    "company": "Stefanini LATAM",
@@ -273,6 +302,64 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "airtm-08433a43",
+   "title": "Coding Expert - JavaScript (contract)",
+   "company": "Alignerr (Labelbox) · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "frontend",
+   "score": 78,
+   "salary": "Hasta 120 USD/h",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Revisar y escribir JavaScript para entrenar modelos de IA. Remoto, por horas.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "airtm-05b15c9e",
+   "title": "Freelance General - QA / AI Trainer",
+   "company": "Mindrift · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "qa",
+   "score": 76,
+   "salary": "",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "QA de respuestas de IA (freelance, remoto). Encaja con tu experiencia de QA.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
   },
   {
    "id": "3ee38d7de8b3",
@@ -429,6 +516,35 @@
    "posted": "",
    "found": "2026-11-04",
    "applicants": null,
+   "curated": true
+  },
+  {
+   "id": "airtm-57aa771e",
+   "title": "Testers con dispositivos Android",
+   "company": "Applause · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "qa",
+   "score": 74,
+   "salary": "Pago por ciclo de prueba",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Crowdtesting: pruebas reales de apps en tu teléfono Android, pagadas por ciclo y por bug encontrado. Ideal para ingreso rápido.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
    "curated": true
   },
   {
@@ -702,6 +818,64 @@
    "applicants": null
   },
   {
+   "id": "airtm-36e02d6a",
+   "title": "Evaluation Scenario Writer - AI Agent Testing",
+   "company": "Mindrift · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "qa",
+   "score": 70,
+   "salary": "Hasta 53 USD/h",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Escribir escenarios de prueba para agentes de IA.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "encaja",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
+   "id": "airtm-68ee8b5a",
+   "title": "AI Voice Trainer - Spanish (contract)",
+   "company": "Alignerr (Labelbox) · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "admin",
+   "score": 68,
+   "salary": "Hasta 40 USD/h",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Evaluar y entrenar voz de IA en español.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
+  },
+  {
    "id": "fc57d6eb5a26",
    "title": "QA Automation Engineer (Playwright & AI) - Remote - Latin America",
    "company": "FullStack",
@@ -795,6 +969,35 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "airtm-9ba7371e",
+   "title": "Web Dev & Design Expert",
+   "company": "Mercor · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "design",
+   "score": 66,
+   "salary": "Hasta 100 USD/h",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Proyecto de IA que busca expertos en desarrollo y diseño web.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
   },
   {
    "id": "766b19c96174",
@@ -1041,6 +1244,35 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "airtm-a2e3a47c",
+   "title": "Spanish Linguistic Projects (remote)",
+   "company": "Sigma AI · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "admin",
+   "score": 62,
+   "salary": "",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Proyectos lingüísticos en español (anotación, revisión) para IA.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
   },
   {
    "id": "fcdf35f87b4a",
@@ -1404,6 +1636,35 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "airtm-f51e8edd",
+   "title": "Grabación de frases en español (voice assistant)",
+   "company": "Shaip · vía Airtm Earn",
+   "location": "Remoto · cualquier país (pago vía Airtm)",
+   "source": "Airtm Earn",
+   "family": "admin",
+   "score": 55,
+   "salary": "15–20 USD por tarea",
+   "url": "https://app.airtm.com/earn/jobs",
+   "apply_email": "",
+   "posted": "",
+   "found": "2026-11-04",
+   "applicants": null,
+   "summary": "Tareas cortas de grabación de voz en español. Dinero rápido, no es empleo.",
+   "note": "Entrar a Airtm → Ganar → Ver detalles",
+   "fit": "puente",
+   "tags": [
+    {
+     "label": "Remoto global",
+     "tone": "ok"
+    },
+    {
+     "label": "Freelance/contrato",
+     "tone": "warn"
+    }
+   ],
+   "curated": true
   },
   {
    "id": "a6187835db33",
