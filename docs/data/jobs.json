@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T19:35+00:00",
+ "updated": "2026-11-06T18:52+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -103,6 +103,40 @@
    "found": "2026-11-03",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "15f1e4d6ae24",
+   "title": "Estamos Contratando",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 80,
+   "salary": "",
+   "url": "https://docs.google.com/forms/d/e/1FAIpQLScpSg37Ouw6jOx9PGuiMS7mWnaW9EJVQclsZjJTPq1PnhEuEg/viewform",
+   "apply_email": "",
+   "posted": "2026-11-05",
+   "found": "2026-11-06",
+   "applicants": null,
+   "summary": "🚀 ¡Estamos Contratando! Desarrollador Java & Angular ¿Buscás una oportunidad estable, 100% remota y de largo plazo? Sumate al equipo tecnológico interno de una empresa líder en marketing directo y participá en proyectos estratégicos de desarrollo, integraciones, automatización e Inteligencia Artificial. 📍 LATAM (Prefer",
+   "curated": false
+  },
+  {
+   "id": "54188b95bf39",
+   "title": "Estamos buscando un Junior Advanced Backend Developer",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 80,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1592",
+   "apply_email": "angelica_acosta@epam.com",
+   "posted": "2026-11-05",
+   "found": "2026-11-06",
+   "applicants": null,
+   "summary": "🚀 ¡Estamos buscando un Junior Advanced Backend Developer! 🚀 ¿Te interesa trabajar en proyectos innovadores relacionados con APIs, Cloud e Inteligencia Artificial? Esta es tu oportunidad de crecer profesionalmente en un entorno tecnológico de alto impacto. 📍 Ubicación: Colombia 🏠 Modalidad: 100% Remota ✅ Requisitos prin",
+   "curated": false
   },
   {
    "id": "airtm-bf31d044",
@@ -331,6 +365,23 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "4fc809174f95",
+   "title": "QA Engineer – Automatización (Inglés Requerido)",
+   "company": "Alluxi",
+   "location": "Remote (Worldwide)",
+   "source": "GetOnBoard",
+   "family": "qa",
+   "score": 76,
+   "salary": "1000-1600 USD/mes",
+   "url": "https://www.getonbrd.com/jobs/qa-junior-english-required-alluxi-remote-a02e",
+   "apply_email": "",
+   "posted": "2026-11-06",
+   "found": "2026-11-06",
+   "applicants": 7,
+   "summary": "2+ años de experiencia como QA de aplicaciones web. Experiencia práctica en automatización con Cypress, Playwright o Selenium (JavaScript/TypeScript o Python). Pruebas de API con Postman o similar y consultas SQL básicas. Diseño de casos de prueba, pruebas de regresión y reporte de defectos (Jira, Azure DevOps o TestRa",
+   "curated": false
   },
   {
    "id": "d4617cc08ec2",
