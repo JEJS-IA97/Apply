@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T18:52+00:00",
+ "updated": "2026-11-07T17:21+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -103,6 +103,23 @@
    "found": "2026-11-03",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "6b6d3ecfb628",
+   "title": "En AD4 Octógono buscamos Desarrollador/a Java – REMOTO",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 80,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1616",
+   "apply_email": "",
+   "posted": "2026-11-06",
+   "found": "2026-11-07",
+   "applicants": null,
+   "summary": "🚀 ¡En AD4 Octógono buscamos Desarrollador/a Java – REMOTO! 💻 ¿Tienes más de 4 años de experiencia con Java, Spring Boot y microservicios? 🏦 Buscamos experiencia demostrable en banca, medios de pago, fintech o seguros (requisito imprescindible). 🔧 Java, Spring Boot, Spring Framework, APIs REST y bases de datos relaciona",
+   "curated": false
   },
   {
    "id": "15f1e4d6ae24",
@@ -379,7 +396,7 @@
    "apply_email": "",
    "posted": "2026-11-06",
    "found": "2026-11-06",
-   "applicants": 7,
+   "applicants": 25,
    "summary": "2+ años de experiencia como QA de aplicaciones web. Experiencia práctica en automatización con Cypress, Playwright o Selenium (JavaScript/TypeScript o Python). Pruebas de API con Postman o similar y consultas SQL básicas. Diseño de casos de prueba, pruebas de regresión y reporte de defectos (Jira, Azure DevOps o TestRa",
    "curated": false
   },
@@ -1358,6 +1375,23 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "b1b0dac1a4b6",
+   "title": "Hay QAs que encuentran bugs, y hay QAs que evitan que existan. Buscamos a los segundos",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 61,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1603",
+   "apply_email": "raquel.gonzalez@oran-tex.com",
+   "posted": "2026-11-06",
+   "found": "2026-11-07",
+   "applicants": null,
+   "summary": "Hay QAs que encuentran bugs, y hay QAs que evitan que existan. Buscamos a los segundos 🐞 Abrimos vacante para QA Manual Senior, 100% remoto 🌎 Vas a estar en el proyecto desde la definición de requisitos hasta la salida a producción, no solo al final. 🛠 Qué vas a hacer: 🧪 Diseñar planes y casos de prueba 📱 Hacer testing",
+   "curated": false
   },
   {
    "id": "fcdf35f87b4a",
