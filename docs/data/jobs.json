@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T17:21+00:00",
+ "updated": "2026-11-08T17:35+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -396,7 +396,7 @@
    "apply_email": "",
    "posted": "2026-11-06",
    "found": "2026-11-06",
-   "applicants": 25,
+   "applicants": 45,
    "summary": "2+ años de experiencia como QA de aplicaciones web. Experiencia práctica en automatización con Cypress, Playwright o Selenium (JavaScript/TypeScript o Python). Pruebas de API con Postman o similar y consultas SQL básicas. Diseño de casos de prueba, pruebas de regresión y reporte de defectos (Jira, Azure DevOps o TestRa",
    "curated": false
   },
