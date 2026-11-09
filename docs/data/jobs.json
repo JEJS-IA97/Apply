@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T17:35+00:00",
+ "updated": "2026-11-09T21:56+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -70,6 +70,23 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "c91a682e014f",
+   "title": "Buscamos Full Stack Developer",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 84,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1629",
+   "apply_email": "contacto@ateneaconocimientos.com",
+   "posted": "2026-11-09",
+   "found": "2026-11-09",
+   "applicants": null,
+   "summary": "🚀 ¡Buscamos Full Stack Developer! Desde Atenea Conocimientos estamos buscando una persona para sumarse a un proyecto de desarrollo de software a jornada completa. ¿Qué buscamos? ✅ Al menos 3 años de experiencia en desarrollo full stack. ✅ C#, .NET y ASP.NET Core. ✅ Vue.js, TypeScript y JavaScript. ✅ SQL Server y Entity",
+   "curated": false
   },
   {
    "title": "QA Automation Engineer",
