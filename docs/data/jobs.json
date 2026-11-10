@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T21:56+00:00",
+ "updated": "2026-11-10T19:16+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -1605,6 +1605,40 @@
    "found": "2026-11-04",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "9a875e118b8f",
+   "title": "🔥 Hiring Alert! | Quality Reviewer, Employer & Saver Services (Spanish/English) $5 USD/hr, remote, full-time quality ownership ✅ Scoring cal",
+   "company": "",
+   "location": "Remote",
+   "source": "Mastodon",
+   "family": "qa",
+   "score": 57,
+   "salary": "",
+   "url": "https://mastodon.social/@nearskill/117593564508423610",
+   "apply_email": "",
+   "posted": "2026-11-10",
+   "found": "2026-11-10",
+   "applicants": null,
+   "summary": "🔥 Hiring Alert! | Quality Reviewer, Employer & Saver Services (Spanish/English) $5 USD/hr, remote, full-time quality ownership ✅ Scoring calls and tickets against client standards daily ✅ Auditing other reviewers and calibrating scores What got you into QA work in the first place? 👉 Apply here: https:// nearskill.in/jo",
+   "curated": false
+  },
+  {
+   "id": "997dde808075",
+   "title": "BÚSQUEDA ABIERTA: Partner Content Specialist (Italiano Avanzado)",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 57,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1650",
+   "apply_email": "vanessa.brito@wearetims.com",
+   "posted": "2026-11-10",
+   "found": "2026-11-10",
+   "applicants": null,
+   "summary": "🚀 ¡BÚSQUEDA ABIERTA: Partner Content Specialist (Italiano Avanzado)! 🚀 📌 ¿De qué se trata el rol? Buscamos un Partner Content Specialist para gestionar el onboarding operativo, la calidad de catálogo y el soporte a comercios aliados. 📍 Modalidad: 100% Remoto 💵 Compensación: Pago en USD (Contractor vía Ontop) ⏰ Horario:",
+   "curated": false
   },
   {
    "id": "2d9f29ef8cc5",
