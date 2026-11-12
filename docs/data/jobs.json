@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T19:31+00:00",
+ "updated": "2026-11-12T20:48+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -72,23 +72,6 @@
    "applicants": null
   },
   {
-   "id": "c91a682e014f",
-   "title": "Buscamos Full Stack Developer",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 84,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1629",
-   "apply_email": "contacto@ateneaconocimientos.com",
-   "posted": "2026-11-09",
-   "found": "2026-11-09",
-   "applicants": null,
-   "summary": "🚀 ¡Buscamos Full Stack Developer! Desde Atenea Conocimientos estamos buscando una persona para sumarse a un proyecto de desarrollo de software a jornada completa. ¿Qué buscamos? ✅ Al menos 3 años de experiencia en desarrollo full stack. ✅ C#, .NET y ASP.NET Core. ✅ Vue.js, TypeScript y JavaScript. ✅ SQL Server y Entity",
-   "curated": false
-  },
-  {
    "title": "QA Automation Engineer",
    "company": "Consultec-TI",
    "location": "Venezuela · 100% remoto",
@@ -120,57 +103,6 @@
    "found": "2026-11-03",
    "applicants": null,
    "curated": true
-  },
-  {
-   "id": "6b6d3ecfb628",
-   "title": "En AD4 Octógono buscamos Desarrollador/a Java – REMOTO",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 80,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1616",
-   "apply_email": "",
-   "posted": "2026-11-06",
-   "found": "2026-11-07",
-   "applicants": null,
-   "summary": "🚀 ¡En AD4 Octógono buscamos Desarrollador/a Java – REMOTO! 💻 ¿Tienes más de 4 años de experiencia con Java, Spring Boot y microservicios? 🏦 Buscamos experiencia demostrable en banca, medios de pago, fintech o seguros (requisito imprescindible). 🔧 Java, Spring Boot, Spring Framework, APIs REST y bases de datos relaciona",
-   "curated": false
-  },
-  {
-   "id": "15f1e4d6ae24",
-   "title": "Estamos Contratando",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 80,
-   "salary": "",
-   "url": "https://docs.google.com/forms/d/e/1FAIpQLScpSg37Ouw6jOx9PGuiMS7mWnaW9EJVQclsZjJTPq1PnhEuEg/viewform",
-   "apply_email": "",
-   "posted": "2026-11-05",
-   "found": "2026-11-06",
-   "applicants": null,
-   "summary": "🚀 ¡Estamos Contratando! Desarrollador Java & Angular ¿Buscás una oportunidad estable, 100% remota y de largo plazo? Sumate al equipo tecnológico interno de una empresa líder en marketing directo y participá en proyectos estratégicos de desarrollo, integraciones, automatización e Inteligencia Artificial. 📍 LATAM (Prefer",
-   "curated": false
-  },
-  {
-   "id": "54188b95bf39",
-   "title": "Estamos buscando un Junior Advanced Backend Developer",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 80,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1592",
-   "apply_email": "angelica_acosta@epam.com",
-   "posted": "2026-11-05",
-   "found": "2026-11-06",
-   "applicants": null,
-   "summary": "🚀 ¡Estamos buscando un Junior Advanced Backend Developer! 🚀 ¿Te interesa trabajar en proyectos innovadores relacionados con APIs, Cloud e Inteligencia Artificial? Esta es tu oportunidad de crecer profesionalmente en un entorno tecnológico de alto impacto. 📍 Ubicación: Colombia 🏠 Modalidad: 100% Remota ✅ Requisitos prin",
-   "curated": false
   },
   {
    "id": "airtm-bf31d044",
@@ -326,23 +258,6 @@
    "applicants": 35
   },
   {
-   "id": "d54a8a6af03f",
-   "title": "Estamos buscando Full Stack Developer",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "frontend",
-   "score": 78,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1477",
-   "apply_email": "recursosparahumanos.by@gmail.com",
-   "posted": "2026-10-28",
-   "found": "2026-11-04",
-   "applicants": null,
-   "summary": "⚙️ ¡Estamos buscando Full Stack Developer! 📣 Estamos acompañando a una consultora de tecnología e inteligencia artificial en la búsqueda de un/a Full Stack Developer que quiera crecer en proyectos innovadores, 100% remoto. ⚙️¿Cuál será tu desafío? -Desarrollar aplicaciones web de punta a punta, desde la interfaz hasta ",
-   "curated": false
-  },
-  {
    "id": "airtm-08433a43",
    "title": "Coding Expert - JavaScript (contract)",
    "company": "Alignerr (Labelbox) · vía Airtm Earn",
@@ -432,23 +347,6 @@
    "found": "2026-11-05",
    "applicants": null,
    "summary": "<h1>About Us </h1><p style=\"min-height:1.5em\">We're hiring a QA Tester to help us ship reliable software, faster. You'll test new features and releases across our web and mobile products, find and document defects, and help build out our automated test coverage. The role is open to candidates from around 1 to 3 years' ",
-   "curated": false
-  },
-  {
-   "id": "049e322053b4",
-   "title": "Buscamos desarrolladores/as web para sumarse a Altum Labs",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "frontend",
-   "score": 76,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1574",
-   "apply_email": "sumate@altum.ar",
-   "posted": "2026-11-04",
-   "found": "2026-11-05",
-   "applicants": null,
-   "summary": "🚀 ¡Buscamos desarrolladores/as web para sumarse a Altum Labs! En Altum Labs desarrollamos plataformas operativas a medida para empresas de distintos rubros: desde industria y energía hasta gastronomía, entretenimiento y salud. Estamos en plena expansión desde Bahía Blanca y queremos crecer junto a gente nueva en el equ",
    "curated": false
   },
   {
@@ -1119,23 +1017,6 @@
    "applicants": null
   },
   {
-   "id": "44caaa1d8f16",
-   "title": "TEMA DE LA SEMANA  Plataformas y trucos para buscar empleo remoto sin morir en el intento",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 65,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1683",
-   "apply_email": "",
-   "posted": "2026-11-12",
-   "found": "2026-11-12",
-   "applicants": null,
-   "summary": "🌐 TEMA DE LA SEMANA | Plataformas y trucos para buscar empleo remoto sin morir en el intento 🚀 Hoy llegamos al Día 4 con un filtro de seguridad indispensable para proteger tu tiempo, tus datos personales y tu dinero. 📌 DÍA 4: Auditoría Express – Cómo detectar vacantes falsas y estafas en 3 minutos El crecimiento del tr",
-   "curated": false
-  },
-  {
    "id": "c81fd5e18133",
    "title": "Estoy en búsqueda de DiseñadoresGráficos",
    "company": "Trabajo Remoto - Empleoverse 🌎",
@@ -1428,23 +1309,6 @@
    "applicants": null
   },
   {
-   "id": "b1b0dac1a4b6",
-   "title": "Hay QAs que encuentran bugs, y hay QAs que evitan que existan. Buscamos a los segundos",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 61,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1603",
-   "apply_email": "raquel.gonzalez@oran-tex.com",
-   "posted": "2026-11-06",
-   "found": "2026-11-07",
-   "applicants": null,
-   "summary": "Hay QAs que encuentran bugs, y hay QAs que evitan que existan. Buscamos a los segundos 🐞 Abrimos vacante para QA Manual Senior, 100% remoto 🌎 Vas a estar en el proyecto desde la definición de requisitos hasta la salida a producción, no solo al final. 🛠 Qué vas a hacer: 🧪 Diseñar planes y casos de prueba 📱 Hacer testing",
-   "curated": false
-  },
-  {
    "id": "fcdf35f87b4a",
    "title": "User Acceptance Test Engineer",
    "company": "Booming Games",
@@ -1692,6 +1556,23 @@
    "curated": true
   },
   {
+   "id": "2d9f29ef8cc5",
+   "title": "QA Automation Engineer",
+   "company": "Acme",
+   "location": "Remote",
+   "source": "Test",
+   "family": "qa",
+   "score": 57,
+   "salary": "",
+   "url": "https://example.com/job/good",
+   "apply_email": "",
+   "posted": "2026-11-11",
+   "found": "2026-11-12",
+   "applicants": null,
+   "summary": "Playwright and Cypress automation for web apps",
+   "curated": false
+  },
+  {
    "id": "9a875e118b8f",
    "title": "🔥 Hiring Alert! | Quality Reviewer, Employer & Saver Services (Spanish/English) $5 USD/hr, remote, full-time quality ownership ✅ Scoring cal",
    "company": "",
@@ -1706,40 +1587,6 @@
    "found": "2026-11-10",
    "applicants": null,
    "summary": "🔥 Hiring Alert! | Quality Reviewer, Employer & Saver Services (Spanish/English) $5 USD/hr, remote, full-time quality ownership ✅ Scoring calls and tickets against client standards daily ✅ Auditing other reviewers and calibrating scores What got you into QA work in the first place? 👉 Apply here: https:// nearskill.in/jo",
-   "curated": false
-  },
-  {
-   "id": "997dde808075",
-   "title": "BÚSQUEDA ABIERTA: Partner Content Specialist (Italiano Avanzado)",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 57,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1650",
-   "apply_email": "vanessa.brito@wearetims.com",
-   "posted": "2026-11-10",
-   "found": "2026-11-10",
-   "applicants": null,
-   "summary": "🚀 ¡BÚSQUEDA ABIERTA: Partner Content Specialist (Italiano Avanzado)! 🚀 📌 ¿De qué se trata el rol? Buscamos un Partner Content Specialist para gestionar el onboarding operativo, la calidad de catálogo y el soporte a comercios aliados. 📍 Modalidad: 100% Remoto 💵 Compensación: Pago en USD (Contractor vía Ontop) ⏰ Horario:",
-   "curated": false
-  },
-  {
-   "id": "2d9f29ef8cc5",
-   "title": "QA Automation Engineer",
-   "company": "Acme",
-   "location": "Remote",
-   "source": "Test",
-   "family": "qa",
-   "score": 57,
-   "salary": "",
-   "url": "https://example.com/job/good",
-   "apply_email": "",
-   "posted": "2026-11-03",
-   "found": "2026-11-04",
-   "applicants": null,
-   "summary": "Playwright and Cypress automation for web apps",
    "curated": false
   },
   {
@@ -1787,23 +1634,6 @@
    "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
    "curated": false,
    "applicants": null
-  },
-  {
-   "id": "330ae630aa97",
-   "title": "Buscamos IT Recruiter en Colombia (100 Remoto) Colombia",
-   "company": "Trabajo Remoto - Empleoverse 🌎",
-   "location": "Remote",
-   "source": "Telegram",
-   "family": "qa",
-   "score": 55,
-   "salary": "",
-   "url": "https://t.me/vacantesremotasempleoverse/1552",
-   "apply_email": "edwin_diaz@epam.com",
-   "posted": "2026-11-03",
-   "found": "2026-11-04",
-   "applicants": null,
-   "summary": "🚀 ¡Buscamos IT Recruiter en Colombia! (100% Remoto) Colombia ¿Te apasiona conectar el mejor talento tecnológico con grandes retos globales? ¡Esta oportunidad es para ti! En EPAM estamos sumando a nuestro equipo a un/a Recruiter de Tecnología con ganas de crecer y marcar la diferencia. Buscamos a un profesional en admin",
-   "curated": false
   },
   {
    "id": "airtm-f51e8edd",

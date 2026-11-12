@@ -19,6 +19,8 @@ def test_message_to_job_vacante_y_ruido():
     assert job and job.title.startswith("Vacante: Asistente Virtual") and job.is_remote
     assert job.apply_email == "rrhh@acme.com" and job.post_source and job.url == "https://t.me/c/1/2"
     assert message_to_job("Hola grupo, buenos días a todos 👋 que tengan un lindo día", NOW, "x", "l") is None
+    assert message_to_job("TEMA DE LA SEMANA: plataformas y trucos para buscar empleo remoto, vacantes y más", NOW, "x", "l") is None
+    assert message_to_job("Hay QAs que encuentran bugs... inscríbete a nuestro curso, buscamos alumnos", NOW, "x", "l") is None
 
 
 def _post(url, desc="Buscamos QA remoto", posted=None):

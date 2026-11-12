@@ -3,8 +3,10 @@ en TELEGRAM_CHATS, con su propia sesión (TELEGRAM_SESSION). Solo lee: nunca
 escribe ni reacciona en los chats."""
 import asyncio
 import importlib.util
+import json
 import re
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 from src.exporter import extract_apply_email
 from src.scrapers.base import BaseScraper, JobPost
@@ -13,6 +15,11 @@ URL_RE = re.compile(r"https?://[^\s)>\]\"']+")
 HIRE_RE = re.compile(
     r"(vacante|contrata|buscamos|se busca|estamos buscando|hiring|we.?re hiring|oferta de empleo|"
     r"oportunidad laboral|postula|apply|job opening|empleo)", re.IGNORECASE)
+NOT_JOB_RE = re.compile(
+    r"(tema de la semana|tips? (para|de)|consejos|curso|webinar|taller|masterclass|bootcamp|"
+    r"inscr[ií]bete|clase gratuita|plataformas y trucos|hay qas que|mentor[ií]a|newsletter|sorteo)",
+    re.IGNORECASE)
+STATUS_PATH = Path(__file__).resolve().parent.parent.parent / "docs" / "data" / "telegram_status.json"
 REMOTE_RE = re.compile(r"(remot|home ?office|teletrabajo|work from home|anywhere|desde casa)", re.IGNORECASE)
 
 
@@ -49,7 +56,8 @@ def _title(text: str) -> str:
 
 def message_to_job(text: str, date: datetime, chat_title: str, link: str) -> JobPost | None:
     """Convierte un mensaje en JobPost si parece una vacante."""
-    if not text or len(text) < 40 or not HIRE_RE.search(text):
+    head = text[:300] if text else ""
+    if not text or len(text) < 40 or not HIRE_RE.search(head) or NOT_JOB_RE.search(head):
         return None
     external = [u.rstrip(".,") for u in URL_RE.findall(text) if "t.me/" not in u]
     url = external[0] if external else link
@@ -84,6 +92,7 @@ class TelegramScraper(BaseScraper):
 
         since = datetime.now(UTC) - timedelta(days=self.days)
         jobs: list[JobPost] = []
+        stats: list[dict] = []
         async with TelegramClient(StringSession(self.session), int(self.api_id), self.api_hash) as client:
             if not await client.is_user_authorized():
                 self.disabled_reason = "TELEGRAM_SESSION inválida o expirada: ejecuta scripts/telegram_login.py"
@@ -91,24 +100,41 @@ class TelegramScraper(BaseScraper):
             await client.get_dialogs(limit=500)  # carga en caché los chats por id
             for item in self.chats:
                 chat, topic = item if isinstance(item, tuple) else (item, None)
+                label = f"{str(chat)[:6]}…{str(chat)[-4:]}" + (f"_{topic}" if topic else "")
                 try:
                     entity = await client.get_entity(chat)
                 except (ValueError, TypeError) as exc:
-                    print(f"    [Telegram] chat {chat} no accesible: {exc}")
+                    print(f"    [Telegram] chat {label} no accesible: {exc}")
+                    stats.append({"chat": label, "leidos": 0, "vacantes": 0, "error": "no accesible: ¿id correcto o no eres miembro?"})
                     continue
                 title = getattr(entity, "title", None) or str(chat)
                 if topic:
                     title = f"{title} #{topic}"
                 username = getattr(entity, "username", None)
+                read = found = 0
                 async for msg in client.iter_messages(entity, limit=self.per_chat, reply_to=topic):
                     if msg.date and msg.date < since:
                         break
+                    read += 1
                     link = (f"https://t.me/{username}/{msg.id}" if username
                             else f"https://t.me/c/{entity.id}/{msg.id}")
                     job = message_to_job(msg.message or "", msg.date, title, link)
                     if job:
+                        found += 1
                         jobs.append(job)
+                stats.append({"chat": title, "leidos": read, "vacantes": found, "error": ""})
+        self._write_status(stats)
         return jobs
+
+    def _write_status(self, stats: list[dict]) -> None:
+        """Deja constancia de qué se leyó en cada chat (sin ids completos ni mensajes)."""
+        try:
+            STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
+            STATUS_PATH.write_text(json.dumps({"fecha": datetime.now(UTC).isoformat(timespec="minutes"),
+                                               "dias": self.days, "chats": stats}, ensure_ascii=False, indent=1),
+                                   encoding="utf-8")
+        except OSError:
+            pass
 
     def verify_job_active(self, url: str) -> bool:
         return True

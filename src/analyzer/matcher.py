@@ -253,7 +253,11 @@ class JobMatcher:
 
     def family_of(self, job: JobPost) -> tuple[str, float]:
         """RF-1/RF-9 (spec 004): familia del título con más puntos."""
-        text = job.title if not job.post_source else f"{job.title} {job.description}"
+        text = job.title
+        if job.post_source and not any(p.search(job.title) for _, _, pats in self.families for p in pats):
+            # En posts el título suele ser "Estamos contratando": mirar solo el inicio del
+            # mensaje, no todo el texto (menciones sueltas de "QA" daban falsos positivos).
+            text = f"{job.title} {(job.description or '')[:350]}"
         best = ("", 0.0)
         for name, points, patterns in self.families:
             if points > best[1] and any(p.search(text) for p in patterns):
