@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T19:12+00:00",
+ "updated": "2026-11-12T19:31+00:00",
  "jobs": [
   {
    "id": "712756cbb055",
@@ -1119,6 +1119,40 @@
    "applicants": null
   },
   {
+   "id": "44caaa1d8f16",
+   "title": "TEMA DE LA SEMANA  Plataformas y trucos para buscar empleo remoto sin morir en el intento",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 65,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1683",
+   "apply_email": "",
+   "posted": "2026-11-12",
+   "found": "2026-11-12",
+   "applicants": null,
+   "summary": "🌐 TEMA DE LA SEMANA | Plataformas y trucos para buscar empleo remoto sin morir en el intento 🚀 Hoy llegamos al Día 4 con un filtro de seguridad indispensable para proteger tu tiempo, tus datos personales y tu dinero. 📌 DÍA 4: Auditoría Express – Cómo detectar vacantes falsas y estafas en 3 minutos El crecimiento del tr",
+   "curated": false
+  },
+  {
+   "id": "c81fd5e18133",
+   "title": "Estoy en búsqueda de DiseñadoresGráficos",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "design",
+   "score": 65,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1671",
+   "apply_email": "talento@gbalatam.com",
+   "posted": "2026-11-11",
+   "found": "2026-11-12",
+   "applicants": null,
+   "summary": "¡Estoy en búsqueda de DiseñadoresGráficos 🚀 ¿Tienes creatividad, pensamiento visual y pasión por transformar ideas en diseños que comuniquen y generen impacto? En GBA LATAM buscamos 2 Diseñadores(as) Gráficos(as) Semi Senior que quieran aportar su talento a proyectos de comunicación, diseño corporativo y transformación",
+   "curated": false
+  },
+  {
    "id": "766b19c96174",
    "title": "Estoy contratando  Diseñador UX/UI",
    "company": "Trabajo Remoto - Empleoverse 🌎",
@@ -1428,6 +1462,40 @@
    "applicants": null
   },
   {
+   "id": "ca368e1479ff",
+   "title": "Mid-level Insurance QA Analyst",
+   "company": "Jobsity",
+   "location": "Colombia",
+   "source": "Himalayas",
+   "family": "qa",
+   "score": 60,
+   "salary": "",
+   "url": "https://himalayas.app/companies/jobsity/jobs/mid-level-insurance-qa-analyst?utm_source=api",
+   "apply_email": "",
+   "posted": "2026-11-12",
+   "found": "2026-11-12",
+   "applicants": null,
+   "summary": "Who We AreAt Jobsity, we believe great talent should not be limited by geography.",
+   "curated": false
+  },
+  {
+   "id": "1acaea6d0005",
+   "title": "Estamos buscando Analista de Calidad (QA) de Ventas",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 60,
+   "salary": "",
+   "url": "https://docs.google.com/forms/d/e/1FAIpQLSca_vKT0eVlxhdR-gL0mZ_KqilTyWOqasA4BpB1RIX-u8BSZQ/viewform",
+   "apply_email": "",
+   "posted": "2026-11-11",
+   "found": "2026-11-12",
+   "applicants": null,
+   "summary": "🚀 ¡Estamos buscando Analista de Calidad (QA) de Ventas! 🌎 Una importante empresa internacional del sector de entretenimiento digital se encuentra en búsqueda de un(a) Analista de Calidad (QA) de Ventas para sumarse a un proyecto en expansión en Latinoamérica. 🔹 ¿Qué harás? — Supervisar la calidad del trabajo de los Sal",
+   "curated": false
+  },
+  {
    "title": "Community Manager",
    "company": "WOW Studio Media",
    "location": "LATAM (modalidad por confirmar)",
@@ -1576,6 +1644,23 @@
    ],
    "curated": true,
    "applicants": 30
+  },
+  {
+   "id": "1cb490abc2e5",
+   "title": "Estamos buscando diseñadora gráfica",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "design",
+   "score": 58,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1664",
+   "apply_email": "pandastudiouy@gmail.com",
+   "posted": "2026-11-11",
+   "found": "2026-11-12",
+   "applicants": null,
+   "summary": "¡Estamos buscando diseñadora gráfica! Requisitos: — Tenga experiencia en diseño para redes sociales (Instagram, reels, historias, etc.) — Sepa trabajar con identidades visuales y adaptarlas a distintos formatos. — Maneje Illustrator, Photoshop y/o Canva Pro. — Sea organizada, responsable y cumpla con los tiempos de ent",
+   "curated": false
   },
   {
    "title": "Community Manager (colaboración)",
