@@ -1,6 +1,23 @@
 {
- "updated": "2026-11-13T19:09+00:00",
+ "updated": "2026-11-14T17:39+00:00",
  "jobs": [
+  {
+   "id": "d00152c2569d",
+   "title": "QA Engineer Intern (6 months)",
+   "company": "shifttechnology",
+   "location": "Remote",
+   "source": "Arbeitnow",
+   "family": "qa",
+   "score": 96,
+   "salary": "",
+   "url": "https://www.arbeitnow.fr/jobs/companies/shifttechnology/qa-engineer-intern-6-months-333718",
+   "apply_email": "",
+   "posted": "2026-11-14",
+   "found": "2026-11-14",
+   "applicants": null,
+   "summary": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12pt; font-family: arial, helvetica, sans-serif;&quot;&gt;Shift delivers AI agents that transform insurers&#39; most critical work. By combining deep industry expertise and unmatched data resources, Shift provides proven results that ha",
+   "curated": false
+  },
   {
    "id": "712756cbb055",
    "title": "Automation QA Engineer (QVAC) (100% remote)",
