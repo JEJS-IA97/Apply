@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T21:36+00:00",
+ "updated": "2026-11-17T20:26+00:00",
  "jobs": [
   {
    "id": "d00152c2569d",
@@ -998,6 +998,23 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "7b63aa58b70a",
+   "title": "Estamos buscando un QA Analyst (Manual & Automation)",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 68,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1751",
+   "apply_email": "gestionhumana@globalr.net",
+   "posted": "2026-11-17",
+   "found": "2026-11-17",
+   "applicants": null,
+   "summary": "🚀 ¡Estamos buscando un QA Analyst (Manual & Automation)! 🧪💻 📍 Venezuela | 100% Remoto 📅 Duración del proyecto: 5 meses 🎯 ¿Qué necesitas saber? 🔥 Experiencia en pruebas funcionales, integrales y de regresión. 🔥 Diseño, elaboración y ejecución de casos de prueba. 🔥 Identificación, documentación y seguimiento de incidenci",
+   "curated": false
   },
   {
    "id": "airtm-68ee8b5a",
