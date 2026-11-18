@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T20:26+00:00",
+ "updated": "2026-11-18T19:55+00:00",
  "jobs": [
   {
    "id": "d00152c2569d",
@@ -1855,6 +1855,23 @@
    "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
    "curated": false,
    "applicants": null
+  },
+  {
+   "id": "6cf3e8e5fe9e",
+   "title": "Consultor(a) SQL  Soporte L2  Remoto",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 55,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1766",
+   "apply_email": "susana.barbosa-ramirez.ext@capgemini.com",
+   "posted": "2026-11-18",
+   "found": "2026-11-18",
+   "applicants": null,
+   "summary": "Consultor(a) SQL | Soporte L2 | Remoto 🇲🇽 ¿Tienes experiencia con SQL y te interesa desarrollarte en soporte de aplicaciones empresariales? ¡Esta oportunidad es para ti! 📍 Modalidad: 100% Remoto (indispensable radicar en México) 🕒 Horario: Operación 24/7 con rol de turnos 🎓 Escolaridad: Ingeniería en Sistemas, Ciencias",
+   "curated": false
   },
   {
    "id": "330ae630aa97",
