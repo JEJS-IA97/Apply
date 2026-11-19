@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T19:55+00:00",
+ "updated": "2026-11-19T19:56+00:00",
  "jobs": [
   {
    "id": "d00152c2569d",
@@ -718,6 +718,23 @@
    "curated": false
   },
   {
+   "id": "970fcf8e6597",
+   "title": "BUSCAMOS DISEÑADOR/A FREELANCE  TRABAJO REMOTO",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 72,
+   "salary": "",
+   "url": "https://t.me/vacantesremotasempleoverse/1798",
+   "apply_email": "rrhh@leyvagroup.es",
+   "posted": "2026-11-19",
+   "found": "2026-11-19",
+   "applicants": null,
+   "summary": "🎨 ¡BUSCAMOS DISEÑADOR/A FREELANCE! | TRABAJO REMOTO ¿Te apasiona el diseño y tenés creatividad para desarrollar contenido visual para diferentes marcas? ¡Esta oportunidad puede ser para vos! En LeyvaGroup buscamos un/a diseñador/a freelance para trabajar con clientes pymes en España, creando piezas gráficas y contenido",
+   "curated": false
+  },
+  {
    "id": "bb8eb4a769d4",
    "title": "Estamos buscando Diseñador/a Gráfico/a Freelance",
    "company": "Trabajo Remoto - Empleoverse 🌎",
@@ -1337,23 +1354,6 @@
    "applicants": null
   },
   {
-   "id": "b6ec902f5d37",
-   "title": "100–150 USD/hr | Fully Remote Open Source Applied Engineer Talent Network Part-time, remote, and paid by the hour. ✅ Designing evals for cod",
-   "company": "",
-   "location": "Remote",
-   "source": "Mastodon",
-   "family": "qa",
-   "score": 64,
-   "salary": "",
-   "url": "https://mastodon.social/@nearskill/117466627563956940",
-   "apply_email": "",
-   "posted": "2026-10-19",
-   "found": "2026-10-19",
-   "summary": "100–150 USD/hr | Fully Remote Open Source Applied Engineer Talent Network Part-time, remote, and paid by the hour. ✅ Designing evals for coding tasks in Python, Java, C, JS or TS ✅ Writing test cases that measure system behavior ✅ A GitHub record of steady contributions in the last year ✅ Git and CI/CD workflow comfort",
-   "curated": false,
-   "applicants": null
-  },
-  {
    "id": "c883753fcb19",
    "title": "En Harguin estamos buscando un/a Diseñador/a Gráfico/a para Redes Sociales",
    "company": "Trabajo Remoto - Empleoverse 🌎",
@@ -1808,6 +1808,23 @@
    "found": "2026-11-04",
    "applicants": null,
    "summary": "Playwright and Cypress automation for web apps",
+   "curated": false
+  },
+  {
+   "id": "6c0f9634eed1",
+   "title": "My VA Support busca Desarrollador de Software Junior Full Stack con Java y React",
+   "company": "Vacantes Remotas | Trabajos Remotos",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "frontend",
+   "score": 56,
+   "salary": "",
+   "url": "https://www.vacantesremotas.com/vacantes/desarrollador-de-software-junior-full-stack-con-java-y-react",
+   "apply_email": "",
+   "posted": "2026-11-19",
+   "found": "2026-11-19",
+   "applicants": null,
+   "summary": "My VA Support busca Desarrollador de Software Junior Full Stack con Java y React ✅ 100% remoto para LATAM, con mentoría de desarrolladores con más trayectoria y oportunidad de asumir más responsabilidad mientras creces en una plataforma real en producción. Más info aquí ➡️ https://www.vacantesremotas.com/vacantes/desar",
    "curated": false
   },
   {
