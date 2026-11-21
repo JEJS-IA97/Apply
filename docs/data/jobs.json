@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T19:34+00:00",
+ "updated": "2026-11-21T18:38+00:00",
  "jobs": [
   {
    "id": "d00152c2569d",
@@ -1096,6 +1096,23 @@
    "applicants": null
   },
   {
+   "id": "903bb1f1b623",
+   "title": "Oportunidad para dar tus primeros pasos en Diseño UX/UI (Part-time  Remoto  USD)",
+   "company": "Trabajo Remoto - Empleoverse 🌎",
+   "location": "Remote",
+   "source": "Telegram",
+   "family": "qa",
+   "score": 66,
+   "salary": "",
+   "url": "https://www.halaxia.com/empleos/serendipia-consultora/practicante-disenador-ux-ui/29082",
+   "apply_email": "",
+   "posted": "2026-11-20",
+   "found": "2026-11-21",
+   "applicants": null,
+   "summary": "🚀 ¡Oportunidad para dar tus primeros pasos en Diseño UX/UI! (Part-time | Remoto | USD) 🎨💻 Desde Serendipia Consultora estamos buscando un/a Practicante de Diseño UX/UI para sumarse al equipo de una fintech regional de triple impacto (social y ambiental). 🌎✨ Si sos estudiante avanzado/a o recién graduado/a y tenés ganas",
+   "curated": false
+  },
+  {
    "title": "Social Media Manager (Instagram/TikTok)",
    "company": "Social Latam (Nicolás Martínez Alarcón)",
    "location": "100% remoto · full time · USD",
@@ -1758,6 +1775,23 @@
    "found": "2026-11-04",
    "applicants": null,
    "curated": true
+  },
+  {
+   "id": "9a2b3da62b59",
+   "title": "UI Designer - Casual Games (Freelance Remote)",
+   "company": "SOFTGAMES",
+   "location": "Remote job",
+   "source": "Arbeitnow",
+   "family": "design",
+   "score": 57,
+   "salary": "",
+   "url": "https://www.arbeitnow.com/jobs/companies/softgames/ui-designer-casual-games-freelance-remote-berlin-403179",
+   "apply_email": "",
+   "posted": "2026-11-20",
+   "found": "2026-11-21",
+   "applicants": null,
+   "summary": "<p><span style=\"color:#000000\">We’re looking for a </span><strong><span style=\"color:#000000\">UI designer</span></strong><span style=\"color:#000000\"> who loves casual games. You know what makes a game feel intuitive and fun to play, and you can turn that into clean, good-looking UI. You’ll be assisting the SOHO Art tea",
+   "curated": false
   },
   {
    "id": "9a875e118b8f",
