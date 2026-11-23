@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T19:01+00:00",
+ "updated": "2026-11-23T23:16+00:00",
  "jobs": [
   {
    "id": "d00152c2569d",
@@ -87,6 +87,23 @@
    ],
    "curated": true,
    "applicants": null
+  },
+  {
+   "id": "d660bef1eefd",
+   "title": "QA Automatizador c/exp en Inteligencia Artificial",
+   "company": "Synopsis S.A.",
+   "location": "Lima, Peru",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 86,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4493913212",
+   "apply_email": "",
+   "posted": "2026-11-23",
+   "found": "2026-11-23",
+   "applicants": 25,
+   "summary": "QA Automation Engineer Senior Buscamos un perfil senior con al menos 4 años de experiencia en automatización de pruebas y sólida capacidad de programación para trabajar en un ecosistema de múltiples aplicaciones. Su objetivo será aumentar la cobertura automatizada, evolucionar los frameworks de testing e integrar las p",
+   "curated": false
   },
   {
    "id": "1e27c41e06c7",
