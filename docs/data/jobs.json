@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T21:55+00:00",
+ "updated": "2026-11-25T21:01+00:00",
  "jobs": [
   {
    "id": "d00152c2569d",
@@ -1923,6 +1923,23 @@
    "summary": "Canadian job & contract leads (any duration), I'm not affiliated with any of these companies: Aviva Canada is hiring a Cybersecurity Advisor in Markham, Ontario. Salary range is $80,000 to $105,000. Apply at https:// aviva.wd1.myworkdayjobs.com/en -US/External/job/Cybersecurity-Advisor_R-173233 . Blue Ant Media is hiri",
    "curated": false,
    "applicants": null
+  },
+  {
+   "id": "a24d7dcb9e80",
+   "title": "Automatizador de Pruebas (QA) (Remoto)(Exp en Banca) K526",
+   "company": "Keppri",
+   "location": "Cochabamba, Cochabamba, Bolivia",
+   "source": "LinkedIn",
+   "family": "qa",
+   "score": 55,
+   "salary": "",
+   "url": "https://www.linkedin.com/jobs/view/4494945002",
+   "apply_email": "",
+   "posted": "2026-11-25",
+   "found": "2026-11-25",
+   "applicants": null,
+   "summary": "",
+   "curated": false
   },
   {
    "id": "6cf3e8e5fe9e",
